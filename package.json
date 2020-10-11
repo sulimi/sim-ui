@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/sulimi/sumi-ui-vue2/issues"
   },
-  "homepage": "https://github.com/sulimi/sumi-ui-vue2#readme"
+  "homepage": "https://github.com/sulimi/sumi-ui-vue2#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
