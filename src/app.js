@@ -17,7 +17,8 @@ new Vue({
 
 //单元测试
 import chai from 'chai';
-
+import spies from 'chai-spies'
+chai.use(spies)
 const expect = chai.expect;
 
 //1 这里应该是测试icon
@@ -89,16 +90,15 @@ const expect = chai.expect;
   vm.$destroy();
 }
 
-//5 测试事件click  期望这个函数被执行
+//5 测试事件click
 {
   const Constructor = Vue.extend(Button);
   const vm = new Constructor();
   vm.$mount();
-  vm.$on('click', function () {
-    expect(1).to.eq(1)  //可能会误写这种代码，期望1等于1用于成立，但是我们期望的是这个函数被执行，这样判断不了是否被执行
-  });
-  // let btn = button.$el.querySelector('button');
-  let btn = vm.$el;  //$el本身就是button
+  let spy = chai.spy(function () {})  //声明一个间谍函数，伪装匿名函数
+  vm.$on('click', spy);  //代替匿名函数，监听间谍函数
+  let btn = vm.$el;
   btn.click();
+  expect(spy).to.have.been.called()  //期待间谍函数被调用了
 }
 
