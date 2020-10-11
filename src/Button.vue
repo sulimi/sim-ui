@@ -1,5 +1,6 @@
 <template>
   <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
+    <g-icon class="icon loading" icon="jiazaizhong"></g-icon>
     <g-icon class="icon" :icon="icon" v-if="icon"></g-icon>
     <div class="slot">
       <slot></slot>
@@ -24,6 +25,15 @@
   };
 </script>
 <style lang="scss">
+  @keyframes g-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   .g-button {
     font-size: var(--font-size);
     height: var(--button-height);
@@ -45,17 +55,21 @@
       order: 2;
     }
 
+
     &.icon-right {
       .icon {
         order: 2;
         margin-left: .3em;
         margin-right: 0
       }
-
       .slot {
         order: 1;
       }
     }
+    .loading{
+      animation: g-spin 1s infinite linear;
+    }
+
 
     &:hover {
       border-color: var(--border-color-hover);
