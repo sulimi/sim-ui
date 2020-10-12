@@ -12,7 +12,7 @@
       <g-button>下一页</g-button>
     </g-button-group>
     <g-input value="正常" ></g-input>
-    <g-input value="禁用" disable></g-input>
+    <g-input value="禁用" disabled></g-input>
     <g-input value="只读" readonly></g-input>
     <g-input value="正常" error="姓名不能少于两个字"></g-input>
 
