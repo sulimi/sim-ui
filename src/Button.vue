@@ -12,7 +12,12 @@
 </template>
 
 <script>
+  import Icon from './components/Icon.vue';
+
   export default {
+    components: {
+      'g-icon': Icon
+    },
     props: {
       icon: {},
       loading: {
@@ -67,11 +72,13 @@
         margin-left: .3em;
         margin-right: 0
       }
+
       .slot {
         order: 1;
       }
     }
-    .loading{
+
+    .loading {
       animation: g-spin 1s infinite linear;
     }
 
