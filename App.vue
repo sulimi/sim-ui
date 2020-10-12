@@ -11,8 +11,11 @@
       <g-button>中间</g-button>
       <g-button>下一页</g-button>
     </g-button-group>
+    <g-input value="正常" ></g-input>
+    <g-input value="禁用" disable></g-input>
+    <g-input value="只读" readonly></g-input>
+    <g-input value="正常" error="姓名不能少于两个字"></g-input>
 
-    <g-input></g-input>
   </div>
 </template>
 
@@ -28,17 +31,16 @@
 </script>
 
 <style lang="scss">
-  @import "src/assets/helper.scss";
   @import "src/assets/reset.scss";
+  @import "src/assets/helper.scss";
+
   html {
-    --button-height: 32px;
-    --font-size: 14px;
     --button-bg: white;
     --button-active-bg: #eee;
-    --border-radius: 4px;
     --color: #333;
     --border-color: #999;
-    --border-color-hover: #666
+    --border-color-hover: #666;
+    --box-shadow-color: rgb(0,0,0,0.5)
   }
 
   #app {
@@ -46,6 +48,6 @@
   }
 
   body {
-    font-size: var(--font-size);
+    font-size: $font-size;
   }
 </style>

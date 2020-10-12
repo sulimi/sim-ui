@@ -35,6 +35,7 @@
   };
 </script>
 <style lang="scss" scoped>
+  @import "src/assets/helper.scss";
   @keyframes g-spin {
     0% {
       transform: rotate(0deg);
@@ -45,10 +46,10 @@
   }
 
   .g-button {
-    font-size: var(--font-size);
-    height: var(--button-height);
+    font-size: $font-size;
+    height: $button-height;
     padding: 1em;
-    border-radius: var(--border-radius);
+    border-radius: $border-radius;
     border: 1px solid var(--border-color);
     background: var(--button-bg);
     display: inline-flex;
