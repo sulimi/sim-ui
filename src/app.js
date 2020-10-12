@@ -29,14 +29,14 @@ try {
       propsData: {
         icon: 'arrow',
       }
-    });
-    vm.$mount();
-
+    }).$mount();
     let useElement = vm.$el.querySelector('use');
     expect(useElement.getAttribute('xlink:href')).to.eq('#icon-arrow');
     vm.$el.remove();
     vm.$destroy();
   }
+
+
 //2 测试loading
   {
     const Constructor = Vue.extend(Button);
@@ -67,9 +67,9 @@ try {
 
     let svgElement = vm.$el.querySelector('svg');
     let {order} = window.getComputedStyle(svgElement);
-    expect(order).to.eq('1');  //css的所有属性值应该是一个字符串，期待的也应该是字符串
-    vm.$el.remove();  //button元素删掉
-    vm.$destroy();  //button对象删掉
+    expect(order).to.eq('1');
+    vm.$el.remove();
+    vm.$destroy();
   }
 //4 测试在右边
   {
