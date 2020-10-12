@@ -71,17 +71,38 @@ describe('Input', () => {
     });
     it('支持 change 事件', () => {
       vm = new Constructor({}).$mount();
-      //假设有一个回调函数:
       const callback = sinon.fake();
-      //监听change触发时回调触发
       vm.$on('change', callback);
-      // ...
-      // 触发input的change事件
-      // ...
       let event = new Event('change');
       let inputElement = vm.$el.querySelector('input');
       inputElement.dispatchEvent(event);
-      //断言
+      expect(callback).to.have.been.calledWith(event);
+    });
+    it('支持 input 事件', () => {
+      vm = new Constructor({}).$mount();
+      const callback = sinon.fake();
+      vm.$on('input', callback);
+      let event = new Event('input');
+      let inputElement = vm.$el.querySelector('input');
+      inputElement.dispatchEvent(event);
+      expect(callback).to.have.been.calledWith(event);
+    });
+    it('支持 focus 事件', () => {
+      vm = new Constructor({}).$mount();
+      const callback = sinon.fake();
+      vm.$on('focus', callback);
+      let event = new Event('focus');
+      let inputElement = vm.$el.querySelector('input');
+      inputElement.dispatchEvent(event);
+      expect(callback).to.have.been.calledWith(event);
+    });
+    it('支持 blur 事件', () => {
+      vm = new Constructor({}).$mount();
+      const callback = sinon.fake();
+      vm.$on('blur', callback);
+      let event = new Event('blur');
+      let inputElement = vm.$el.querySelector('input');
+      inputElement.dispatchEvent(event);
       expect(callback).to.have.been.calledWith(event);
     });
   });
