@@ -34,7 +34,7 @@
     }
   };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   @keyframes g-spin {
     0% {
       transform: rotate(0deg);
