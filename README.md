@@ -41,14 +41,19 @@ npm i --save sumi
 3. 引入 sumi
 
 ```
+import {Button,ButtonGroup} from 'sumi-ui-vue2'
+import 'sumi-ui-vue2/dist/index.css'
 
+export default {
+  name: 'App',
+  components: {
+    Button,
+    ButtonGroup,
+    Icon
+  }
+}
 ```
 
-4. 引入 svg symbols
-
-```
-
-```
 
 ## 安装
 
