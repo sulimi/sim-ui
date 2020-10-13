@@ -39,7 +39,7 @@
 <style lang="scss">
   .col {
     height: 100px;
-    width: 50%;
+    /*width: 50%;*/
     $class-prefix: col-;
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n} {
@@ -55,8 +55,6 @@
     }
 
     .content {
-      background: yellow;
-      border: 1px solid red;
       height: 100%;
     }
   }

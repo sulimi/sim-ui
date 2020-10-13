@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-      <g-row gutter="10">
-        <g-col span="2"></g-col>
-        <g-col span="4"></g-col>
-        <g-col span="6"></g-col>
-        <g-col span="12"></g-col>
-      </g-row>
+
   </div>
 </template>
 
@@ -24,6 +19,7 @@
 <style lang="scss">
   @import "src/assets/reset.scss";
   @import "src/assets/helper.scss";
+
 
   html {
     --button-bg: white;

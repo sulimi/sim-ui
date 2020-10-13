@@ -1,22 +1,36 @@
 <template>
-  <div class="row" :style="rowStyle">
+  <div class="row" :class="rowClass" :style="rowStyle">
     <slot></slot>
   </div>
 </template>
 <script>
   export default {
-    props: ['gutter'],
+    props: {
+      gutter: {
+        type: [String, Number]
+      },
+      align: {
+        type: String,
+        validator(value) {
+          return ['left', 'right', 'center'].includes(value);
+        }
+      }
+    },
     mounted() {
       this.$children.forEach((v) => {
         v.gutter = this.gutter;
       });
     },
-    computed:{
-      rowStyle(){
+    computed: {
+      rowClass() {
+        let {align} = this;
+        return [align && `align-${align}`];
+      },
+      rowStyle() {
         return {
-          marginLeft: -this.gutter/2 + 'px',
-          marginRight: -this.gutter/2 + 'px'
-        }
+          marginLeft: -this.gutter / 2 + 'px',
+          marginRight: -this.gutter / 2 + 'px'
+        };
       }
     }
   };
@@ -24,5 +38,15 @@
 <style lang="scss">
   .row {
     display: flex;
+    &.align-left{
+      justify-content: flex-start;
+    }
+    &.align-right{
+      justify-content: flex-end;
+    }
+    &.align-center{
+      justify-content: center;
+    }
+
   }
 </style>
