@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <g-row class="wrapper">
-      <g-col class="demo" span="12" offset="10"
-             :iPad="{span:8, offset:10}"
-             :narrowPc="{span:8, offset:10}"
-             :pc="{span:8, offset:10}"
-             :widePc="{span:8, offset:10}"></g-col>
-    </g-row>
+    <g-layout class="wrapper">
+      <g-sider class="sider"></g-sider>
+
+      <g-layout class="inside">
+        <g-header class="header"></g-header>
+        <g-content class="content"></g-content>
+        <g-footer class="footer"></g-footer>
+      </g-layout>
+
+
+    </g-layout>
   </div>
 </template>
 
@@ -27,12 +31,30 @@
   @import "src/assets/helper.scss";
 
   .wrapper {
-    background: yellow;
+    height: 500px;
+    border: 1px solid #333333;
+    .sider {
+      width: 150px;
+      background: #999999;
+      &.slide-enter, &.slide-leave-to{
+        margin-left: -150px;
+      }
+    }
+    .inside{
+      .header{
+        background: #666666;
+        height: 100px;
+      }
+      .content{
+
+      }
+      .footer{
+        background: #666666;
+        height: 50px;
+      }
+    }
   }
 
-  .demo {
-    border: 1px solid red;
-  }
 
   html {
     --button-bg: white;
