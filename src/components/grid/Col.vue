@@ -40,16 +40,30 @@
     mounted() {
       this.gutter = this.$parent.gutter;
     },
+    methods:{
+      createClasses(spanAndoffsetObj, str=''){
+        let array=[]
+        if (!spanAndoffsetObj){
+          return []
+        }
+        if (spanAndoffsetObj.span){
+          array.push(`col-${str}${spanAndoffsetObj.span}`)
+        }
+        if (spanAndoffsetObj.offset){
+          array.push(`col-${str}${spanAndoffsetObj.offset}`)
+        }
+        return array
+      }
+    },
     computed: {
       colClass() {
-        let {span, offset, iPad, narrowPc, pc, widePc} = this;
+        let {span, offset, iPad, narrowPc, pc, widePc,createClasses} = this;
         return [
-          span && `col-${span}`,
-          offset && `offset-${offset}`,
-          iPad && `col-iPad-${iPad.span}`,
-          narrowPc && `col-narrowPc-${narrowPc.span}`,
-          pc && `col-pc-${pc.span}`,
-          widePc && `col-widePc-${widePc.span}`
+          ...createClasses({span, offset}),
+          ...createClasses(iPad, 'iPad-'),
+          ...createClasses(narrowPc,'narrow-pc-'),
+          ...createClasses(pc,'pc-'),
+          ...createClasses(widePc,'wide-pc-'),
         ];
       },
       colStyle() {
