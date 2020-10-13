@@ -1,35 +1,27 @@
 <template>
   <div id="app">
-    <g-button icon="arrow">按钮</g-button>
-    <g-button>按钮</g-button>
-    <g-button icon="arrow" icon-position="right">按钮</g-button>
+    <div style="border: 1px solid black;">
+      <g-row gutter="10">
+        <g-col span="2"></g-col>
+        <g-col span="4"></g-col>
+        <g-col span="6"></g-col>
+        <g-col span="12"></g-col>
+      </g-row>
+    </div>
 
-    <g-button-group>
-      <g-button>上一页</g-button>
-      <g-button>中间</g-button>
-      <g-button>中间</g-button>
-      <g-button>中间</g-button>
-      <g-button>下一页</g-button>
-    </g-button-group>
-    <g-input value="正常" v-model="message"></g-input>
-    <div>{{message}}</div>
-    <g-input value="禁用" disabled></g-input>
-    <g-input value="只读" readonly></g-input>
-    <g-input value="正常" error="姓名不能少于两个字"></g-input>
-<div id="aa"></div>
   </div>
 </template>
 
 <script>
   export default {
-    data(){
+    data() {
       return {
         loading1: true,
         loading2: true,
         message: ''
-      }
+      };
     },
-  }
+  };
 </script>
 
 <style lang="scss">
@@ -42,7 +34,7 @@
     --color: #333;
     --border-color: #999;
     --border-color-hover: #666;
-    --box-shadow-color: rgb(0,0,0,0.5)
+    --box-shadow-color: rgb(0, 0, 0, 0.5)
   }
 
   #app {

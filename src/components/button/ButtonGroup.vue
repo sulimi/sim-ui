@@ -18,7 +18,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "src/assets/helper.scss";
+  @import "../../assets/helper";
   .g-button-group {
     display: inline-flex;
     vertical-align: middle;

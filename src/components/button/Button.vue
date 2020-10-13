@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import Icon from './Icon.vue';
+  import Icon from '../Icon.vue';
 
   export default {
     components: {
@@ -35,7 +35,7 @@
   };
 </script>
 <style lang="scss" scoped>
-  @import "src/assets/helper.scss";
+  @import "../../assets/helper";
   @keyframes g-spin {
     0% {
       transform: rotate(0deg);
