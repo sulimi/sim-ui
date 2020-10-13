@@ -3,7 +3,7 @@ import App from './App.vue';
 import Button from './src/components/button/Button.vue';
 import Icon from './src/components/Icon.vue';
 import ButtonGroup from './src/components/button/ButtonGroup.vue';
-import Input from './src/components/Input.vue';
+import Input from './src/components/input/Input.vue';
 import Row from './src/components/grid/Row.vue';
 import Col from './src/components/grid/Col.vue';
 import Layout from './src/components/layout/Layout.vue'

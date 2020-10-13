@@ -1,6 +1,6 @@
 const expect = chai.expect;
 import Vue from 'vue';
-import Input from '../src/components/Input.vue';
+import Input from '../src/components/input/Input.vue';
 
 Vue.config.productionTip = false;
 Vue.config.devtools = false;

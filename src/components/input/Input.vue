@@ -35,7 +35,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "src/assets/helper.scss";
+  @import "../../assets/helper";
 
   .wrapper {
     font-size: $font-size;
