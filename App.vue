@@ -1,9 +1,12 @@
 <template>
   <div id="app">
     <g-row class="wrapper">
-      <g-col class="demo" span="12" :phone="{span:8, offset:10}"></g-col>
-      <g-col class="demo" span="6" :phone="{span:8, offset:10}"></g-col>
-      <g-col class="demo" span="6" :phone="{span:8, offset:10}"></g-col>
+      <g-col class="demo" span="12"
+             :iPad="{span:8, offset:10}"></g-col>
+      <g-col class="demo" span="6"
+             :iPad="{span:8, offset:10}"></g-col>
+      <g-col class="demo" span="6"
+             :iPad="{span:8, offset:10}"></g-col>
     </g-row>
   </div>
 </template>

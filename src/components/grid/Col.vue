@@ -9,6 +9,16 @@
   </div>
 </template>
 <script>
+  let validator = (value) => {
+    let keys = Object.keys(value);
+    let valid = true;
+    keys.forEach(key => {
+      if (!['span', 'offset'].includes(key)) {
+        valid = false;
+      }
+    });
+    return valid;
+  };
   export default {
     props: {
       span: {
@@ -17,71 +27,10 @@
       offset: {
         type: Number
       },
-      phone: {
-        type: Object,
-        validator(value) {
-          let keys = Object.keys(value);
-          let valid = true;
-          keys.forEach(key => {
-            if (!['span', 'offset'].includes(key)) {
-              valid = false;
-            }
-          });
-          return valid;
-        }
-      },
-      iPad: {
-        type: Object,
-        validator(value) {
-          let keys = Object.keys(value);
-          let valid = true;
-          keys.forEach(key => {
-            if (!['span', 'offset'].includes(key)) {
-              valid = false;
-            }
-          });
-          return valid;
-        }
-      },
-      narrowPc: {
-        type: Object,
-        validator(value) {
-          let keys = Object.keys(value);
-          let valid = true;
-          keys.forEach(key => {
-            if (!['span', 'offset'].includes(key)) {
-              valid = false;
-            }
-          });
-          return valid;
-        }
-      },
-      pc: {
-        type: Object,
-        validator(value) {
-          let keys = Object.keys(value);
-          let valid = true;
-          keys.forEach(key => {
-            if (!['span', 'offset'].includes(key)) {
-              valid = false;
-            }
-          });
-          return valid;
-        }
-      },
-      widePc: {
-        type: Object,
-        validator(value) {
-          let keys = Object.keys(value);
-          let valid = true;
-          keys.forEach(key => {
-            if (!['span', 'offset'].includes(key)) {
-              valid = false;
-            }
-          });
-          return valid;
-        }
-      },
+      iPad: {type: Object, validator},
+      narrowPc: {type: Object, validator},
+      pc: {type: Object, validator},
+      widePc: {type: Object, validator},
     },
     data() {
       return {
@@ -93,15 +42,14 @@
     },
     computed: {
       colClass() {
-        let {span, offset, phone} = this;
-        let phoneClass = []
-        if (phone){
-          phoneClass=[`col-phone-${phone.span}`]
-        }
+        let {span, offset, iPad, narrowPc, pc, widePc} = this;
         return [
           span && `col-${span}`,
           offset && `offset-${offset}`,
-          ...phoneClass
+          iPad && `col-iPad-${iPad.span}`,
+          narrowPc && `col-narrowPc-${narrowPc.span}`,
+          pc && `col-pc-${pc.span}`,
+          widePc && `col-widePc-${widePc.span}`
         ];
       },
       colStyle() {
@@ -117,6 +65,7 @@
   .col {
     height: 100px;
     /*width: 50%;*/
+    //默认手机
     $class-prefix: col-;
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n} {
@@ -130,43 +79,24 @@
         margin-left: ($n / 24) * 100%;
       }
     }
-
-//宽PC
-    @media (max-width: 1201px) {
-      $class-prefix: col-wide-pc-;
+    //iPad
+    @media (min-width: 577px) {
+      $class-prefix: col-iPad-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
           width: ($n / 24) * 100%;
         }
       }
 
-      $class-prefix: offset-wide-pc-;
+      $class-prefix: offset-iPad-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
           margin-left: ($n / 24) * 100%;
         }
       }
     }
-
-//正常pc
-    @media (min-width: 933px) and (max-width: 1200px) {
-      $class-prefix: col-pc-;
-      @for $n from 1 through 24 {
-        &.#{$class-prefix}#{$n} {
-          width: ($n / 24) * 100%;
-        }
-      }
-
-      $class-prefix: offset-pc-;
-      @for $n from 1 through 24 {
-        &.#{$class-prefix}#{$n} {
-          margin-left: ($n / 24) * 100%;
-        }
-      }
-    }
-
     //窄PC
-    @media (min-width: 769px) and (max-width: 992px) {
+    @media (min-width: 769px) {
       $class-prefix: col-narrow-pc-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
@@ -181,34 +111,32 @@
         }
       }
     }
-
-    //ipad
-    @media (min-width: 577px) and (max-width: 786px) {
-      $class-prefix: col-ipad-;
+    //正常pc
+    @media (min-width: 933px) {
+      $class-prefix: col-pc-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
           width: ($n / 24) * 100%;
         }
       }
 
-      $class-prefix: offset-ipad-;
+      $class-prefix: offset-pc-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
           margin-left: ($n / 24) * 100%;
         }
       }
     }
-
-    //手机
-    @media (max-width: 567px) {
-      $class-prefix: col-phone-;
+    //宽PC
+    @media (max-width: 1201px) {
+      $class-prefix: col-wide-pc-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
           width: ($n / 24) * 100%;
         }
       }
 
-      $class-prefix: offset-ipad-;
+      $class-prefix: offset-wide-pc-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
           margin-left: ($n / 24) * 100%;
