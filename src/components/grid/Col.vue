@@ -1,6 +1,6 @@
 <template>
-  <div class="col" :class="[span&&`col-${span}`,offset&&`offset-${offset}`]"
-       :style="{paddingLeft: gutter/2 + 'px', paddingRight: gutter/2 + 'px'}"
+  <div class="col" :class="colClass"
+       :style="colStyle"
   >
     <div class="content">
       <slot></slot>
@@ -19,6 +19,21 @@
     mounted() {
       this.gutter = this.$parent.gutter;
     },
+    computed: {
+      colClass() {
+        let {span, offset} = this;
+        return [
+          span && `col-${span}`,
+          offset && `offset-${offset}`
+        ];
+      },
+      colStyle() {
+        return {
+          paddingLeft: this.gutter / 2 + 'px',
+          paddingRight: this.gutter / 2 + 'px'
+        };
+      }
+    }
   };
 </script>
 <style lang="scss">
@@ -38,7 +53,8 @@
         margin-left: ($n / 24) * 100%;
       }
     }
-    .content{
+
+    .content {
       background: yellow;
       border: 1px solid red;
       height: 100%;

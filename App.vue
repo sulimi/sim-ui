@@ -1,14 +1,11 @@
 <template>
   <div id="app">
-    <div style="border: 1px solid black;">
       <g-row gutter="10">
         <g-col span="2"></g-col>
         <g-col span="4"></g-col>
         <g-col span="6"></g-col>
         <g-col span="12"></g-col>
       </g-row>
-    </div>
-
   </div>
 </template>
 
