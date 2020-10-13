@@ -1,12 +1,11 @@
 <template>
   <div id="app">
     <g-row class="wrapper">
-      <g-col class="demo" span="12"
-             :iPad="{span:8, offset:10}"></g-col>
-      <g-col class="demo" span="6"
-             :iPad="{span:8, offset:10}"></g-col>
-      <g-col class="demo" span="6"
-             :iPad="{span:8, offset:10}"></g-col>
+      <g-col class="demo" span="12" offset="10"
+             :iPad="{span:8, offset:10}"
+             :narrowPc="{span:8, offset:10}"
+             :pc="{span:8, offset:10}"
+             :widePc="{span:8, offset:10}"></g-col>
     </g-row>
   </div>
 </template>

@@ -25,7 +25,7 @@
         type: [String, Number]
       },
       offset: {
-        type: Number
+        type: [Number,String]
       },
       iPad: {type: Object, validator},
       narrowPc: {type: Object, validator},
@@ -50,7 +50,7 @@
           array.push(`col-${str}${spanAndoffsetObj.span}`)
         }
         if (spanAndoffsetObj.offset){
-          array.push(`col-${str}${spanAndoffsetObj.offset}`)
+          array.push(`offset-${str}${spanAndoffsetObj.offset}`)
         }
         return array
       }
