@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-
+    <g-row class="wrapper">
+      <g-col class="demo" span="12" :phone="{span:8, offset:10}"></g-col>
+      <g-col class="demo" span="6" :phone="{span:8, offset:10}"></g-col>
+      <g-col class="demo" span="6" :phone="{span:8, offset:10}"></g-col>
+    </g-row>
   </div>
 </template>
 
@@ -20,6 +24,13 @@
   @import "src/assets/reset.scss";
   @import "src/assets/helper.scss";
 
+  .wrapper {
+    background: yellow;
+  }
+
+  .demo {
+    border: 1px solid red;
+  }
 
   html {
     --button-bg: white;
