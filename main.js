@@ -32,7 +32,7 @@ Vue.component('g-header', Header);
 Vue.component('g-toast', Toast);
 new Vue({
   mounted() {
-    this.$toast('撒国际奥赛就挂了看见大法官克拉刻录机第三个路口附近', {
+    this.$toast('撒国', {
       closeButton: {
         text: '关闭了',
         callback: () => {
