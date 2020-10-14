@@ -2,7 +2,6 @@
   <div id="app">
     <div>
       点我
-      <g-toast></g-toast>
     </div>
   </div>
 </template>
