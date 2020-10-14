@@ -18,11 +18,11 @@
     methods: {
       showToast(){
         this.$toast('我出现了', {
-          position: 'bottom',
+          // position: 'bottom',
           closeButton: {
             text: '关闭',
             callback: () => {
-              console.log('用户点击了关闭');
+              // console.log('用户点击了关闭');
             }
           },
         });

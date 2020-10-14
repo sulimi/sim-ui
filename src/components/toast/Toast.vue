@@ -67,7 +67,9 @@
         });
       },
       close() {
+        console.log('调用了关闭函数');
         this.$el.remove();
+        this.$emit('close')
         this.$destroy();
       },
       onClickFun() {
@@ -81,7 +83,19 @@
 </script>
 
 <style lang="scss" scoped>
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(100%)
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%)
+    }
+  }
+
   .toast {
+    animation: fade-in 1s;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -110,13 +124,16 @@
       border-left: 1px solid #666;
       margin-left: 16px;
     }
-    &.position-top{
+
+    &.position-top {
       top: 0;
     }
-    &.position-bottom{
+
+    &.position-bottom {
       bottom: 0;
     }
-    &.position-middle{
+
+    &.position-middle {
       top: 50%;
       transform: translate(-50%);
     }
