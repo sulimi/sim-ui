@@ -14,12 +14,11 @@
   export default {
     props: {
       autoClose: {
-        type: Boolean,
-        default: true
-      },
-      autoCloseDelay: {
-        type: Number,
-        default: 5
+        type: [Boolean, String],
+        default: true,
+        validator(value) {
+          return value === false || typeof value === 'number';
+        }
       },
       closeButton: {
         type: Object,
@@ -59,7 +58,7 @@
         if (this.autoClose) {
           setTimeout(() => {
             this.close();
-          }, this.autoCloseDelay * 9000000);
+          }, this.autoClose * 9000000);
         }
       },
       updateStyles() {
@@ -71,7 +70,7 @@
       close() {
         console.log('调用了关闭函数');
         this.$el.remove();
-        this.$emit('close')
+        this.$emit('close');
         this.$destroy();
       },
       onClickFun() {
@@ -86,14 +85,16 @@
 
 <style lang="scss" scoped>
   $animation-duration: 1s;
-  .wrapper{
+  .wrapper {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+
     &.position-top {
 
       top: 0;
-      .toast{
+
+      .toast {
         animation: slide-down $animation-duration;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -103,7 +104,8 @@
     &.position-bottom {
 
       bottom: 0;
-      .toast{
+
+      .toast {
         animation: slide-up $animation-duration;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -113,11 +115,13 @@
     &.position-middle {
       top: 50%;
       transform: translateX(-50%) translateY(-50%);
-      .toast{
+
+      .toast {
         animation: fade-in $animation-duration;
       }
     }
   }
+
   @keyframes slide-up {
     0% {
       opacity: 0;
@@ -128,6 +132,7 @@
       transform: translateY(0%)
     }
   }
+
   @keyframes slide-down {
     0% {
       opacity: 0;
@@ -138,6 +143,7 @@
       transform: translateY(0%)
     }
   }
+
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -146,6 +152,7 @@
       opacity: 1;
     }
   }
+
   .toast {
     display: flex;
     justify-content: space-between;
