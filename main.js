@@ -31,17 +31,6 @@ Vue.component('g-header', Header);
 
 Vue.component('g-toast', Toast);
 new Vue({
-  mounted() {
-    this.$toast('撒国', {
-      position: 'bottom',
-      closeButton: {
-        text: '关闭了',
-        callback: () => {
-          console.log('用户点击了关闭');
-        }
-      },
-    });
-  },
   render: h => h(App)
 }).$mount('#app');
 

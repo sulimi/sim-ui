@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div>
+    <div @click="showToast">
       点我
     </div>
   </div>
@@ -14,6 +14,19 @@
         loading2: true,
         message: ''
       };
+    },
+    methods: {
+      showToast(){
+        this.$toast('我出现了', {
+          position: 'bottom',
+          closeButton: {
+            text: '关闭',
+            callback: () => {
+              console.log('用户点击了关闭');
+            }
+          },
+        });
+      }
     },
   };
 </script>
