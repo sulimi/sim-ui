@@ -33,6 +33,7 @@ Vue.component('g-toast', Toast);
 new Vue({
   mounted() {
     this.$toast('撒国', {
+      position: 'bottom',
       closeButton: {
         text: '关闭了',
         callback: () => {
