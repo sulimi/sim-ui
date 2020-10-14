@@ -75,7 +75,7 @@
     }
   };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .col {
     height: 100px;
     /*width: 50%;*/

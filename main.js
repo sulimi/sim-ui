@@ -6,11 +6,15 @@ import ButtonGroup from './src/components/button/ButtonGroup.vue';
 import Input from './src/components/input/Input.vue';
 import Row from './src/components/grid/Row.vue';
 import Col from './src/components/grid/Col.vue';
-import Layout from './src/components/layout/Layout.vue'
-import Content from './src/components/layout/Content.vue'
-import Footer from './src/components/layout/Footer.vue'
-import Sider from './src/components/layout/Sider.vue'
-import Header from './src/components/layout/Header.vue'
+import Layout from './src/components/layout/Layout.vue';
+import Content from './src/components/layout/Content.vue';
+import Footer from './src/components/layout/Footer.vue';
+import Sider from './src/components/layout/Sider.vue';
+import Header from './src/components/layout/Header.vue';
+import Toast from './src/components/toast/Toast.vue';
+import plugin from './src/plugin.js';
+
+Vue.use(plugin);
 
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
@@ -24,7 +28,12 @@ Vue.component('g-content', Content);
 Vue.component('g-footer', Footer);
 Vue.component('g-sider', Sider);
 Vue.component('g-header', Header);
+
+Vue.component('g-toast', Toast);
 new Vue({
+  mounted() {
+    this.$toast('我是一个提示框');
+  },
   render: h => h(App)
 }).$mount('#app');
 
