@@ -32,7 +32,14 @@ Vue.component('g-header', Header);
 Vue.component('g-toast', Toast);
 new Vue({
   mounted() {
-    this.$toast('我是一个提示框');
+    this.$toast('撒国际奥赛就挂了看见大法官克拉刻录机第三个路口附近', {
+      closeButton: {
+        text: '关闭了',
+        callback: () => {
+          console.log('用户点击了关闭');
+        }
+      },
+    });
   },
   render: h => h(App)
 }).$mount('#app');

@@ -1,7 +1,8 @@
 <template>
-  <div class="toast">
-    <slot></slot>
-    <div class="line"></div>
+  <div class="toast" ref="toast">
+    <slot v-if="!enableHtml"></slot>
+    <div v-html="$slots.default[0]" v-else></div>
+    <div class="line" ref="line"></div>
     <span class="close" v-if="closeButton" @click="onClickFun">{{closeButton.text}}</span>
   </div>
 </template>
@@ -26,23 +27,42 @@
             }
           };
         }
+      },
+      enableHtml: {
+        type: Boolean,
+        default: false
       }
     },
+    created() {
+      console.log(this.closeButton.text);
+    },
     mounted() {
-      // if (this.autoClose) {
-      //   setTimeout(() => {
-      //     this.close();
-      //   }, this.autoCloseDelay * 1000);
-      // }
+      this.execAutoClose();
+      this.updateStyles();
     },
     methods: {
+      updateStyles() {
+        this.$nextTick(() => {
+          this.$refs.line.style.height =
+            `${this.$refs.toast.getBoundingClientRect().height}px`;
+        });
+      },
+      execAutoClose() {
+        if (this.autoClose) {
+          setTimeout(() => {
+            this.close();
+          }, this.autoCloseDelay * 9000000);
+        }
+      },
       close() {
         this.$el.remove();
         this.$destroy();
       },
       onClickFun() {
-        this.close()
-        this.closeButton.callback()
+        this.close();
+        if (this.closeButton && typeof this.closeButton.callback === 'function') {
+          this.closeButton.callback();
+        }
       }
     }
   };
@@ -58,7 +78,7 @@
     transform: translateX(-50%);
     font-size: 14px;
     line-height: 1.8;
-    height: 40px;
+    min-height: 40px;
     align-items: center;
     background: rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
@@ -67,12 +87,11 @@
     border-radius: 4px;
 
     .close {
-      display: flex;
       padding-left: 16px;
+      flex-shrink: 0;
     }
 
     .line {
-      height: 100%;
       border-left: 1px solid #666;
       margin-left: 16px;
     }
