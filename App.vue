@@ -17,8 +17,8 @@
     },
     methods: {
       showToast(){
-        this.$toast('我出现了', {
-          // position: 'bottom',
+        this.$toast('我出间分厘圣诞节分厘卡记录卡就科技的发达的空间分厘卡电视机发卡的现了', {
+          // position: 'middle',
           closeButton: {
             text: '关闭',
             callback: () => {
@@ -50,6 +50,7 @@
   }
 
   body {
+    height: 100vh;
     font-size: $font-size;
   }
 </style>
