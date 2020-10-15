@@ -26,7 +26,7 @@
           return {
             text: '关闭',
             callback: () => {
-              console.log('点击关闭');
+              // console.log('点击关闭');
             }
           };
         }
@@ -68,7 +68,7 @@
         });
       },
       close() {
-        console.log('调用了关闭函数');
+        // console.log('调用了关闭函数');
         this.$el.remove();
         this.$emit('close');
         this.$destroy();
@@ -161,7 +161,7 @@
     min-height: 40px;
     align-items: center;
     background: rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
     color: #fff;
     padding: 0 16px;
     border-radius: 4px;

@@ -5,7 +5,7 @@
 </template>
 <script>
   export default {
-
+    inject: ['eventBus']
   }
 </script>
 <style lang="scss" scoped>

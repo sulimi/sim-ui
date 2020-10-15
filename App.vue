@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <g-tabs :selected.sync="sports" >
+    <g-tabs :selected.sync="selectedTab" >
       <g-tabs-head>
         <template slot="actions"><button>设置</button></template>
-        <g-tabs-item name="woman" disabled><g-icon icon="error"></g-icon>美女</g-tabs-item>
+        <g-tabs-item name="woman" disabled>美女</g-tabs-item>
         <g-tabs-item name="finance">财经</g-tabs-item>
         <g-tabs-item name="sports">体育</g-tabs-item>
         <g-tabs-item name="military">军事</g-tabs-item>
       </g-tabs-head>
 
       <g-tabs-body>
-        <g-tabs-pane>美女相关资讯</g-tabs-pane>
-        <g-tabs-pane>财经相关资讯</g-tabs-pane>
-        <g-tabs-pane>体育相关资讯</g-tabs-pane>
-        <g-tabs-pane>军事相关资讯</g-tabs-pane>
+        <g-tabs-pane name="woman">美女相关资讯</g-tabs-pane>
+        <g-tabs-pane name="finance">财经相关资讯</g-tabs-pane>
+        <g-tabs-pane name="sports">体育相关资讯</g-tabs-pane>
+        <g-tabs-pane name="military">军事相关资讯</g-tabs-pane>
       </g-tabs-body>
     </g-tabs>
   </div>
@@ -27,7 +27,8 @@
       return {
         loading1: true,
         loading2: true,
-        message: ''
+        message: '',
+        selectedTab: 'sports'
       };
     },
     methods: {
@@ -43,6 +44,7 @@
         });
       }
     },
+
   };
 </script>
 
