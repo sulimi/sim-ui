@@ -18,6 +18,7 @@ import TabsHead from './src/components/tab/TabsHead.vue';
 import TabsBody from './src/components/tab/TabsBody.vue';
 import TabsItem from './src/components/tab/TabsItem.vue';
 import TabsPane from './src/components/tab/TabsPane.vue';
+import Popover from './src/components/popover/Popover.vue';
 
 Vue.use(plugin);
 
@@ -41,6 +42,8 @@ Vue.component('g-tabs-head', TabsHead);
 Vue.component('g-tabs-body', TabsBody);
 Vue.component('g-tabs-item', TabsItem);
 Vue.component('g-tabs-pane', TabsPane);
+
+Vue.component('g-popover', Popover);
 new Vue({
   render: h => h(App)
 }).$mount('#app');

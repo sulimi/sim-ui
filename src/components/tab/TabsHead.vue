@@ -17,7 +17,7 @@
         let {left: tabsLeft} = this.$el.getBoundingClientRect();
         let {width,left} = vm.$el.getBoundingClientRect();
         this.$refs.line.style.width = `${width}px`;
-        this.$refs.line.style.left = `${left-tabsLeft}px`;
+        this.$refs.line.style.left = `${left-tabsLeft-window.scrollX}px`;
       });
     }
   };

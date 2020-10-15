@@ -1,26 +1,24 @@
 <template>
   <div id="app">
-    <g-tabs :selected.sync="selectedTab" >
-      <g-tabs-head>
-        <template slot="actions"><button>设置</button></template>
-        <g-tabs-item name="woman" disabled>美女</g-tabs-item>
-        <g-tabs-item name="finance">财经</g-tabs-item>
-        <g-tabs-item name="sports">体育</g-tabs-item>
-        <g-tabs-item name="military">军事</g-tabs-item>
-      </g-tabs-head>
+    <div style="height:600px;border: 10px solid blue;"></div>
+    <div >
+      <div style="overflow: hidden;width: 100px;height: 100px;border: 1px solid red;">
+        <g-popover>
 
-      <g-tabs-body>
-        <g-tabs-pane name="woman">美女相关资讯</g-tabs-pane>
-        <g-tabs-pane name="finance">财经相关资讯</g-tabs-pane>
-        <g-tabs-pane name="sports">体育相关资讯</g-tabs-pane>
-        <g-tabs-pane name="military">军事相关资讯</g-tabs-pane>
-      </g-tabs-body>
-    </g-tabs>
+          <template slot="content">
+            <div class="content">hi，这里是气泡框</div>
+          </template>
+          <button>点我出现</button>
+        </g-popover>
+      </div>
+    </div>
   </div>
+
 </template>
 
 <script>
   import Button from './src/components/button/Button';
+
   export default {
     components: {Button},
     data() {
@@ -52,6 +50,12 @@
   @import "src/assets/reset.scss";
   @import "src/assets/helper.scss";
 
+  .content {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #666666;
+    overflow: hidden;
+  }
 
   html {
     --button-bg: white;
