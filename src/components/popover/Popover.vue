@@ -20,17 +20,14 @@
         this.$refs.contentWrapper.style.left = left + window.scrollX + 'px';
         this.$refs.contentWrapper.style.top = top + window.scrollY + 'px';
       },
+      eventHandler(e) {
+        if (this.$refs && (this.$refs.triggerWrapper.contains(e.target) || this.$refs.contentWrapper.contains(e.target))) {
+          return;
+        }
+        this.removeEven();
+      },
       listenToDocument: function () {
-        let eventHandler = (e) => {
-          if (this.$refs && (this.$refs.triggerWrapper.contains(e.target)|| this.$refs.contentWrapper.contains(e.target))) {
-            return;
-          }
-          this.visible = false;
-          document.removeEventListener('click', eventHandler);
-          console.log('移除监听document');
-        };
-        console.log('监听document');
-        document.addEventListener('click', eventHandler);
+        document.addEventListener('click', this.eventHandler);
       },
       onShow() {
         setTimeout(() => {
@@ -38,13 +35,17 @@
           this.listenToDocument();
         }, 0);
       },
+      removeEven() {
+        this.visible = false;
+        document.removeEventListener('click', this.eventHandler);
+      },
       toggle(even) {
         if (this.$refs.triggerWrapper.contains(even.target)) {
           this.visible = !this.visible;
           if (this.visible === true) {
             this.onShow();
           } else {
-            // console.log('关闭2');
+            this.removeEven();
           }
         }
       }
