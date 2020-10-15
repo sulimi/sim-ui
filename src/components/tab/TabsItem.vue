@@ -1,11 +1,11 @@
 <template>
-  <div class="tabs-item" @click="chooseTab" :class="classes">
+  <div class="tabs-item" @click="chooseTab" :class="classes" :data-name="name">
     <slot></slot>
   </div>
 </template>
 <script>
   export default {
-    name:'Tags-item',
+    name: 'Tags-item',
     inject: ['eventBus'],
     data() {
       return {
@@ -24,16 +24,23 @@
     },
     computed: {
       classes() {
-        return {active: this.active};
+        return {
+          active: this.active,
+          disabled: this.disabled
+        };
       }
     },
     methods: {
       chooseTab() {
-        this.eventBus.$emit('update:selected', this.name,this);
+        if (this.disabled) {
+          return;
+        }
+        this.eventBus.$emit('update:selected', this.name, this);
+        this.$emit('click',this)
       }
     },
     created() {
-      this.eventBus.$on('update:selected', (name,vm) => {
+      this.eventBus.$on('update:selected', (name, vm) => {
         this.active = name === this.name;
       });
     }
@@ -47,6 +54,11 @@
     height: 100%;
     display: flex;
     align-items: center;
+
+    &.disabled {
+      color: grey;
+      cursor: not-allowed;
+    }
 
     &.active {
       color: blue;

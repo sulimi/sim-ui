@@ -21,15 +21,9 @@ describe('Toast', () => {
   //     }
   //   }).$mount(div);
   //
-  //   function sleep(time) {
-  //     return new Promise((resolve) => setTimeout(resolve, time));
-  //   }
-  //
   //   vm.$on('close', () => {
   //     expect(document.body.contains(vm.$el)).to.eq(false);
-  //     sleep(500).then(() => {
   //       done();
-  //     });
   //   });
   //
   // });

@@ -31,6 +31,9 @@
       },
     },
     mounted() {
+      if (this.$children.length===0){
+        console&&console.warn&&console.warn('g-tabs的子标签应该是g-tabs-head和g-tabs-body')
+      }
       this.$children.forEach(v=>{
         if (v.$options.name === 'g-tabs-head'){
           v.$children.forEach(v=>{
