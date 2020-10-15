@@ -31,7 +31,16 @@
       },
     },
     mounted() {
-      this.eventBus.$emit('update:selected', this.selected);
+      this.$children.forEach(v=>{
+        if (v.$options.name === 'g-tabs-head'){
+          v.$children.forEach(v=>{
+            if (v.name===this.selected){
+              this.eventBus.$emit('update:selected', this.selected, v);
+            }
+          })
+        }
+      })
+
     }
   };
 </script>
