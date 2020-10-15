@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div style="height:600px;border: 10px solid blue;"></div>
+    <div style="height:60px;border: 10px solid blue;"></div>
     <div >
       <div style="overflow: hidden;width: 100px;height: 100px;border: 1px solid red;">
         <g-popover>
