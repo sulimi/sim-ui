@@ -24,11 +24,11 @@
 </script>
 <style lang="scss" scoped>
   .tabs-head {
-
     display: flex;
     height: 40px;
     align-items: center;
     position: relative;
+    border-bottom: 1px solid #ddd;
 
     .line {
       position: absolute;
@@ -42,6 +42,11 @@
 
     .actions-wrapper {
       margin-left: auto;
+      background: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1em;
     }
   }
 </style>
