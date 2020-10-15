@@ -26,13 +26,10 @@
         }
         this.removeEven();
       },
-      listenToDocument: function () {
-        document.addEventListener('click', this.eventHandler);
-      },
-      onShow() {
+      showContent() {
         setTimeout(() => {
           this.positionContent();
-          this.listenToDocument();
+          document.addEventListener('click', this.eventHandler);
         }, 0);
       },
       removeEven() {
@@ -43,7 +40,7 @@
         if (this.$refs.triggerWrapper.contains(even.target)) {
           this.visible = !this.visible;
           if (this.visible === true) {
-            this.onShow();
+            this.showContent();
           } else {
             this.removeEven();
           }
