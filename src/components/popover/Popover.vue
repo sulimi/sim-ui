@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="toggle" ref="popover">
+  <div class="popover" ref="popover">
     <div ref="contentWrapper" v-show="visible" class="content-wrapper" :class="{['position-'+position]:true}">
       <slot name="content"></slot>
     </div>
@@ -20,6 +20,29 @@
         validator(value) {
           return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0;
         }
+      },
+      trigger: {
+        type: String,
+        default: 'click',
+        validator(value) {
+          return ['click', 'hover'].indexOf(value) >= 0;
+        }
+      }
+    },
+    mounted() {
+      if (this.trigger === 'click') {
+        this.$refs.popover.addEventListener('click', this.toggle);
+      } else if (this.trigger === 'hover') {
+        this.$refs.popover.addEventListener('mouseenter', this.showContent);
+        this.$refs.popover.addEventListener('mouseleave', this.removeEven);
+      }
+    },
+    destroyed() {
+      if (this.trigger === 'click') {
+        this.$refs.popover.removeEventListener('click', this.toggle);
+      } else if (this.trigger === 'hover') {
+        this.$refs.popover.removeEventListener('mouseenter', this.showContent);
+        this.$refs.popover.removeEventListener('mouseleave', this.removeEven);
       }
     },
     methods: {
@@ -56,6 +79,7 @@
         this.removeEven();
       },
       showContent() {
+        this.visible = true;
         setTimeout(() => {
           this.positionContent();
           document.addEventListener('click', this.eventHandler);
@@ -67,11 +91,10 @@
       },
       toggle(even) {
         if (this.$refs.triggerWrapper.contains(even.target)) {
-          this.visible = !this.visible;
           if (this.visible === true) {
-            this.showContent();
-          } else {
             this.removeEven();
+          } else {
+            this.showContent();
           }
         }
       }
@@ -159,6 +182,7 @@
 
     &.position-right {
       margin-left: 10px;
+
       &::before, &::after {
         top: 50%;
         transform: translateY(-50%);
