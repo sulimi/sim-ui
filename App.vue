@@ -1,19 +1,12 @@
 <template>
-  <div id="app">
-    <div style="height:60px;border: 10px solid blue;"></div>
-    <div >
-      <div style="overflow: hidden;width: 100px;height: 100px;border: 1px solid red;">
-        <g-popover>
-
-          <template slot="content">
-            <div class="content">hi，这里是气泡框</div>
-          </template>
-          <button>点我出现</button>
-        </g-popover>
-      </div>
-    </div>
+  <div id="app" style="padding-top: 100px">
+    <g-popover>
+      <template slot="content">
+        <div class="content">hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
   </div>
-
 </template>
 
 <script>
@@ -50,12 +43,6 @@
   @import "src/assets/reset.scss";
   @import "src/assets/helper.scss";
 
-  .content {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #666666;
-    overflow: hidden;
-  }
 
   html {
     --button-bg: white;

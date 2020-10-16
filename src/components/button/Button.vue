@@ -50,8 +50,8 @@
     height: $button-height;
     padding: 1em;
     border-radius: $border-radius;
-    border: 1px solid var(--border-color);
-    background: var(--button-bg);
+    border: 1px solid #999;
+    background: white;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -85,11 +85,11 @@
 
 
     &:hover {
-      border-color: var(--border-color-hover);
+      border-color: #666;
     }
 
     &:active {
-      background-color: var(--button-active-bg);
+      background-color: #eee;
     }
 
     &:focus {

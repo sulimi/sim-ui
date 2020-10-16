@@ -3,7 +3,7 @@
     <div ref="contentWrapper" v-show="visible" class="content-wrapper">
       <slot name="content"></slot>
     </div>
-    <span ref="triggerWrapper">
+    <span ref="triggerWrapper" class="trigger">
           <slot></slot>
     </span>
   </div>
@@ -54,10 +54,40 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
+    .trigger{
+      display: inline-block;
+    }
   }
 
   .content-wrapper {
     position: absolute;
-    transform: translateY(-100%)
+    border: 1px solid #333;
+    background: #fff;
+    border-radius: 4px;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.7));
+    transform: translateY(-100%);
+    margin-top: -10px;
+    padding: 0.5em 1em;
+    max-width: 20em;
+    word-break: break-all;
+    &::before,&::after{
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 10px;
+      border: 10px solid transparent;
+
+    }
+    &::before{
+      top: 100%;
+      border-top-color: black;
+    }
+    &::after{
+      top: calc(100% - 1px);
+      border-top-color: white;
+    }
   }
+
 </style>
