@@ -1,6 +1,24 @@
 <template>
-  <div id="app" style="padding-top: 100px">
-    <g-popover>
+  <div id="app" style="padding-top: 100px;padding-left: 50px">
+    <g-popover position="top">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+    <g-popover position="bottom">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+    <g-popover position="left">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+    <g-popover position="right">
       <template slot="content">
         <div class="content">hi，这里是气泡框</div>
       </template>
