@@ -1,74 +1,11 @@
 <template>
-  <div id="app" style="padding-top: 100px;padding-left: 50px">
-    <g-popover position="top">
-      <template slot="content" slot-scope="{close}">
-        <div class="content">
-          hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框
-        </div>
-        <button @click="close">关闭</button>
-      </template>
-      <g-button>点我出现</g-button>
-    </g-popover>
-    <g-popover position="bottom">
-      <template slot="content">
-        <div class="content">
-          hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框
-        </div>
-      </template>
-      <g-button>点我出现</g-button>
-    </g-popover>
-    <g-popover position="left">
-      <template slot="content">
-        <div class="content">
-          hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框
-        </div>
-      </template>
-      <g-button>点我出现</g-button>
-    </g-popover>
-    <g-popover position="right">
-      <template slot="content">
-        <div class="content">
-          hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框
-        </div>
-      </template>
-      <g-button>点我出现</g-button>
-    </g-popover>
-    <br/>
-    <br/>
-    <br/>
+  <div id="app" style="padding: 100px">
+    <g-collapse>
+      <g-collapse-item title="标题1">内容1</g-collapse-item>
+      <g-collapse-item title="标题2">内容2</g-collapse-item>
+      <g-collapse-item title="标题3">内容3</g-collapse-item>
+    </g-collapse>
 
-    <g-popover trigger="hover" position="top">
-      <template slot="content">
-        <div class="content">
-          hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框
-        </div>
-      </template>
-      <g-button>点我出现</g-button>
-    </g-popover>
-    <g-popover trigger="hover" position="bottom">
-      <template slot="content">
-        <div class="content">
-          hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框
-        </div>
-      </template>
-      <g-button>点我出现</g-button>
-    </g-popover>
-    <g-popover trigger="hover" position="left">
-      <template slot="content">
-        <div class="content">
-          hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框
-        </div>
-      </template>
-      <g-button>点我出现</g-button>
-    </g-popover>
-    <g-popover trigger="hover" position="right">
-      <template slot="content">
-        <div class="content">
-          hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框
-        </div>
-      </template>
-      <g-button>点我出现</g-button>
-    </g-popover>
   </div>
 </template>
 
