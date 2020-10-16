@@ -134,13 +134,17 @@
     &.position-top {
       transform: translateY(-100%);
       margin-top: -10px;
+      border-bottom: none;
 
       &::before {
+        border-bottom: none;
         top: 100%;
         border-top-color: black;
+
       }
 
       &::after {
+        border-bottom: none;
         top: calc(100% - 1px);
         border-top-color: white;
       }
@@ -149,12 +153,15 @@
     &.position-bottom {
       margin-top: 10px;
 
+
       &::before {
+        border-top: none;
         bottom: 100%;
         border-bottom-color: black;
       }
 
       &::after {
+        border-top: none;
         bottom: calc(100% - 1px);
         border-bottom-color: white;
       }
@@ -164,7 +171,9 @@
       transform: translateX(-100%);
       margin-left: -10px;
 
+
       &::before, &::after {
+        border-right: none;
         left: 100%;
         top: 50%;
         transform: translateY(-50%);
@@ -183,7 +192,9 @@
     &.position-right {
       margin-left: 10px;
 
+
       &::before, &::after {
+        border-left: none;
         top: 50%;
         transform: translateY(-50%);
         right: 100%;
