@@ -1,6 +1,6 @@
 <template>
   <div class="collapse-item">
-    <div class="title" @click="open=!open">
+    <div class="title" @click="toggle">
       {{title}}
     </div>
     <div class="content" v-if="open">
@@ -9,16 +9,43 @@
   </div>
 </template>
 <script>
+
   export default {
     props: {
       title: {
         type: String,
         required: true
-      }
+      },
+      name:{type: String,required: true}
     },
-    data(){
+    data() {
       return {
         open: false
+      };
+    },
+    inject: ['eventBus'],
+    mounted() {
+      this.eventBus && this.eventBus.$on('openitem', (name) => {
+        if (name !== this.name) {
+          this.close();
+        }else {
+         this.show()
+        }
+      });
+    },
+    methods: {
+      toggle() {
+        if (this.open) {
+          this.open = false;
+        } else {
+          this.eventBus && this.eventBus.$emit('openitem', this.name);
+        }
+      },
+      close() {
+        this.open = false;
+      },
+      show(){
+        this.open=true
       }
     }
   };
@@ -41,11 +68,13 @@
         border-top: none;
       }
     }
+
     &:last-child {
-      .title:last-child{
+      .title:last-child {
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
       }
+
       .content {
         border-bottom: 1px solid #ddd;
         border-radius: 4px;
