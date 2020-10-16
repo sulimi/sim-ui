@@ -106,7 +106,6 @@
           popover.removeEventListener('mouseleave', this.close);
         }
       }
-
     },
   };
 </script>
