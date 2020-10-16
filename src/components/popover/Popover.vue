@@ -24,25 +24,30 @@
     },
     methods: {
       positionContent() {
-        let {contentWrapper, triggerWrapper} = this.$refs;
+        const {contentWrapper, triggerWrapper} = this.$refs;
         document.body.appendChild(contentWrapper);
-        let {top, left, height, width} = triggerWrapper.getBoundingClientRect();
-        let {height: cHeight} = contentWrapper.getBoundingClientRect();
-        let contentStyle = contentWrapper.style;
-        if (this.position === 'top') {
-          contentStyle.left = left + window.scrollX + 'px';
-          contentStyle.top = top + window.scrollY + 'px';
-        } else if (this.position === 'bottom') {
-          contentStyle.left = left + window.scrollX + 'px';
-          contentStyle.top = top + height + window.scrollY + 'px';
-        } else if (this.position === 'left') {
-          contentStyle.left = left + window.scrollX + 'px';
-          contentStyle.top = top - (cHeight - height) / 2 + window.scrollY + 'px';
-        } else if (this.position === 'right') {
-          contentStyle.left = left + width + window.scrollX +'px';
-          contentStyle.top = top - (cHeight - height) / 2 + window.scrollY + 'px';
-        }
-
+        const {top, left, height, width} = triggerWrapper.getBoundingClientRect();
+        const {height: cHeight} = contentWrapper.getBoundingClientRect();
+        let positions = {
+          top: {
+            left: left + window.scrollX,
+            top: top + window.scrollY
+          },
+          bottom: {
+            left: left + window.scrollX,
+            top: top + height + window.scrollY
+          },
+          left: {
+            left: left + window.scrollX,
+            top: top - (cHeight - height) / 2 + window.scrollY
+          },
+          right: {
+            left: left + width + window.scrollX,
+            top: top - (cHeight - height) / 2 + window.scrollY
+          }
+        };
+        contentWrapper.style.left = positions[this.position].left + 'px';
+        contentWrapper.style.top = positions[this.position].top + 'px';
       },
       eventHandler(e) {
         if (this.$refs && (this.$refs.triggerWrapper.contains(e.target) || this.$refs.contentWrapper.contains(e.target))) {
