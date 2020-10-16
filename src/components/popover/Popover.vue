@@ -30,20 +30,10 @@
       }
     },
     mounted() {
-      if (this.trigger === 'click') {
-        this.$refs.popover.addEventListener('click', this.toggle);
-      } else if (this.trigger === 'hover') {
-        this.$refs.popover.addEventListener('mouseenter', this.showContent);
-        this.$refs.popover.addEventListener('mouseleave', this.removeEven);
-      }
+      this.addEvent();
     },
     destroyed() {
-      if (this.trigger === 'click') {
-        this.$refs.popover.removeEventListener('click', this.toggle);
-      } else if (this.trigger === 'hover') {
-        this.$refs.popover.removeEventListener('mouseenter', this.showContent);
-        this.$refs.popover.removeEventListener('mouseleave', this.removeEven);
-      }
+      this.removeEvent();
     },
     methods: {
       positionContent() {
@@ -76,28 +66,47 @@
         if (this.$refs && (this.$refs.triggerWrapper.contains(e.target) || this.$refs.contentWrapper.contains(e.target))) {
           return;
         }
-        this.removeEven();
+        this.close();
       },
-      showContent() {
+      open() {
         this.visible = true;
         setTimeout(() => {
           this.positionContent();
           document.addEventListener('click', this.eventHandler);
         }, 0);
       },
-      removeEven() {
+      close() {
         this.visible = false;
         document.removeEventListener('click', this.eventHandler);
       },
-      toggle(even) {
+      onClick(even) {
         if (this.$refs.triggerWrapper.contains(even.target)) {
           if (this.visible === true) {
-            this.removeEven();
+            this.close();
           } else {
-            this.showContent();
+            this.open();
           }
         }
+      },
+      addEvent() {
+        let {popover} = this.$refs;
+        if (this.trigger === 'click') {
+          popover.addEventListener('click', this.onClick);
+        } else if (this.trigger === 'hover') {
+          popover.addEventListener('mouseenter', this.open);
+          popover.addEventListener('mouseleave', this.close);
+        }
+      },
+      removeEvent() {
+        let {popover} = this.$refs;
+        if (this.trigger === 'click') {
+          popover.removeEventListener('click', this.onClick);
+        } else if (this.trigger === 'hover') {
+          popover.removeEventListener('mouseenter', this.open);
+          popover.removeEventListener('mouseleave', this.close);
+        }
       }
+
     },
   };
 </script>
