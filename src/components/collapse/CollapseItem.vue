@@ -16,37 +16,31 @@
         type: String,
         required: true
       },
-      name:{type: String,required: true}
+      name: {type: String, required: true}
     },
     data() {
       return {
-        open: false
+        open: false,
       };
     },
     inject: ['eventBus'],
     mounted() {
-      this.eventBus && this.eventBus.$on('openitem', (name) => {
-        if (name !== this.name) {
-          this.close();
-        }else {
-         this.show()
+      this.eventBus && this.eventBus.$on('onSelected', (names) => {
+        if (names.indexOf(this.name) < 0) {
+          this.open = false;
+        } else {
+          this.open = true;
         }
       });
     },
     methods: {
       toggle() {
         if (this.open) {
-          this.open = false;
+          this.eventBus && this.eventBus.$emit('removeSelected', this.name);
         } else {
-          this.eventBus && this.eventBus.$emit('openitem', this.name);
+          this.eventBus && this.eventBus.$emit('addSelected', this.name);
         }
       },
-      close() {
-        this.open = false;
-      },
-      show(){
-        this.open=true
-      }
     }
   };
 </script>
