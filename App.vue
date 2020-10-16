@@ -1,10 +1,11 @@
 <template>
   <div id="app" style="padding-top: 100px;padding-left: 50px">
     <g-popover position="top">
-      <template slot="content">
+      <template slot="content" slot-scope="{close}">
         <div class="content">
           hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框
         </div>
+        <button @click="close">关闭</button>
       </template>
       <g-button>点我出现</g-button>
     </g-popover>
