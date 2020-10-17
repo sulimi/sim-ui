@@ -37,9 +37,6 @@
         return this.$attrs.hasOwnProperty('disabled');
       }
     },
-    mounted() {
-      console.log(this.disabledHave);
-    }
   };
 </script>
 <style lang="scss" scoped>

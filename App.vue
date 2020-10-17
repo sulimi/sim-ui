@@ -1,7 +1,7 @@
 <template>
   <div id="app" style="padding: 100px">
-    <g-button icon="shezhi" disabled readonly @click="a">默认按钮</g-button>
-    <g-button :loading="true" @click="a" readonly icon-position="left">加载按钮</g-button>
+    <g-button icon="shezhi" >默认按钮</g-button>
+    <g-button :loading="true" icon-position="left">加载按钮</g-button>
   </div>
 </template>
 
@@ -20,9 +20,6 @@
       };
     },
     methods: {
-      a(){
-        console.log(1);
-      },
       showToast() {
         this.$toast('我出间分厘圣诞节分厘卡记录卡就科技的发达的空间分厘卡电视机发卡的现了', {
           // position: 'middle',
