@@ -1,16 +1,12 @@
 ---
-title: 开始使用
+title: 开始
 ---
 
-2. 开始使用
+# 开始
 
-1. 添加 CSS 样式
+欢迎来到 **Mi UI**！在这里，您将可以使用 [Button](/components/button)、[Iput](/components/input)、[Grid](/components/grid) 等组件，话不多说，一起去 [安装](/install) 使用吧！
 
-    使用本框架前，请在 CSS 中开启 border-box
-    
-    ```
-    *,*::before,*::after{box-sizing: border-box}
-    ```
-    IE 8 及以上浏览器都支持此浏览器
+
+
     
  

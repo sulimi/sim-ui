@@ -1,37 +1,33 @@
 <template>
-  <div id="app" style="padding: 100px">
-    <g-button icon="shezhi" >默认按钮</g-button>
-    <g-button :loading="true" icon-position="left">加载按钮</g-button>
-  </div>
+  <g-home></g-home>
 </template>
 
 <script>
-  import Button from './src/components/button/Button';
 
   export default {
-    components: {Button},
-    data() {
-      return {
-        selectedArray:['1'],
-        loading1: true,
-        loading2: true,
-        message: '',
-        selectedTab: 'sports'
-      };
-    },
-    methods: {
-      showToast() {
-        this.$toast('我出间分厘圣诞节分厘卡记录卡就科技的发达的空间分厘卡电视机发卡的现了', {
-          // position: 'middle',
-          closeButton: {
-            text: '关闭',
-            callback: () => {
-              // console.log('用户点击了关闭');
-            }
-          },
-        });
-      }
-    },
+    // components: {Button},
+    // data() {
+    //   return {
+    //     selectedArray:['1'],
+    //     loading1: true,
+    //     loading2: true,
+    //     message: '',
+    //     selectedTab: 'sports'
+    //   };
+    // },
+    // methods: {
+    //   showToast() {
+    //     this.$toast('我出间分厘圣诞节分厘卡记录卡就科技的发达的空间分厘卡电视机发卡的现了', {
+    //       // position: 'middle',
+    //       closeButton: {
+    //         text: '关闭',
+    //         callback: () => {
+    //           // console.log('用户点击了关闭');
+    //         }
+    //       },
+    //     });
+    //   }
+    // },
 
   };
 </script>
@@ -39,16 +35,6 @@
 <style lang="scss" scoped>
   @import "src/assets/reset.scss";
   @import "src/assets/helper.scss";
-
-
-  /*html {*/
-  /*  --button-bg: white;*/
-  /*  --button-active-bg: #eee;*/
-  /*  --color: #333;*/
-  /*  --border-color: #999;*/
-  /*  --border-color-hover: #666;*/
-  /*  --box-shadow-color: rgb(0, 0, 0, 0.5)*/
-  /*}*/
 
   #app {
     margin: 20px

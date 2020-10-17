@@ -8,9 +8,7 @@
       <g-button>下一页</g-button>
     </g-button-group>
 
-    <pre>
-      <code>{{content}}</code>
-    </pre>
+    <pre><code>{{content}}</code></pre>
 
   </div>
 </template>
@@ -25,7 +23,6 @@
     },
     data(){
       return {
-        a:'jj',
         content: `
         <g-button>默认按钮</g-button>
         <g-button>加载按钮</g-button>
@@ -34,7 +31,8 @@
           <g-button>上一页</g-button>
           <g-button>下一页</g-button>
         </g-button-group>
-        `};
+        `.replace(/\t+| +/g, '').trim()
+      };
     }
   };
 </script>

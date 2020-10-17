@@ -1,7 +1,7 @@
 ---
-title: Button - 按钮
+title: Tabs - 标签
 ---
-# 按钮
+# 标签
 
 使用方法
 

@@ -1,7 +1,7 @@
 ---
-title: Button - 按钮
+title: Input - 输入框
 ---
-# 按钮
+# 输入框
 
 使用方法
 
