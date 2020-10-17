@@ -1,13 +1,19 @@
 <template>
-    <svg class="g-icon" >
-      <use :xlink:href=`#icon-${icon}`></use>
-    </svg>
+  <svg class="g-icon">
+    <use :xlink:href=`#icon-${icon}`></use>
+  </svg>
 </template>
 
 <script>
-  import '../svg.js'
+  import '../svg.js';
+
   export default {
-    props: ['icon']
+    name:'Icon',
+    props: {
+      icon: {
+        type: String
+      }
+    }
   };
 </script>
 

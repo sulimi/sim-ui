@@ -1,5 +1,5 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}"
+  <button class="g-button" :class="{[`icon-${iconPosition}`]:true,'disabledHave':disabledHave}"
           @click="$emit('click')">
     <g-icon class="icon loading" icon="jiazaizhong" v-if="loading"></g-icon>
     <g-icon class="icon" :icon="icon" v-if="icon&&!loading"></g-icon>
@@ -31,11 +31,20 @@
           return value === 'left' || value === 'right';
         }
       }
+    },
+    computed: {
+      disabledHave() {
+        return this.$attrs.hasOwnProperty('disabled');
+      }
+    },
+    mounted() {
+      console.log(this.disabledHave);
     }
   };
 </script>
 <style lang="scss" scoped>
   @import "../../assets/helper";
+
   @keyframes g-spin {
     0% {
       transform: rotate(0deg);
@@ -56,6 +65,16 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
+
+    &.disabledHave {
+      border-color: #bbb;
+      color: #bbb;
+      cursor: not-allowed;
+
+      .icon {
+        fill: #bbb
+      }
+    }
 
     .icon {
       order: 1;
