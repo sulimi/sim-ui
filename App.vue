@@ -1,11 +1,7 @@
 <template>
   <div id="app" style="padding: 100px">
-    <g-collapse :selected.sync="selectedArray">
-      <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>
-      <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>
-      <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
-    </g-collapse>
-{{selectedArray}}
+    <g-button icon="shezhi">默认按钮</g-button>
+    <g-button :loading="true">加载按钮</g-button>
   </div>
 </template>
 
