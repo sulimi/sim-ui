@@ -45,14 +45,14 @@
   @import "src/assets/helper.scss";
 
 
-  html {
-    --button-bg: white;
-    --button-active-bg: #eee;
-    --color: #333;
-    --border-color: #999;
-    --border-color-hover: #666;
-    --box-shadow-color: rgb(0, 0, 0, 0.5)
-  }
+  /*html {*/
+  /*  --button-bg: white;*/
+  /*  --button-active-bg: #eee;*/
+  /*  --color: #333;*/
+  /*  --border-color: #999;*/
+  /*  --border-color-hover: #666;*/
+  /*  --box-shadow-color: rgb(0, 0, 0, 0.5)*/
+  /*}*/
 
   #app {
     margin: 20px

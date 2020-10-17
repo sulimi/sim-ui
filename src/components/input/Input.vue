@@ -1,11 +1,13 @@
 <template>
   <div class="wrapper">
-    <input :class="{'error': error}" :value="value" :disabled="disabled" :readonly="readonly"
-           @change="$emit('change', $event.target.value)"
-           @input="$emit('input', $event.target.value)"
-           @focus="$emit('focus', $event.target.value)"
-           @blur="$emit('blur', $event.target.value)"
-    />
+    <label>
+      <input :class="{'error': error}" :value="value" :disabled="disabled" :readonly="readonly"
+             @change="$emit('change', $event.target.value)"
+             @input="$emit('input', $event.target.value)"
+             @focus="$emit('focus', $event.target.value)"
+             @blur="$emit('blur', $event.target.value)"
+      />
+    </label>
     <template v-if="error">
       <g-icon icon="error" class="error-icon"></g-icon>
       <span class="error-message">{{error}}</span>
@@ -50,18 +52,18 @@
 
     input {
       height: $button-height;
-      border: 1px solid var(--border-color);
+      border: 1px solid  #999;
       border-radius: $border-radius;
       padding: 0 8px;
       font-size: inherit;
 
       &:hover {
-        border-color: var(--border-color-hover);
+        border-color: #666;
       }
 
       &:focus {
         outline: none;
-        box-shadow: inset 0 1px 3px var(--box-shadow-color);
+        box-shadow: inset 0 1px 3px rgb(0, 0, 0, 0.5);
       }
 
       &[disabled], &[readonly] {
