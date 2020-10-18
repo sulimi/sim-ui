@@ -21,10 +21,8 @@ import TabsPane from './src/components/tab/TabsPane.vue';
 import Popover from './src/components/popover/Popover.vue';
 import Collapse from './src/components/collapse/Collapse.vue';
 import CollapseItem from './src/components/collapse/CollapseItem.vue';
-import Home from './src/views/Home.vue';
 Vue.use(plugin);
 
-Vue.component('g-home', Home);
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
 Vue.component('g-button-group', ButtonGroup);

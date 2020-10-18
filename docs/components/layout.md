@@ -3,8 +3,20 @@ title: Layout - 布局
 ---
 # 布局
 
-使用方法
-
 <ClientOnly>
-  <button-demos></button-demos>
+<template>
+<Container title="类型">
+<template #list>
+
+888
+
+</template>
+<template #code>
+
+  ```vue
+  
+  ```
+</template>
+</Container>
+</template>
 </ClientOnly>

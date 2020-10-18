@@ -5,30 +5,31 @@ let currentToast;
 
 export default {
   install(Vue, options) {
-    Vue.prototype.$toast = function (message, toastOptions) {
+    Vue.prototype.$toast = function (toastOptions) {
       if (currentToast) {
         currentToast.close();
       }
       currentToast = createToast({
         Vue,
-        message,
         propsData: toastOptions,
         onClose: () => {
           currentToast = null
         }
       });
+      // console.log(currentToast);
     };
   }
 };
 
 
 //帮助函数
-function createToast({Vue, message, propsData, onClose}) {
+function createToast({Vue,propsData, onClose}) {
   let Constructor = Vue.extend(Toast);
   let toast = new Constructor({
     propsData
   });
-  toast.$slots.default = [message];
+  const {text}=propsData
+  toast.$slots.default = [text];
   toast.$mount();
   toast.$on('close', onClose);
   document.body.appendChild(toast.$el);

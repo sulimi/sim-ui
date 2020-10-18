@@ -5,7 +5,7 @@
         <slot v-if="!enableHtml"></slot>
         <div v-html="$slots.default[0]" v-else></div>
       </div>
-      <div class="line" ref="line"></div>
+      <div class="line" ref="line" v-if="closeButton"></div>
       <span class="close" v-if="closeButton" @click="onClickFun">{{closeButton.text}}</span>
     </div>
   </div>
@@ -20,16 +20,19 @@
           return value === false || typeof value === 'number';
         }
       },
+      text:{
+        type:String,
+        required: true
+      },
+      type:{
+        type:String,
+        default: 'normal',
+        validator(value){
+          return ['normal','warning', 'info', 'error','success'].indexOf(value) >= 0;
+        }
+      },
       closeButton: {
         type: Object,
-        default: () => {
-          return {
-            text: '关闭',
-            callback: () => {
-              // console.log('点击关闭');
-            }
-          };
-        }
       },
       enableHtml: {
         type: Boolean,
@@ -63,8 +66,9 @@
       },
       updateStyles() {
         this.$nextTick(() => {
-          this.$refs.line.style.height =
-            `${this.$refs.toast.getBoundingClientRect().height}px`;
+
+          this.$refs.line?this.$refs.line.style.height =
+            `${this.$refs.toast.getBoundingClientRect().height}px`:'';
         });
       },
       close() {
@@ -91,7 +95,7 @@
     transform: translateX(-50%);
 
     &.position-top {
-
+z-index: 20;
       top: 0;
 
       .toast {
