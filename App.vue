@@ -1,14 +1,21 @@
 <template>
   <div id="app">
+    <g-layout class="wrapper">
+      <g-sider class="sider" :close-button="true">lkjlkhlkhlj</g-sider>
 
+      <g-layout class="inside">
+        <g-header class="header"></g-header>
+        <g-content class="content"></g-content>
+        <g-footer class="footer"></g-footer>
+      </g-layout>
+
+
+    </g-layout>
   </div>
 </template>
 
 <script>
-  import Button from './src/components/button/Button';
-
   export default {
-    components: {Button},
     data() {
       return {
         loading1: true,
@@ -16,39 +23,39 @@
         message: ''
       };
     },
-    methods: {
-      showToast() {
-        this.$toast(
-          {
-            text: '提示',
-            // position: 'top',
-            closeButton: {
-              text: '关闭',
-              callback: () => {
-                console.log('用户点击了关闭');
-              }
-            },
-          }
-        );
-      }
-    },
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import "src/assets/reset.scss";
   @import "src/assets/helper.scss";
 
-  %colitem {
-    min-height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border: 1px solid red;
+  .wrapper {
+    height: 500px;
+    border: 1px solid #333333;
+    .sider {
+      min-width: 150px;
+      background: #999999;
+/*      &.fade-enter, &.fade-leave-to{
+        margin-left: -150px;
+
+      }*/
+    }
+    .inside{
+      .header{
+        background: #3eaf7c;
+        height: 100px;
+      }
+      .content{
+
+      }
+      .footer{
+        background: #666666;
+        height: 50px;
+      }
+    }
   }
 
-  .item {
-    @extend %colitem
-  }
 
   html {
     --button-bg: white;
@@ -64,7 +71,6 @@
   }
 
   body {
-    height: 100vh;
     font-size: $font-size;
   }
 </style>

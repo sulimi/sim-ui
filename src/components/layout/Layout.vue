@@ -8,10 +8,11 @@
   export default {
     data() {
       return {
-        layoutHasSiderClass: {hasSider: false}
+        layoutHasSiderClass: {hasSider: false},
+        closeB:false
       };
     },
-    mounted() {
+    mounted(){
       this.$children.forEach((v) => {
         if (v.$options.name === 'isSider') {
           this.layoutHasSiderClass.hasSider = true;
@@ -25,10 +26,17 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    transition: all .5s;
+    position: relative;
 
     &.hasSider {
       flex-direction: row;
       flex: 1;
+    }
+    button {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
