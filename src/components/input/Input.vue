@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <label>
-      <input :class="{'error': error}" :value="value" :disabled="disabled" :readonly="readonly"
+      <input v-bind="$attrs" :class="{'error': error}" :value="value" :disabled="disabled" :readonly="readonly"
              @change="$emit('change', $event.target.value)"
              @input="$emit('input', $event.target.value)"
              @focus="$emit('focus', $event.target.value)"
@@ -17,6 +17,7 @@
 
 <script>
   export default {
+    inheritAttrs:false,
     props: {
       value: {
         type: String,
@@ -32,7 +33,7 @@
       error: {
         type: String
       }
-    }
+    },
   };
 </script>
 
@@ -52,7 +53,7 @@
 
     input {
       height: $button-height;
-      border: 1px solid  #999;
+      border: 1px solid  #999999;
       border-radius: $border-radius;
       padding: 0 8px;
       font-size: inherit;
@@ -63,13 +64,14 @@
 
       &:focus {
         outline: none;
-        box-shadow: inset 0 1px 3px rgb(0, 0, 0, 0.5);
+        box-shadow: 0 0 0 2px #99caff
       }
 
       &[disabled], &[readonly] {
         border-color: #bbb;
         color: #bbb;
         cursor: not-allowed;
+        user-select:none;
       }
 
       &.error {

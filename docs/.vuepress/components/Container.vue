@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="header">
-      <h4>{{title}}</h4>
+      <h2>{{title}}</h2>
       <Button @click="open=!open">查看代码</Button>
     </div>
     <hr/>
@@ -23,7 +23,7 @@
     components: {Button},
     data() {
       return {
-        open: true
+        open: false
       };
     },
     props: {

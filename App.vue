@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <g-button @click="loading1=!loading1" :loading="loading1">加载</g-button>
+ <g-input value="内容" placeholder="Please input username"></g-input>
   </div>
 </template>
 

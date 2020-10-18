@@ -9,8 +9,8 @@ title: Button - 按钮
 <template #list>
 <mi-button>普通按钮</mi-button>
 <mi-button disabled>禁用按钮</mi-button>
-<mi-button :loading="true">加载按钮</mi-button>
-<mi-button :loading="loading" @click="loading=!loading">点击加载</mi-button>
+<mi-button :loading="true">加载中</mi-button>
+<mi-button :loading="loading" @click="loading=!loading">{{loading?'加载中':'点击加载'}}</mi-button>
 <br/>
 <br/>
 <mi-button icon="jiazaizhong">左图标按钮</mi-button>
@@ -67,9 +67,10 @@ title: Button - 按钮
 |    参数      | 说明 | 类型 | 默认值 |
 | ----------   | ---  | ---- | ------ | 
 | **icon**         | 按钮图标  | string | - |
-| **iconPosition** | 按钮图标位置，可选值：left,right  | string | left |
+| **iconPosition** | 按钮图标位置，可选值：left,right  | string | left |          
 | **loading**      | 设置按钮是否处于加载状态  | boolean | false |
 | **disabled**     | 按钮禁用状态  | boolean | false|
+
 
 
 <script>

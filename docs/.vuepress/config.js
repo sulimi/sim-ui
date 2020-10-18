@@ -24,12 +24,12 @@ module.exports = {
        sidebarDepth: 0,
        children:[
          '/components/button',
-         '/components/grid',
          '/components/input',
+         '/components/grid',
          '/components/layout',
-         '/components/popover',
-         '/components/tabs',
          '/components/toast',
+         '/components/tabs',
+         '/components/popover',
        ]
      }
    ]
