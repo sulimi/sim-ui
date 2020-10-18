@@ -9,24 +9,22 @@ title: Grid - 栅格
 <ClientOnly>
 <template>
 <Container title="基础">
-<template #list>
-<mi-row>
-<mi-col class="item" span="24">col-24</mi-col>
-</mi-row>
-
-<mi-row>
-<mi-col class="item" span="4">col-4</mi-col>
-<mi-col class="item" span="8">col-8</mi-col>
-<mi-col class="item" span="12">col-12</mi-col>
-</mi-row>
-
-<mi-row>
-<mi-col class="item" span="6">col-6</mi-col>
-<mi-col class="item" span="6">col-6</mi-col>
-<mi-col class="item" span="6">col-6</mi-col>
-<mi-col class="item" span="6">col-6</mi-col>
-</mi-row>
-</template>
+    <template #list>
+        <mi-row>
+            <mi-col class="item" span="24">col-24</mi-col>
+        </mi-row>
+        <mi-row>
+            <mi-col class="item" span="4">col-4</mi-col>
+            <mi-col class="item" span="8">col-8</mi-col>
+            <mi-col class="item" span="12">col-12</mi-col>
+        </mi-row>
+        <mi-row>
+            <mi-col class="item" span="6">col-6</mi-col>
+            <mi-col class="item" span="6">col-6</mi-col>
+            <mi-col class="item" span="6">col-6</mi-col>
+            <mi-col class="item" span="6">col-6</mi-col>
+        </mi-row>
+    </template>
 <template #code>
 
   ```vue
@@ -95,20 +93,19 @@ background: #81d2ad;
 
 <template>
 <Container title="占比偏移">
-<template #list>
-<mi-row>
-<mi-col class="item" span="2" offset="2">col-2</mi-col>
-<mi-col class="item" span="6" offset="2">col-6</mi-col>
-<mi-col class="item" span="10" offset="2">col-10</mi-col>
-</mi-row>
-
-<mi-row>
-<mi-col class="item" span="6">col-6</mi-col>
-<mi-col class="item" span="4" offset="2">col-4</mi-col>
-<mi-col class="item" span="6">col-6</mi-col>
-<mi-col class="item" span="6">col-6</mi-col>
-</mi-row>
-</template>
+    <template #list>
+        <mi-row>
+            <mi-col class="item" span="2" offset="2">col-2</mi-col>
+            <mi-col class="item" span="6" offset="2">col-6</mi-col>
+            <mi-col class="item" span="10" offset="2">col-10</mi-col>
+        </mi-row>
+        <mi-row>
+            <mi-col class="item" span="6">col-6</mi-col>
+            <mi-col class="item" span="4" offset="2">col-4</mi-col>
+            <mi-col class="item" span="6">col-6</mi-col>
+            <mi-col class="item" span="6">col-6</mi-col>
+        </mi-row>
+    </template>
 <template #code>
 
   ```vue
@@ -174,26 +171,21 @@ background: #81d2ad;
 </Container>
 </template>
 
-
-
-
-
 <template>
 <Container title="随意间隔">
-<template #list>
-<mi-row gutter="30">
-<mi-col class="item" span="4">col-4</mi-col>
-<mi-col class="item" span="8">col-8</mi-col>
-<mi-col class="item" span="12">col-12</mi-col>
-</mi-row>
-
-<mi-row gutter="10">
-<mi-col class="item" span="6">col-6</mi-col>
-<mi-col class="item" span="6">col-6</mi-col>
-<mi-col class="item" span="6">col-6</mi-col>
-<mi-col class="item" span="6">col-6</mi-col>
-</mi-row>
-</template>
+    <template #list>
+        <mi-row gutter="30">
+            <mi-col class="item" span="4">col-4</mi-col>
+            <mi-col class="item" span="8">col-8</mi-col>
+            <mi-col class="item" span="12">col-12</mi-col>
+        </mi-row>
+        <mi-row gutter="10">
+            <mi-col class="item" span="6">col-6</mi-col>
+            <mi-col class="item" span="6">col-6</mi-col>
+            <mi-col class="item" span="6">col-6</mi-col>
+            <mi-col class="item" span="6">col-6</mi-col>
+        </mi-row>
+    </template>
 <template #code>
 
   ```vue
@@ -257,29 +249,25 @@ background: #81d2ad;
 </Container>
 </template>
 
-
-
-
-
 <template>
 <Container title="flex布局">
-<template #list>
-<mi-row align="left">
-<mi-col class="item" span="4">left-col-4</mi-col>
-<mi-col class="item" span="8">left-col-8</mi-col>
-<mi-col class="item" span="8">left-col-8</mi-col>
-</mi-row>
-<mi-row align="center">
-<mi-col class="item" span="4">center-col-4</mi-col>
-<mi-col class="item" span="8">center-col-8</mi-col>
-</mi-row>
-<mi-row gutter="10"  align="right">
-<mi-col class="item" span="4">right-col-4</mi-col>
-<mi-col class="item" span="4">right-col-4</mi-col>
-<mi-col class="item" span="4">right-col-4</mi-col>
-<mi-col class="item" span="4">right-col-4</mi-col>
-</mi-row>
-</template>
+    <template #list>
+        <mi-row align="left">
+            <mi-col class="item" span="4">left-col-4</mi-col>
+            <mi-col class="item" span="8">left-col-8</mi-col>
+            <mi-col class="item" span="8">left-col-8</mi-col>
+        </mi-row>
+        <mi-row align="center">
+            <mi-col class="item" span="4">center-col-4</mi-col>
+            <mi-col class="item" span="8">center-col-8</mi-col>
+        </mi-row>
+        <mi-row gutter="10"  align="right">
+            <mi-col class="item" span="4">right-col-4</mi-col>
+            <mi-col class="item" span="4">right-col-4</mi-col>
+            <mi-col class="item" span="4">right-col-4</mi-col>
+            <mi-col class="item" span="4">right-col-4</mi-col>
+        </mi-row>
+    </template>
 <template #code>
 
   ```vue
@@ -349,27 +337,24 @@ background: #81d2ad;
 </Container>
 </template>
 
-
-
 <template>
 <Container title="响应式（默认为手机样式）">
-<template #list>
-<mi-row>
-<mi-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:1}" :pc="{span:13}" :widePc="{span:1}"
-></mi-col>
-<mi-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:6}" :pc="{span:1}" :widePc="{span:8}"
-></mi-col>
-<mi-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:17}" :pc="{span:10}" :widePc="{span:15}"
-></mi-col>
-</mi-row>
-
-<mi-row>
-<mi-col class="item" span="6" :pc="{span:2}">col-6</mi-col>
-<mi-col class="item" span="4" offset="2" :pc="{span:2}">col-4</mi-col>
-<mi-col class="item" span="6" :pc="{span:8}">col-6</mi-col>
-<mi-col class="item" span="6" :pc="{span:10}">col-6</mi-col>
-</mi-row>
-</template>
+    <template #list>
+        <mi-row>
+            <mi-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:1}" :pc="{span:13}" :widePc="{span:1}"
+            ></mi-col>
+            <mi-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:6}" :pc="{span:1}" :widePc="{span:8}"
+            ></mi-col>
+            <mi-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:17}" :pc="{span:10}" :widePc="{span:15}"
+            ></mi-col>
+        </mi-row>
+        <mi-row>
+            <mi-col class="item" span="6" :pc="{span:2}">col-6</mi-col>
+            <mi-col class="item" span="4" offset="2" :pc="{span:2}">col-4</mi-col>
+            <mi-col class="item" span="6" :pc="{span:8}">col-6</mi-col>
+            <mi-col class="item" span="6" :pc="{span:10}">col-6</mi-col>
+        </mi-row>
+    </template>
 <template #code>
 
   ```vue
@@ -449,12 +434,7 @@ background: #81d2ad;
 </template>
 </Container>
 </template>
-
 </ClientOnly>
-
-
-
-
 
 
 

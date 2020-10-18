@@ -4,16 +4,15 @@ title: Layout - 布局
 # 布局
 
 <ClientOnly>
+
 <template>
 <Container title="上中下布局">
 <template #list>
-
-<mi-layout>
-<mi-header class="mi-header">header</mi-header>
-<mi-content class="mi-content">content</mi-content>
-<mi-footer class="mi-footer">footer</mi-footer>
-</mi-layout>
-
+    <mi-layout>
+        <mi-header class="mi-header">header</mi-header>
+        <mi-content class="mi-content">content</mi-content>
+        <mi-footer class="mi-footer">footer</mi-footer>
+    </mi-layout>
 </template>
 <template #code>
 
@@ -76,20 +75,17 @@ $h:40px;
 </Container>
 </template>
 
-
 <template>
 <Container title="内容加侧边栏">
 <template #list>
-
-<mi-layout>
-<mi-header class="mi-header">header</mi-header>
-<mi-layout>
-<mi-sider class="mi-sider">sider</mi-sider>
-<mi-content class="mi-content">content</mi-content>
-</mi-layout>
-<mi-footer class="mi-footer">footer</mi-footer>
-</mi-layout>
-
+    <mi-layout>
+        <mi-header class="mi-header">header</mi-header>
+    <mi-layout>
+        <mi-sider class="mi-sider">sider</mi-sider>
+        <mi-content class="mi-content">content</mi-content>
+    </mi-layout>
+        <mi-footer class="mi-footer">footer</mi-footer>
+    </mi-layout>
 </template>
 <template #code>
 
@@ -162,20 +158,17 @@ $hh:100px;
 </Container>
 </template>
 
-
-
 <template>
 <Container title="独立侧边栏">
 <template #list>
-<mi-layout>
-<mi-sider class="mi-sider">sider</mi-sider>
-<mi-layout>
-<mi-header class="mi-header">header</mi-header>
-<mi-content class="mi-content">content</mi-content>
-<mi-footer class="mi-footer">footer</mi-footer>
-</mi-layout>
-</mi-layout>
-
+    <mi-layout>
+        <mi-sider class="mi-sider">sider</mi-sider>
+    <mi-layout>
+        <mi-header class="mi-header">header</mi-header>
+        <mi-content class="mi-content">content</mi-content>
+        <mi-footer class="mi-footer">footer</mi-footer>
+    </mi-layout>
+    </mi-layout>
 </template>
 <template #code>
 

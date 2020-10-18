@@ -6,11 +6,11 @@ title: Input - 输入框
 <ClientOnly>
 <template>
 <Container title="基础">
-<template #list>
-<mi-input placeholder="请输入内容"></mi-input>
-<mi-input placeholder="只读" readonly></mi-input>
-<mi-input placeholder="禁用" disabled></mi-input>
-</template>
+    <template #list>
+        <mi-input placeholder="请输入内容"></mi-input>
+        <mi-input placeholder="只读" readonly></mi-input>
+        <mi-input placeholder="禁用" disabled></mi-input>
+    </template>
 <template #code>
 
   ```vue
@@ -32,10 +32,10 @@ title: Input - 输入框
 
 <template>
 <Container title="双向绑定">
-<template #list>
-<mi-input  placeholder="请输入内容" v-model="value"></mi-input>
-<span style="padding-left: 1em">展示：</span><span>{{value}}</span>
-</template>
+    <template #list>
+        <mi-input  placeholder="请输入内容" v-model="value"></mi-input>
+        <span style="padding-left: 1em">展示：</span><span>{{value}}</span>
+    </template>
 <template #code>
 
   ```vue
@@ -60,9 +60,9 @@ title: Input - 输入框
 
 <template>
 <Container title="错误提示">
-<template #list>
-<mi-input  placeholder="请输入内容" value="错误的内容" error="输入错误"></mi-input>
-</template>
+    <template #list>
+        <mi-input  placeholder="请输入内容" value="错误的内容" error="输入错误"></mi-input>
+    </template>
 <template #code>
 
   ```vue
@@ -83,9 +83,9 @@ title: Input - 输入框
 
 <template>
 <Container title="一键清空">
-<template #list>
-<mi-input  :clear="true" placeholder="请输入内容" value="不想要了"></mi-input>
-</template>
+    <template #list>
+        <mi-input  :clear="true" placeholder="请输入内容" value="不想要了"></mi-input>
+    </template>
 <template #code>
 
   ```vue
