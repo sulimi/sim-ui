@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="input-wrapper">
-      <input ref="input" v-bind="$attrs" :class="{'error': error}" :value="value" :disabled="disabled"
+      <input ref="input" v-bind="$attrs" :class="{'error': error}" :disabled="disabled"
              :readonly="readonly"
              @change="$emit('change', $event.target.value)"
              @input="$emit('input', $event.target.value)"
@@ -19,12 +19,13 @@
 </template>
 
 <script>
+  import Icon from '../Icon.vue';
   export default {
+    components:{
+      'g-icon':Icon
+    },
     inheritAttrs: false,
     props: {
-      value: {
-        type: String,
-      },
       disabled: {
         type: Boolean,
         default: false
@@ -38,11 +39,8 @@
       },
       clear: {
         type: Boolean,
-        default: true
+        default: false
       }
-    },
-    mounted() {
-      console.log(this.$refs.input.value);
     },
     methods: {
       clearValue() {
@@ -107,7 +105,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        color: #666;
       }
     }
 

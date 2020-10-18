@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="header">
-      <h2>{{title}}</h2>
+      <h3>{{title}}</h3>
       <Button @click="open=!open">查看代码</Button>
     </div>
     <hr/>
@@ -43,14 +43,14 @@
     justify-content: space-between;
     align-items: flex-end;
 
-    h4 {
+    h3 {
       border-bottom: none;
     }
   }
 
   .content {
     margin: 16px 0;
-    border: 1px solid #dfe2e5;
+    border: 2px solid #3eaf7c;
     /*height: 100px;*/
     position: relative;
 
@@ -59,7 +59,7 @@
       left: 0;
       top: 0;
       padding: 4px;
-      background: #999999;
+      background: #3eaf7c;
       display: inline-flex;
       color: #fff;
       justify-content: center;
@@ -76,7 +76,7 @@
     overflow: hidden;
     transition: all .6s;
     &.open{
-      max-height: 1000px;
+      max-height: 5000px;
     }
   }
 </style>

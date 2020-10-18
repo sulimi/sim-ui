@@ -1,11 +1,12 @@
 <template>
   <div id="app">
- <g-input value="内容" placeholder="Please input username"></g-input>
+
   </div>
 </template>
 
 <script>
   import Button from './src/components/button/Button';
+
   export default {
     components: {Button},
     data() {
@@ -16,18 +17,18 @@
       };
     },
     methods: {
-      showToast(){
+      showToast() {
         this.$toast(
           {
-            text:'提示',
-          // position: 'top',
-          closeButton: {
-            text: '关闭',
-            callback: () => {
-              console.log('用户点击了关闭');
-            }
-          },
-        }
+            text: '提示',
+            // position: 'top',
+            closeButton: {
+              text: '关闭',
+              callback: () => {
+                console.log('用户点击了关闭');
+              }
+            },
+          }
         );
       }
     },
@@ -38,6 +39,16 @@
   @import "src/assets/reset.scss";
   @import "src/assets/helper.scss";
 
+  %colitem {
+    min-height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid red;
+  }
+
+  .item {
+    @extend %colitem
+  }
 
   html {
     --button-bg: white;

@@ -5,60 +5,91 @@ title: Button - 按钮
 
 <ClientOnly>
 <template>
-<Container title="类型">
+<Container title="基础">
 <template #list>
 <mi-button>普通按钮</mi-button>
 <mi-button disabled>禁用按钮</mi-button>
 <mi-button :loading="true">加载中</mi-button>
 <mi-button :loading="loading" @click="loading=!loading">{{loading?'加载中':'点击加载'}}</mi-button>
-<br/>
-<br/>
-<mi-button icon="jiazaizhong">左图标按钮</mi-button>
-<mi-button icon="jiazaizhong" iconPosition="right">右图标按钮</mi-button>
-<br/>
-<br/>
-<mi-button-group>
-    <mi-button>上一页</mi-button>
-    <mi-button>主页</mi-button>
-    <mi-button>下一页</mi-button>
-</mi-button-group>
-
 </template>
 <template #code>
 
   ```vue
 <template>
-
     <mi-button>普通按钮</mi-button>
     <mi-button disabled>禁用按钮</mi-button>
     <mi-button :loading="true">加载按钮</mi-button>
     <mi-button :loading="loading" @click="loading=!loading">点击加载</mi-button>
-
-    <mi-button icon="jiazaizhong">左图标按钮</mi-button>
-    <mi-button icon="jiazaizhong" iconPosition="right">右图标按钮</mi-button>
-
-    <mi-button-group>
-      <mi-button>上一页</mi-button>
-      <mi-button>主页</mi-button>
-      <mi-button>下一页</mi-button>
-    </mi-button-group>
-
 </template>
 <script>
     export default {
-      components: {
+      components: {},
           data() {
             return {
               loading: false,
             }
           }
-      },
     };
 </script>
   ```
 </template>
 </Container>
 </template>
+
+
+<template>
+<Container title="有图标">
+<template #list>
+<mi-button icon="jiazaizhong">左图标按钮</mi-button>
+<mi-button icon="jiazaizhong" iconPosition="right">右图标按钮</mi-button>
+</template>
+<template #code>
+
+  ```vue
+<template>
+    <mi-button icon="jiazaizhong">左图标按钮</mi-button>
+    <mi-button icon="jiazaizhong" iconPosition="right">右图标按钮</mi-button>
+</template>
+<script>
+    export default {
+      components: {},
+    };
+</script>
+  ```
+</template>
+</Container>
+</template>
+
+
+<template>
+<Container title="组合">
+<template #list>
+<mi-button-group>
+    <mi-button>上一页</mi-button>
+    <mi-button>主页</mi-button>
+    <mi-button>下一页</mi-button>
+</mi-button-group>
+</template>
+<template #code>
+
+  ```vue
+<template>
+    <mi-button-group>
+      <mi-button>上一页</mi-button>
+      <mi-button>主页</mi-button>
+      <mi-button>下一页</mi-button>
+    </mi-button-group>
+</template>
+<script>
+    export default {
+      components: {},
+    };
+</script>
+  ```
+</template>
+</Container>
+</template>
+
 </ClientOnly>
 
 

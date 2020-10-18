@@ -13,7 +13,7 @@
     let keys = Object.keys(value);
     let valid = true;
     keys.forEach(key => {
-      if (!['span', 'offset'].indexOf(key)>=0) {
+      if (['span', 'offset'].indexOf(key)<0) {
         valid = false;
       }
     });
@@ -22,7 +22,8 @@
   export default {
     props: {
       span: {
-        type: [String, Number]
+        type: [String, Number],
+        required:true
       },
       offset: {
         type: [Number,String]
@@ -31,11 +32,6 @@
       narrowPc: {type: Object, validator},
       pc: {type: Object, validator},
       widePc: {type: Object, validator},
-    },
-    data() {
-      return {
-        gutter: 0
-      };
     },
     mounted() {
       this.gutter = this.$parent.gutter;
@@ -68,8 +64,8 @@
       },
       colStyle() {
         return {
-          paddingLeft: this.gutter / 2 + 'px',
-          paddingRight: this.gutter / 2 + 'px'
+          marginLeft: this.$parent.gutter / 2 + 'px',
+          marginRight: this.$parent.gutter / 2 + 'px'
         };
       }
     }
@@ -77,8 +73,6 @@
 </script>
 <style lang="scss" scoped>
   .col {
-    height: 100px;
-    /*width: 50%;*/
     //默认手机
     $class-prefix: col-;
     @for $n from 1 through 24 {
@@ -94,7 +88,7 @@
       }
     }
     //iPad
-    @media (min-width: 577px) {
+    @media (min-width: 576px) {
       $class-prefix: col-iPad-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
@@ -110,7 +104,7 @@
       }
     }
     //窄PC
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       $class-prefix: col-narrow-pc-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
@@ -126,7 +120,7 @@
       }
     }
     //正常pc
-    @media (min-width: 933px) {
+    @media (min-width: 932px) {
       $class-prefix: col-pc-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
@@ -142,7 +136,7 @@
       }
     }
     //宽PC
-    @media (max-width: 1201px) {
+    @media (min-width: 1200px) {
       $class-prefix: col-wide-pc-;
       @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
