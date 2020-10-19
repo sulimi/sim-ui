@@ -1,10 +1,18 @@
 ---
 title: 安装
 ---
-
 # 安装
+>前言：如果你的项目没有`sass`、`sass-loader`包，请先安装。
+>安装推荐：
+>```
+>yarn add -D sass
+>yarn add -D sass-loader
+>//OR
+>npm i -D sass
+>npm i -D sass-loader
 
 
+>开始安装 Sim UI
 ## yarn
 ```shell script
 yarn add sim-ui-use
@@ -20,7 +28,7 @@ yarn add sim-ui-use
 
 ## npm
 ```shell script
-npm install sim-ui-use
+npm i sim-ui-use
 ```
 
 
