@@ -16,7 +16,6 @@ export default {
           currentToast = null
         }
       });
-      // console.log(currentToast);
     };
   }
 };
@@ -28,8 +27,8 @@ function createToast({Vue,propsData, onClose}) {
   let toast = new Constructor({
     propsData
   });
-  const {text}=propsData
-  toast.$slots.default = [text];
+  const {content}=propsData
+  toast.$slots.default = [content];
   toast.$mount();
   toast.$on('close', onClose);
   document.body.appendChild(toast.$el);

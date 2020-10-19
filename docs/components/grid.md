@@ -443,27 +443,6 @@ background: #81d2ad;
 
 
 
-## API
-
->Col
-
-|    参数      | 说明 | 类型 | 默认值 | 是否必填 |
-| ----------   | ---  | ---- | ----- | ----|
-| **span**         | 栅格占位格数  | string/number | - | 是 |
-| **offset** | 栅格向左偏移的间隔格数  | string/number | - | 否 |          
-| **iPad**      | >=576 响应式栅格  | object | - | 否 |
-| **narrowPc**     | >=768 响应式栅格  | object | -| 否 |
-| **pc**     | >=992 响应式栅格  | object | -| 否 |
-| **widePc**     | >=1200 响应式栅格  | object | -| 否 |
-
->Row
-
-|    参数      | 说明 | 类型 | 默认值 | 是否必填 |
-| ----------   | ---  | ---- | ------ | ----|
-| **gutter**         | 栅格间隔  | string/number | - | 否 |
-| **align** | flex布局下的水平布局方式，可选值：left,right,center  | string | - | 否 |          
-
-
 <script>
   import Row from '../../src/components/grid/Row.vue';
   import Col from '../../src/components/grid/Col.vue';
@@ -515,3 +494,25 @@ background: #3eaf7c;
      }
 
 </style>
+
+
+## API
+
+>Col
+
+|    参数      | 说明 | 类型 | 默认值 | 是否必填 |
+| ----------   | ---  | ---- | ----- | ----|
+| **span**         | 栅格占位格数  | string/number | - | 是 |
+| **offset** | 栅格向左偏移的间隔格数  | string/number | - | 否 |          
+| **iPad**      | >=576 响应式栅格  | object | - | 否 |
+| **narrowPc**     | >=768 响应式栅格  | object | -| 否 |
+| **pc**     | >=992 响应式栅格  | object | -| 否 |
+| **widePc**     | >=1200 响应式栅格  | object | -| 否 |
+
+>Row
+
+|    参数      | 说明 | 类型 | 默认值 | 是否必填 |
+| ----------   | ---  | ---- | ------ | ----|
+| **gutter**         | 栅格间隔  | string/number | - | 否 |
+| **align** | flex布局下的水平布局方式，可选值：left,right,center  | string | - | 否 |          
+

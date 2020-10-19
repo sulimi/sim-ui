@@ -15,22 +15,22 @@
     props: {
       autoClose: {
         type: [Boolean, Number],
-        default: 5,
+        default: 2,
         validator (value) {
           return value === false || typeof value === 'number';
         }
       },
-      text:{
+      content:{
         type:String,
         required: true
       },
-      type:{
-        type:String,
-        default: 'normal',
-        validator(value){
-          return ['normal','warning', 'info', 'error','success'].indexOf(value) >= 0;
-        }
-      },
+      // type:{
+      //   type:String,
+      //   default: 'normal',
+      //   validator(value){
+      //     return ['normal','warning', 'info', 'error','success'].indexOf(value) >= 0;
+      //   }
+      // },
       closeButton: {
         type: Object,
       },
@@ -61,7 +61,7 @@
         if (this.autoClose) {
           setTimeout(() => {
             this.close();
-          }, this.autoClose * 9000000);
+          }, this.autoClose * 1000);
         }
       },
       updateStyles() {
@@ -89,14 +89,15 @@
 
 <style lang="scss" scoped>
   $animation-duration: 1s;
+
   .wrapper {
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100;
 
     &.position-top {
-z-index: 20;
-      top: 0;
+      top: 1vh;
 
       .toast {
         animation: slide-down $animation-duration;
@@ -107,7 +108,7 @@ z-index: 20;
 
     &.position-bottom {
 
-      bottom: 0;
+      bottom: 1vh;
 
       .toast {
         animation: slide-up $animation-duration;
@@ -177,6 +178,7 @@ z-index: 20;
     .close {
       padding-left: 16px;
       flex-shrink: 0;
+      cursor: pointer;
     }
 
     .line {

@@ -94,15 +94,6 @@ title: Button - 按钮
 
 
 
-## API
-|    参数      | 说明 | 类型 | 默认值 |
-| ----------   | ---  | ---- | ------ | 
-| **icon**         | 按钮图标  | string | - |
-| **iconPosition** | 按钮图标位置，可选值：left,right  | string | left |          
-| **loading**      | 设置按钮是否处于加载状态  | boolean | false |
-| **disabled**     | 按钮禁用状态  | boolean | false|
-
-
 
 <script>
   import Button from '../../src/components/button/Button.vue';
@@ -119,3 +110,14 @@ title: Button - 按钮
         }
   };
 </script>
+
+
+
+## API
+|    参数      | 说明 | 类型 | 默认值 |
+| ----------   | ---  | ---- | ------ | 
+| **icon**         | 按钮图标  | string | - |
+| **iconPosition** | 按钮图标位置，可选值：left,right  | string | left |          
+| **loading**      | 设置按钮是否处于加载状态  | boolean | false |
+| **disabled**     | 按钮禁用状态  | boolean | false|
+
