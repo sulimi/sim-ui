@@ -52,10 +52,9 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/helper";
 
   .wrapper {
-    font-size: $font-size;
+    font-size: 14px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -69,9 +68,9 @@
 
 
       input {
-        height: $button-height;
+        height: 32px;
         border: 1px solid #999999;
-        border-radius: $border-radius;
+        border-radius: 4px;
         padding: 0 8px;
         font-size: inherit;
 

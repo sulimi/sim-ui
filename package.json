@@ -1,6 +1,6 @@
 {
   "name": "sim-ui-use",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "这是一个 UI 框架",
   "main": "dist/index.js",
   "scripts": {
@@ -38,6 +38,7 @@
     "karma-chrome-launcher": "^3.1.0",
     "karma-mocha": "^2.0.1",
     "karma-sinon-chai": "^2.0.2",
+    "marked": "^1.2.0",
     "mocha": "^8.1.3",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.27.0",

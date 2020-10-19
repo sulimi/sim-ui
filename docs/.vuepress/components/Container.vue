@@ -35,8 +35,6 @@
   };
 </script>
 <style lang="scss" scoped>
-  @import "src/assets/reset.scss";
-
   .header {
     padding: 16px 0;
     display: flex;

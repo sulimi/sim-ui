@@ -40,7 +40,6 @@
   };
 </script>
 <style lang="scss" scoped>
-  @import "../../assets/helper";
 
   @keyframes g-spin {
     0% {
@@ -52,10 +51,10 @@
   }
 
   .g-button {
-    font-size: $font-size;
-    height: $button-height;
+    font-size: 14px;
+    height: 32px;
     padding: 1em;
-    border-radius: $border-radius;
+    border-radius: 4px;
     border: 1px solid #999;
     background: white;
     display: inline-flex;
