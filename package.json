@@ -1,6 +1,6 @@
 {
   "name": "sim-ui-use",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "这是一个 UI 框架",
   "main": "dist/index.js",
   "scripts": {
