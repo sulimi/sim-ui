@@ -1,6 +1,6 @@
 module.exports = {
   base:'/sim-ui/',
-  title: 'Mi UI',
+  title: 'Sim UI',
   description: '一个好用的UI组件库',
  themeConfig: {
    displayAllHeaders: true,
