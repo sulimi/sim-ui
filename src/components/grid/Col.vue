@@ -64,8 +64,8 @@
       },
       colStyle() {
         return {
-          marginLeft: this.$parent.gutter / 2 + 'px',
-          marginRight: this.$parent.gutter / 2 + 'px'
+          paddingLeft: this.$parent.gutter / 2 + 'px',
+          paddingRight: this.$parent.gutter / 2 + 'px'
         };
       }
     }

@@ -122,10 +122,10 @@
 
   .content-wrapper {
     position: absolute;
-    border: 1px solid #333;
+    border: 1px solid #bbbbbb;
     background: #fff;
     border-radius: 4px;
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
     padding: 0.5em 1em;
     max-width: 20em;
     word-break: break-all;
@@ -147,7 +147,7 @@
       &::before {
         border-bottom: none;
         top: 100%;
-        border-top-color: black;
+        border-top-color: #bbbbbb;
 
       }
 
@@ -165,7 +165,7 @@
       &::before {
         border-top: none;
         bottom: 100%;
-        border-bottom-color: black;
+        border-bottom-color: #bbbbbb;
       }
 
       &::after {
@@ -188,7 +188,7 @@
       }
 
       &::before {
-        border-left-color: black;
+        border-left-color: #bbbbbb;
       }
 
       &::after {
@@ -209,7 +209,7 @@
       }
 
       &::before {
-        border-right-color: black;
+        border-right-color: #bbbbbb;
       }
 
       &::after {

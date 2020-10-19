@@ -8,9 +8,7 @@ title: Toast - 提示框
 <template>
 <Container title="类型">
 <template #list>
-
-888
-
+<mi-toast></mi-toast>
 </template>
 <template #code>
 
@@ -21,3 +19,14 @@ title: Toast - 提示框
 </Container>
 </template>
 </ClientOnly>
+
+
+
+<script>
+  import Toast from '../../src/components/toast/Toast.vue';
+  export default {
+    components: {
+    'mi-toast':Toast,
+    }
+  };
+</script>

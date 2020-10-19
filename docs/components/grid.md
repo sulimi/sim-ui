@@ -175,15 +175,15 @@ background: #81d2ad;
 <Container title="随意间隔">
     <template #list>
         <mi-row gutter="30">
-            <mi-col class="item" span="4">col-4</mi-col>
-            <mi-col class="item" span="8">col-8</mi-col>
-            <mi-col class="item" span="12">col-12</mi-col>
+            <mi-col span="4" class="mi-col"><div>col-4</div></mi-col>
+            <mi-col span="8" class="mi-col"><div>col-8</div></mi-col>
+            <mi-col span="12" class="mi-col"><div>col-12</div></mi-col>
         </mi-row>
         <mi-row gutter="10">
-            <mi-col class="item" span="6">col-6</mi-col>
-            <mi-col class="item" span="6">col-6</mi-col>
-            <mi-col class="item" span="6">col-6</mi-col>
-            <mi-col class="item" span="6">col-6</mi-col>
+            <mi-col span="6" class="mi-col"><div>col-6</div></mi-col>
+            <mi-col span="6" class="mi-col"><div>col-6</div></mi-col>
+            <mi-col span="6" class="mi-col"><div>col-6</div></mi-col>
+            <mi-col span="6" class="mi-col"><div>col-6</div></mi-col>
         </mi-row>
     </template>
 <template #code>
@@ -195,18 +195,19 @@ background: #81d2ad;
     <!--mi-col 列-->
     <!--span 控制占比-->
     <!--gutter 控制padding间隔-->
-    <mi-row gutter="30">
-        <mi-col class="item" span="4">col-4</mi-col>
-        <mi-col class="item" span="8">col-8</mi-col>
-        <mi-col class="item" span="12">col-12</mi-col>
-    </mi-row>
-    
-    <mi-row gutter="10">
-        <mi-col class="item" span="6">col-6</mi-col>
-        <mi-col class="item" span="6">col-6</mi-col>
-        <mi-col class="item" span="6">col-6</mi-col>
-        <mi-col class="item" span="6">col-6</mi-col>
-    </mi-row>
+    <template #list>
+        <mi-row gutter="30">
+            <mi-col span="4" class="item"><div>col-4</div></mi-col>
+            <mi-col span="8" class="item"><div>col-8</div></mi-col>
+            <mi-col span="12" class="item"><div>col-12</div></mi-col>
+        </mi-row>
+        <mi-row gutter="10">
+            <mi-col span="6" class="item"><div>col-6</div></mi-col>
+            <mi-col span="6" class="item"><div>col-6</div></mi-col>
+            <mi-col span="6" class="item"><div>col-6</div></mi-col>
+            <mi-col span="6" class="item"><div>col-6</div></mi-col>
+        </mi-row>
+    </template>
 
 </template>
 
@@ -235,13 +236,17 @@ background: #81d2ad;
 }
 
 .item:nth-child(odd){
-@extend %colitem;
-background: #81d2ad;
+    div{
+        @extend %colitem;
+        background: #81d2ad;
+    }
 }
 
 .item:nth-child(even){
-@extend %colitem;
-  background: #3eaf7c;
+    div{
+        @extend %colitem;
+        background: #3eaf7c;
+    }
 }
 </style>
   ```
@@ -253,19 +258,19 @@ background: #81d2ad;
 <Container title="flex布局">
     <template #list>
         <mi-row align="left">
-            <mi-col class="item" span="4">left-col-4</mi-col>
-            <mi-col class="item" span="8">left-col-8</mi-col>
-            <mi-col class="item" span="8">left-col-8</mi-col>
+            <mi-col class="item" span="4">left-4</mi-col>
+            <mi-col class="item" span="8">left-8</mi-col>
+            <mi-col class="item" span="8">left-8</mi-col>
         </mi-row>
         <mi-row align="center">
-            <mi-col class="item" span="4">center-col-4</mi-col>
-            <mi-col class="item" span="8">center-col-8</mi-col>
+            <mi-col class="item" span="4">center-4</mi-col>
+            <mi-col class="item" span="8">center-8</mi-col>
         </mi-row>
         <mi-row gutter="10"  align="right">
-            <mi-col class="item" span="4">right-col-4</mi-col>
-            <mi-col class="item" span="4">right-col-4</mi-col>
-            <mi-col class="item" span="4">right-col-4</mi-col>
-            <mi-col class="item" span="4">right-col-4</mi-col>
+            <mi-col class="item" span="4">right-4</mi-col>
+            <mi-col class="item" span="4">right-4</mi-col>
+            <mi-col class="item" span="4">right-4</mi-col>
+            <mi-col class="item" span="4">right-4</mi-col>
         </mi-row>
     </template>
 <template #code>
@@ -279,21 +284,21 @@ background: #81d2ad;
     <!--gutter 控制padding间隔-->
     <!--align 控制排列位置-->
     <mi-row align="left">
-        <mi-col class="item" span="4">left-col-4</mi-col>
-        <mi-col class="item" span="8">left-col-8</mi-col>
-        <mi-col class="item" span="8">left-col-8</mi-col>
+        <mi-col class="item" span="4">left-4</mi-col>
+        <mi-col class="item" span="8">left-8</mi-col>
+        <mi-col class="item" span="8">left-8</mi-col>
     </mi-row>
 
     <mi-row align="center">
-        <mi-col class="item" span="4">center-col-4</mi-col>
-        <mi-col class="item" span="8">center-col-8</mi-col>
+        <mi-col class="item" span="4">center-4</mi-col>
+        <mi-col class="item" span="8">center-8</mi-col>
     </mi-row>
 
     <mi-row gutter="10"  align="right">
-        <mi-col class="item" span="4">right-col-4</mi-col>
-        <mi-col class="item" span="4">right-col-4</mi-col>
-        <mi-col class="item" span="4">right-col-4</mi-col>
-        <mi-col class="item" span="4">right-col-4</mi-col>
+        <mi-col class="item" span="4">right-4</mi-col>
+        <mi-col class="item" span="4">right-4</mi-col>
+        <mi-col class="item" span="4">right-4</mi-col>
+        <mi-col class="item" span="4">right-4</mi-col>
     </mi-row>
 
 </template>
@@ -349,10 +354,10 @@ background: #81d2ad;
             ></mi-col>
         </mi-row>
         <mi-row>
-            <mi-col class="item" span="6" :pc="{span:2}">col-6</mi-col>
-            <mi-col class="item" span="4" offset="2" :pc="{span:2}">col-4</mi-col>
-            <mi-col class="item" span="6" :pc="{span:8}">col-6</mi-col>
-            <mi-col class="item" span="6" :pc="{span:10}">col-6</mi-col>
+            <mi-col class="item" span="6" :pc="{span:2}"></mi-col>
+            <mi-col class="item" span="4" offset="2" :pc="{span:2}"></mi-col>
+            <mi-col class="item" span="6" :pc="{span:8}"></mi-col>
+            <mi-col class="item" span="6" :pc="{span:10}"></mi-col>
         </mi-row>
     </template>
 <template #code>
@@ -495,6 +500,18 @@ background: #81d2ad;
 
 .item:nth-child(even){
 @extend %colitem;
-  background: #3eaf7c;
+background: #3eaf7c;
 }
+.mi-col:nth-child(odd)
+    div{
+        @extend %colitem;
+        background: #81d2ad;
+     }
+
+.mi-col:nth-child(even)
+    div{
+        @extend %colitem;
+         background: #3eaf7c;
+     }
+
 </style>

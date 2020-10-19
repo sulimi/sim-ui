@@ -1,60 +1,91 @@
 <template>
-  <div id="app">
-    <g-layout class="wrapper">
-      <g-sider class="sider" :close-button="true">lkjlkhlkhlj</g-sider>
+  <div id="app" style="padding-top: 100px;padding-left: 50px">
+    <g-popover position="top">
+      <template slot="content">
+        <div class="content"></div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+    <g-popover position="bottom">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+    <g-popover position="left">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+    <g-popover position="right">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+<br/>
 
-      <g-layout class="inside">
-        <g-header class="header"></g-header>
-        <g-content class="content"></g-content>
-        <g-footer class="footer"></g-footer>
-      </g-layout>
-
-
-    </g-layout>
+    <g-popover trigger="hover" position="top">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+    <g-popover trigger="hover" position="bottom">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+    <g-popover trigger="hover" position="left">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
+    <g-popover trigger="hover" position="right">
+      <template slot="content">
+        <div class="content">hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框hi，这里是气泡框</div>
+      </template>
+      <g-button>点我出现</g-button>
+    </g-popover>
   </div>
 </template>
 
 <script>
+  import Button from './src/components/button/Button';
+
   export default {
+    components: {Button},
     data() {
       return {
         loading1: true,
         loading2: true,
-        message: ''
+        message: '',
+        selectedTab: 'sports'
       };
     },
+    methods: {
+      showToast() {
+        this.$toast('我出间分厘圣诞节分厘卡记录卡就科技的发达的空间分厘卡电视机发卡的现了', {
+          // position: 'middle',
+          closeButton: {
+            text: '关闭',
+            callback: () => {
+              // console.log('用户点击了关闭');
+            }
+          },
+        });
+      }
+    },
+
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import "src/assets/reset.scss";
   @import "src/assets/helper.scss";
-
-  .wrapper {
-    height: 500px;
-    border: 1px solid #333333;
-    .sider {
-      min-width: 150px;
-      background: #999999;
-/*      &.fade-enter, &.fade-leave-to{
-        margin-left: -150px;
-
-      }*/
-    }
-    .inside{
-      .header{
-        background: #3eaf7c;
-        height: 100px;
-      }
-      .content{
-
-      }
-      .footer{
-        background: #666666;
-        height: 50px;
-      }
-    }
-  }
 
 
   html {
@@ -71,6 +102,7 @@
   }
 
   body {
+    height: 100vh;
     font-size: $font-size;
   }
 </style>
