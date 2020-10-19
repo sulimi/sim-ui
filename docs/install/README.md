@@ -7,7 +7,7 @@ title: 安装
 
 ## yarn
 ```shell script
-yarn add sim-ui
+yarn add sim-ui-use
 ```
 
 **说明：**
@@ -20,7 +20,7 @@ yarn add sim-ui
 
 ## npm
 ```shell script
-npm install sim-ui
+npm install sim-ui-use
 ```
 
 
