@@ -15,14 +15,20 @@ title: Input - 输入框
 
   ```vue
 <template>
-  <mi-input placeholder="请输入内容"></mi-input>
-  <mi-input readonly placeholder="只读"></mi-input>
-  <mi-input disabled placeholder="禁用"></mi-input>
+      <mi-input placeholder="请输入内容"></mi-input>
+      <mi-input readonly placeholder="只读"></mi-input>
+      <mi-input disabled placeholder="禁用"></mi-input>
 </template>
+
+
+
 <script>
-    export default {
-      components: {},
-    };
+  import Input from '../../src/components/input/Input.vue';
+  export default {
+    components: {
+    'mi-input':Input,
+    },
+   };
 </script>
   ```
 </template>
@@ -42,14 +48,19 @@ title: Input - 输入框
 <template>
   <mi-input  v-model="value" placeholder="请输入内容"></mi-input>
 </template>
+
+
 <script>
-    export default {
-      components: {},
-          data() {
-            return {
-              value: '双向绑定',
-            }
-          }
+  import Input from '../../src/components/input/Input.vue';
+  export default {
+    components: {
+    'mi-input':Input,
+    },
+      data() {
+        return {
+          value: '双向绑定',
+        }
+      }
     };
 </script>
   ```
@@ -67,13 +78,17 @@ title: Input - 输入框
 
   ```vue
 <template>
-   <mi-input error="输入错误"
-     placeholder="请输入内容" value="错误的内容"></mi-input>
+   <mi-input error="输入错误" placeholder="请输入内容" value="错误的内容"></mi-input>
 </template>
+
+
 <script>
-    export default {
-      components: {},
-    };
+  import Input from '../../src/components/input/Input.vue';
+  export default {
+    components: {
+    'mi-input':Input,
+    },
+   };
 </script>
   ```
 </template>
@@ -90,9 +105,10 @@ title: Input - 输入框
 
   ```vue
 <template>
-  <mi-input  :clear="true" 
-    placeholder="请输入内容" value="不想要了"></mi-input>
+  <mi-input  :clear="true" placeholder="请输入内容" value="不想要了"></mi-input>
 </template>
+
+
 <script>
     export default {
       components: {},
@@ -114,12 +130,12 @@ title: Input - 输入框
 
 >支持原生input属性
 
-|    参数      | 说明 | 类型 | 默认值 |
-| ----------   | ---  | ---- | ------ | 
-| **readonly**         | 改良后的只读输入框  | boolean | false |
-| **disabled** | 改良后的禁用输入框  | boolean | false |          
-| **error**      | 标识错误提示框，并提示错误信息  | string | - |
-| **clear**     | 添加一键清空按钮  | boolean | false|
+|    参数      | 说明 | 类型 | 默认值 | 是否必填 |
+| ----------   | ---  | ---- | ------ |  ----|
+| **readonly**         | 改良后的只读输入框  | boolean | false | 否 |
+| **disabled** | 改良后的禁用输入框  | boolean | false | 否 |
+| **error**      | 标识错误提示框，并提示错误信息  | string | - | 否 |
+| **clear**     | 添加一键清空按钮  | boolean | false| 否 |
 
 
 

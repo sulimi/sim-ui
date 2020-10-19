@@ -11,6 +11,7 @@
 </template>
 <script>
   export default {
+    name:'tabs-head',
     inject: ['eventBus'],
     mounted() {
       this.eventBus.$on('update:selected', (name, vm) => {
@@ -35,14 +36,13 @@
       bottom: 0;
       width: 100px;
       height: 2px;
-      background: blue;
+      background: #3eaf7c;
       border-radius: 1px;
       transition: left 350ms;
     }
 
     .actions-wrapper {
       margin-left: auto;
-      background: red;
       display: flex;
       align-items: center;
       justify-content: center;

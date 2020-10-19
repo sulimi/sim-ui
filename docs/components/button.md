@@ -21,14 +21,21 @@ title: Button - 按钮
     <mi-button :loading="true">加载按钮</mi-button>
     <mi-button :loading="loading" @click="loading=!loading">点击加载</mi-button>
 </template>
+
+
 <script>
+  import Button from '../../src/components/button/Button.vue';
+  import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
     export default {
-      components: {},
-          data() {
-            return {
-              loading: false,
-            }
-          }
+      components: {
+        'mi-button':Button,
+        'mi-button-group':ButtonGroup,
+      },
+      data() {
+        return {
+          loading: false,
+        }
+      }
     };
 </script>
   ```
@@ -50,9 +57,16 @@ title: Button - 按钮
     <mi-button icon="jiazaizhong">左图标按钮</mi-button>
     <mi-button icon="jiazaizhong" iconPosition="right">右图标按钮</mi-button>
 </template>
+
+
 <script>
+  import Button from '../../src/components/button/Button.vue';
+  import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
     export default {
-      components: {},
+      components: {
+        'mi-button':Button,
+        'mi-button-group':ButtonGroup,
+      },
     };
 </script>
   ```
@@ -80,9 +94,16 @@ title: Button - 按钮
       <mi-button>下一页</mi-button>
     </mi-button-group>
 </template>
+
+
 <script>
+  import Button from '../../src/components/button/Button.vue';
+  import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
     export default {
-      components: {},
+      components: {
+         'mi-button':Button,
+         'mi-button-group':ButtonGroup,
+      },
     };
 </script>
   ```
@@ -97,7 +118,7 @@ title: Button - 按钮
 
 <script>
   import Button from '../../src/components/button/Button.vue';
-    import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
+  import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
   export default {
     components: {
     'mi-button':Button,
@@ -114,10 +135,11 @@ title: Button - 按钮
 
 
 ## API
-|    参数      | 说明 | 类型 | 默认值 |
-| ----------   | ---  | ---- | ------ | 
-| **icon**         | 按钮图标  | string | - |
-| **iconPosition** | 按钮图标位置，可选值：left,right  | string | left |          
-| **loading**      | 设置按钮是否处于加载状态  | boolean | false |
-| **disabled**     | 按钮禁用状态  | boolean | false|
+|    参数      | 说明 | 类型 | 默认值 | 是否必填 |
+| ----------   | ---  | ---- | ------ |  ----|
+| **icon**         | 按钮图标  | string | - | 否 |
+| **iconPosition** | 按钮图标位置，可选值：left,right  | string | left | 否 |
+| **loading**      | 设置按钮是否处于加载状态  | boolean | false | 否 |
+| **disabled**     | 按钮禁用状态  | boolean | false| 否 |
+
 

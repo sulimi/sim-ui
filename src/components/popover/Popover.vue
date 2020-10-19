@@ -1,7 +1,7 @@
 <template>
   <div class="popover" ref="popover">
     <div ref="contentWrapper" v-show="visible" class="content-wrapper" :class="{['position-'+position]:true}">
-      <slot name="content" :close="close"></slot>
+      <slot name="content"></slot>
     </div>
     <span ref="triggerWrapper" class="trigger">
           <slot></slot>
@@ -90,6 +90,7 @@
       },
       addEvent() {
         let {popover} = this.$refs;
+        if (!popover){return}
         if (this.trigger === 'click') {
           popover.addEventListener('click', this.onClick);
         } else if (this.trigger === 'hover') {
@@ -99,6 +100,7 @@
       },
       removeEvent() {
         let {popover} = this.$refs;
+        if (!popover){return}
         if (this.trigger === 'click') {
           popover.removeEventListener('click', this.onClick);
         } else if (this.trigger === 'hover') {

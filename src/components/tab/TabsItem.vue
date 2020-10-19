@@ -1,6 +1,6 @@
 <template>
-  <div class="tabs-item" @click="chooseTab" :class="classes" :data-name="name">
-    <slot></slot>
+  <div class="tabs-item" @click="chooseTab" :class="classes" :data-name="name"><!--data-name是方便测试加的-->
+    {{name}}
   </div>
 </template>
 <script>
@@ -56,12 +56,12 @@
     align-items: center;
 
     &.disabled {
-      color: grey;
+      color: #bbbbbb;
       cursor: not-allowed;
     }
 
     &.active {
-      color: blue;
+      color: #3eaf7c;
       font-weight: bold;
     }
   }

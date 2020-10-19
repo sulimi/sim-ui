@@ -14,8 +14,10 @@ title: Toast - 提示框
 
   ```vue
 <template>
-  <mi-button @click="showToast">点我出现</mi-button>
+    <mi-button @click="showToast">点我出现</mi-button>
 </template>
+
+
 <script>
   import Vue from 'vue';
   import Button from '../../src/components/button/Button.vue';
@@ -51,8 +53,10 @@ title: Toast - 提示框
 
   ```vue
 <template>
-  <mi-button @click="showToast">点我出现</mi-button>
+    <mi-button @click="showToast">点我出现</mi-button>
 </template>
+
+
 <script>
   import Vue from 'vue';
   import Button from '../../src/components/button/Button.vue';
@@ -96,6 +100,8 @@ title: Toast - 提示框
 <template>
     <mi-button @click="showToast">点我出现</mi-button>
 </template>
+
+
 <script>
   import Vue from 'vue';
   import Button from '../../src/components/button/Button.vue';
@@ -148,6 +154,8 @@ title: Toast - 提示框
     <mi-button @click="showMiddle">中间出现</mi-button>
     <mi-button @click="showBottom">底部出现</mi-button>
 </template>
+
+
 <script>
   import Vue from 'vue';
   import Button from '../../src/components/button/Button.vue';
@@ -198,6 +206,8 @@ title: Toast - 提示框
 <template>
     <mi-button @click="showToast">点我出现</mi-button>
 </template>
+
+
 <script>
   import Vue from 'vue';
   import Button from '../../src/components/button/Button.vue';

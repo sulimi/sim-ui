@@ -12,10 +12,6 @@
       };
     },
     props: {
-      disabled: {
-        type: Boolean,
-        default: false
-      },
       name: {
         type: String,
         required: true
@@ -35,6 +31,7 @@
 </script>
 <style lang="scss" scoped>
   .tabs-pane {
+    padding: 16px;
     &.active {
 
     }

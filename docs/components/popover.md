@@ -18,13 +18,13 @@ title: Popover - 弹出层
 
   ```vue
 <template>
-<mi-popover>
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>点我出现</mi-button>
-</mi-popover>
+    <mi-popover>
+       <template slot="content"><div>hi 这是弹出层</div></template>
+       <mi-button>点我出现</mi-button>
+    </mi-popover>
 </template>
+
+
   <script>
     import Popover from '../../src/components/popover/Popover.vue';
     import Button from '../../src/components/button/Button.vue';
@@ -44,59 +44,45 @@ title: Popover - 弹出层
 <Container title="弹出方位">
 <template #list>
 <mi-popover>
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>上方出现</mi-button>
+   <template slot="content"><div>hi 这是弹出层</div></template>
+   <mi-button>上方出现</mi-button>
 </mi-popover>
 <mi-popover position="bottom">
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>下方出现</mi-button>
+   <template slot="content"><div>hi 这是弹出层</div></template>
+   <mi-button>下方出现</mi-button>
 </mi-popover>
 <mi-popover position="left">
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>左边出现</mi-button>
+   <template slot="content"><div>hi 这是弹出层</div></template>
+   <mi-button>左边出现</mi-button>
 </mi-popover>
 <mi-popover position="right">
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>右边出现</mi-button>
+   <template slot="content"><div>hi 这是弹出层</div></template>
+   <mi-button>右边出现</mi-button>
 </mi-popover>
 </template>
 <template #code>
 
   ```vue
 <template #list>
-<mi-popover>
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>上方出现</mi-button>
-</mi-popover>
-<mi-popover position="bottom">
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>下方出现</mi-button>
-</mi-popover>
-<mi-popover position="left">
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>左边出现</mi-button>
-</mi-popover>
-<mi-popover position="right">
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>右边出现</mi-button>
-</mi-popover>
+    <mi-popover>
+       <template slot="content"><div>hi 这是弹出层</div></template>
+       <mi-button>上方出现</mi-button>
+    </mi-popover>
+    <mi-popover position="bottom">
+       <template slot="content"><div>hi 这是弹出层</div></template>
+       <mi-button>下方出现</mi-button>
+    </mi-popover>
+    <mi-popover position="left">
+       <template slot="content"><div>hi 这是弹出层</div></template>
+       <mi-button>左边出现</mi-button>
+    </mi-popover>
+    <mi-popover position="right">
+       <template slot="content"><div>hi 这是弹出层</div></template>
+       <mi-button>右边出现</mi-button>
+    </mi-popover>
 </template>
+
+
   <script>
     import Popover from '../../src/components/popover/Popover.vue';
     import Button from '../../src/components/button/Button.vue';
@@ -132,21 +118,17 @@ title: Popover - 弹出层
 
   ```vue
 <template>
-<template #list>
-<mi-popover>
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>点击出现</mi-button>
-</mi-popover>
-<mi-popover trigger="hover">
-   <template slot="content">
-        <div>hi 这是弹出层</div>
-      </template>
-      <mi-button>hover出现</mi-button>
-</mi-popover>
+    <mi-popover>
+       <template slot="content"><div>hi 这是弹出层</div></template>
+       <mi-button>点击出现</mi-button>
+    </mi-popover>
+    <mi-popover trigger="hover">
+       <template slot="content"><div>hi 这是弹出层</div></template>
+       <mi-button>hover出现</mi-button>
+    </mi-popover>
 </template>
-</template>
+
+
   <script>
     import Popover from '../../src/components/popover/Popover.vue';
     import Button from '../../src/components/button/Button.vue';

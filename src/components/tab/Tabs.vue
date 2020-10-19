@@ -22,23 +22,16 @@
         type: String,
         required: true
       },
-      direction: {
-        type: String,
-        default: 'horizontal',
-        validator(value) {
-          return ['horizontal', 'vertical'].indexOf(value) >= 0;
-        }
-      },
     },
     methods: {
       checkChildren() {
         if (this.$children.length === 0) {
-          console && console.warn && console.warn('g-tabs的子标签应该是g-tabs-head和g-tabs-body');
+          console && console.warn && console.warn('Tabs的子标签应该是TabsHead和TabsBody');
         }
       },
       selectTab() {
         this.$children.forEach(v => {
-          if (v.$options.name === 'g-tabs-head') {
+          if (v.$options.name === 'tabs-head') {
             v.$children.forEach(v => {
               if (v.name === this.selected) {
                 this.eventBus.$emit('update:selected', this.selected, v);
@@ -55,7 +48,5 @@
   };
 </script>
 <style lang="scss" scoped>
-  .tabs {
 
-  }
 </style>
