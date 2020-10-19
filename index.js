@@ -1,5 +1,4 @@
 import Vue from 'vue';
-import Button from './src/components/button/Button.vue';
 import Icon from './src/components/Icon.vue';
 import ButtonGroup from './src/components/button/ButtonGroup.vue';
 import Input from './src/components/input/Input.vue';
@@ -20,6 +19,7 @@ import TabsPane from './src/components/tab/TabsPane.vue';
 import Popover from './src/components/popover/Popover.vue';
 import Collapse from './src/components/collapse/Collapse.vue';
 import CollapseItem from './src/components/collapse/CollapseItem.vue';
+import Button from './src/components/button/Button.vue';
 Vue.use(plugin);
 export {
   ButtonGroup,
