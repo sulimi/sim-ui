@@ -7,7 +7,7 @@ title: 安装
 
 ## yarn
 ```shell script
-yarn add xxx-demo
+yarn add sim-ui
 ```
 
 **说明：**
@@ -20,7 +20,7 @@ yarn add xxx-demo
 
 ## npm
 ```shell script
-npm install xxx-demo
+npm install sim-ui
 ```
 
 

@@ -7,19 +7,19 @@ title: Button - 按钮
 <template>
 <Container title="基础">
     <template #list>
-        <mi-button>普通按钮</mi-button>
-        <mi-button disabled>禁用按钮</mi-button>
-        <mi-button :loading="true">加载中</mi-button>
-        <mi-button :loading="loading" @click="loading=!loading">{{loading?'加载中':'点击加载'}}</mi-button>
+        <s-button>普通按钮</s-button>
+        <s-button disabled>禁用按钮</s-button>
+        <s-button :loading="true">加载中</s-button>
+        <s-button :loading="loading" @click="loading=!loading">{{loading?'加载中':'点击加载'}}</s-button>
     </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-button>普通按钮</mi-button>
-    <mi-button disabled>禁用按钮</mi-button>
-    <mi-button :loading="true">加载按钮</mi-button>
-    <mi-button :loading="loading" @click="loading=!loading">点击加载</mi-button>
+    <s-button>普通按钮</s-button>
+    <s-button disabled>禁用按钮</s-button>
+    <s-button :loading="true">加载按钮</s-button>
+    <s-button :loading="loading" @click="loading=!loading">点击加载</s-button>
 </template>
 
 
@@ -28,8 +28,8 @@ title: Button - 按钮
   import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
     export default {
       components: {
-        'mi-button':Button,
-        'mi-button-group':ButtonGroup,
+        's-button':Button,
+        's-button-group':ButtonGroup,
       },
       data() {
         return {
@@ -47,15 +47,15 @@ title: Button - 按钮
 <template>
 <Container title="有图标">
     <template #list>
-        <mi-button icon="jiazaizhong">左图标按钮</mi-button>
-        <mi-button icon="jiazaizhong" iconPosition="right">右图标按钮</mi-button>
+        <s-button icon="jiazaizhong">左图标按钮</s-button>
+        <s-button icon="jiazaizhong" iconPosition="right">右图标按钮</s-button>
     </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-button icon="jiazaizhong">左图标按钮</mi-button>
-    <mi-button icon="jiazaizhong" iconPosition="right">右图标按钮</mi-button>
+    <s-button icon="jiazaizhong">左图标按钮</s-button>
+    <s-button icon="jiazaizhong" iconPosition="right">右图标按钮</s-button>
 </template>
 
 
@@ -64,8 +64,8 @@ title: Button - 按钮
   import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
     export default {
       components: {
-        'mi-button':Button,
-        'mi-button-group':ButtonGroup,
+        's-button':Button,
+        's-button-group':ButtonGroup,
       },
     };
 </script>
@@ -78,21 +78,21 @@ title: Button - 按钮
 <template>
 <Container title="组合">
     <template #list>
-        <mi-button-group>
-            <mi-button>上一页</mi-button>
-            <mi-button>主页</mi-button>
-            <mi-button>下一页</mi-button>
-        </mi-button-group>
+        <s-button-group>
+            <s-button>上一页</s-button>
+            <s-button>主页</s-button>
+            <s-button>下一页</s-button>
+        </s-button-group>
     </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-button-group>
-      <mi-button>上一页</mi-button>
-      <mi-button>主页</mi-button>
-      <mi-button>下一页</mi-button>
-    </mi-button-group>
+    <s-button-group>
+      <s-button>上一页</s-button>
+      <s-button>主页</s-button>
+      <s-button>下一页</s-button>
+    </s-button-group>
 </template>
 
 
@@ -101,8 +101,8 @@ title: Button - 按钮
   import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
     export default {
       components: {
-         'mi-button':Button,
-         'mi-button-group':ButtonGroup,
+         's-button':Button,
+         's-button-group':ButtonGroup,
       },
     };
 </script>
@@ -121,8 +121,8 @@ title: Button - 按钮
   import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
   export default {
     components: {
-    'mi-button':Button,
-    'mi-button-group':ButtonGroup,
+    's-button':Button,
+    's-button-group':ButtonGroup,
     },
         data() {
           return {

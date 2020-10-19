@@ -1,5 +1,5 @@
 module.exports = {
-  base:'/sumi-ui-vue2/',
+  base:'/sim-ui/',
   title: 'Mi UI',
   description: '一个好用的UI组件库',
  themeConfig: {
@@ -7,7 +7,7 @@ module.exports = {
     nav:[
       {text: '主页', link:'/'},
       {text: '文档', link: '/get-started/'},
-      {text: '交流',link: 'https://github.com/sulimi/sumi-ui-vue2'}
+      {text: '交流',link: 'https://github.com/sulimi/sim-ui'}
     ],
    sidebar: [
      {

@@ -8,13 +8,13 @@ title: Toast - 提示框
 <template>
 <Container title="自动关闭">
     <template #list>
-        <mi-button @click="showToast">点我出现</mi-button>
+        <s-button @click="showToast">点我出现</s-button>
     </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-button @click="showToast">点我出现</mi-button>
+    <s-button @click="showToast">点我出现</s-button>
 </template>
 
 
@@ -26,7 +26,7 @@ title: Toast - 提示框
   Vue.use(plugin);
   export default {
     components: {
-    'mi-button':Button,
+    's-button':Button,
     Toast
     },
     methods: {
@@ -46,14 +46,14 @@ title: Toast - 提示框
 <template>
 <Container title="自动关闭时间">
     <template #list>
-        <mi-button @click="$toast({content: 'hi 我是提示框',
-                                   autoClose: 1})">点我出现</mi-button>
+        <s-button @click="$toast({content: 'hi 我是提示框',
+                                   autoClose: 1})">点我出现</s-button>
     </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-button @click="showToast">点我出现</mi-button>
+    <s-button @click="showToast">点我出现</s-button>
 </template>
 
 
@@ -65,7 +65,7 @@ title: Toast - 提示框
   Vue.use(plugin);
   export default {
     components: {
-    'mi-button':Button,
+    's-button':Button,
     Toast
     },
     methods: {
@@ -86,19 +86,19 @@ title: Toast - 提示框
 <template>
 <Container title="手动关闭">
     <template #list>
-       <mi-button @click="$toast({content: 'hi 我是提示框',
+       <s-button @click="$toast({content: 'hi 我是提示框',
                                   autoClose:false,
                                   closeButton:{
                                   text:'关闭',
                                   callback:()=>{}
                                   }
-                                  })">点我出现</mi-button>
+                                  })">点我出现</s-button>
     </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-button @click="showToast">点我出现</mi-button>
+    <s-button @click="showToast">点我出现</s-button>
 </template>
 
 
@@ -110,7 +110,7 @@ title: Toast - 提示框
   Vue.use(plugin);
   export default {
     components: {
-    'mi-button':Button,
+    's-button':Button,
     Toast
     },
     methods: {
@@ -138,21 +138,21 @@ title: Toast - 提示框
 <template>
 <Container title="出现位置">
     <template #list>
-        <mi-button @click="$toast({content: 'hi 我是提示框'})">上方出现</mi-button>
-       <mi-button @click="$toast({content: 'hi 我是提示框',
+        <s-button @click="$toast({content: 'hi 我是提示框'})">上方出现</s-button>
+       <s-button @click="$toast({content: 'hi 我是提示框',
                                   position:'middle'
-                                  })">中间出现</mi-button>
-       <mi-button @click="$toast({content: 'hi 我是提示框',
+                                  })">中间出现</s-button>
+       <s-button @click="$toast({content: 'hi 我是提示框',
                                   position:'bottom'
-                                  })">底部出现</mi-button>
+                                  })">底部出现</s-button>
     </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-button @click="showTop">上方出现</mi-button>
-    <mi-button @click="showMiddle">中间出现</mi-button>
-    <mi-button @click="showBottom">底部出现</mi-button>
+    <s-button @click="showTop">上方出现</s-button>
+    <s-button @click="showMiddle">中间出现</s-button>
+    <s-button @click="showBottom">底部出现</s-button>
 </template>
 
 
@@ -164,7 +164,7 @@ title: Toast - 提示框
   Vue.use(plugin);
   export default {
     components: {
-    'mi-button':Button,
+    's-button':Button,
     Toast
     },
     methods: {
@@ -196,15 +196,15 @@ title: Toast - 提示框
 <template>
 <Container title="手动关闭">
     <template #list>
-       <mi-button @click="$toast({content: `<h1>标题</h1>`,
+       <s-button @click="$toast({content: `<h1>标题</h1>`,
                                   enableHtml:true,
-                                  })">点我出现</mi-button>
+                                  })">点我出现</s-button>
     </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-button @click="showToast">点我出现</mi-button>
+    <s-button @click="showToast">点我出现</s-button>
 </template>
 
 
@@ -216,7 +216,7 @@ title: Toast - 提示框
   Vue.use(plugin);
   export default {
     components: {
-    'mi-button':Button,
+    's-button':Button,
     Toast
     },
     methods: {
@@ -246,7 +246,7 @@ title: Toast - 提示框
   Vue.use(plugin);
   export default {
     components: {
-    'mi-button':Button,
+    's-button':Button,
     Toast
     },
     methods: {

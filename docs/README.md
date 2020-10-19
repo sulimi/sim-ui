@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: /miui.png
-heroText: Mi UI
+heroImage: /simui.png
+heroText: Sim UI
 tagline: 一个使工作变得更高效的UI组件库
 actionText: 使用组件 →
 actionLink: /install/

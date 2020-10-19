@@ -7,21 +7,21 @@ title: Popover - 弹出层
 <template>
 <Container title="基础">
 <template #list>
-<mi-popover>
+<s-popover>
    <template slot="content">
         <div>hi 这是弹出层</div>
       </template>
-      <mi-button>点我出现</mi-button>
-</mi-popover>
+      <s-button>点我出现</s-button>
+</s-popover>
 </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-popover>
+    <s-popover>
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <mi-button>点我出现</mi-button>
-    </mi-popover>
+       <s-button>点我出现</s-button>
+    </s-popover>
 </template>
 
 
@@ -30,8 +30,8 @@ title: Popover - 弹出层
     import Button from '../../src/components/button/Button.vue';
     export default {
       components: {
-      'mi-popover':Popover,
-      'mi-button':Button,
+      's-popover':Popover,
+      's-button':Button,
       }
     };
   </script>
@@ -43,43 +43,43 @@ title: Popover - 弹出层
 <template>
 <Container title="弹出方位">
 <template #list>
-<mi-popover>
+<s-popover>
    <template slot="content"><div>hi 这是弹出层</div></template>
-   <mi-button>上方出现</mi-button>
-</mi-popover>
-<mi-popover position="bottom">
+   <s-button>上方出现</s-button>
+</s-popover>
+<s-popover position="bottom">
    <template slot="content"><div>hi 这是弹出层</div></template>
-   <mi-button>下方出现</mi-button>
-</mi-popover>
-<mi-popover position="left">
+   <s-button>下方出现</s-button>
+</s-popover>
+<s-popover position="left">
    <template slot="content"><div>hi 这是弹出层</div></template>
-   <mi-button>左边出现</mi-button>
-</mi-popover>
-<mi-popover position="right">
+   <s-button>左边出现</s-button>
+</s-popover>
+<s-popover position="right">
    <template slot="content"><div>hi 这是弹出层</div></template>
-   <mi-button>右边出现</mi-button>
-</mi-popover>
+   <s-button>右边出现</s-button>
+</s-popover>
 </template>
 <template #code>
 
   ```vue
 <template #list>
-    <mi-popover>
+    <s-popover>
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <mi-button>上方出现</mi-button>
-    </mi-popover>
-    <mi-popover position="bottom">
+       <s-button>上方出现</s-button>
+    </s-popover>
+    <s-popover position="bottom">
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <mi-button>下方出现</mi-button>
-    </mi-popover>
-    <mi-popover position="left">
+       <s-button>下方出现</s-button>
+    </s-popover>
+    <s-popover position="left">
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <mi-button>左边出现</mi-button>
-    </mi-popover>
-    <mi-popover position="right">
+       <s-button>左边出现</s-button>
+    </s-popover>
+    <s-popover position="right">
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <mi-button>右边出现</mi-button>
-    </mi-popover>
+       <s-button>右边出现</s-button>
+    </s-popover>
 </template>
 
 
@@ -88,8 +88,8 @@ title: Popover - 弹出层
     import Button from '../../src/components/button/Button.vue';
     export default {
       components: {
-      'mi-popover':Popover,
-      'mi-button':Button,
+      's-popover':Popover,
+      's-button':Button,
       }
     };
   </script>
@@ -101,31 +101,31 @@ title: Popover - 弹出层
 <template>
 <Container title="触发方式">
 <template #list>
-<mi-popover>
+<s-popover>
    <template slot="content">
         <div>hi 这是弹出层</div>
       </template>
-      <mi-button>点击出现</mi-button>
-</mi-popover>
-<mi-popover trigger="hover">
+      <s-button>点击出现</s-button>
+</s-popover>
+<s-popover trigger="hover">
    <template slot="content">
         <div>hi 这是弹出层</div>
       </template>
-      <mi-button>hover出现</mi-button>
-</mi-popover>
+      <s-button>hover出现</s-button>
+</s-popover>
 </template>
 <template #code>
 
   ```vue
 <template>
-    <mi-popover>
+    <s-popover>
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <mi-button>点击出现</mi-button>
-    </mi-popover>
-    <mi-popover trigger="hover">
+       <s-button>点击出现</s-button>
+    </s-popover>
+    <s-popover trigger="hover">
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <mi-button>hover出现</mi-button>
-    </mi-popover>
+       <s-button>hover出现</s-button>
+    </s-popover>
 </template>
 
 
@@ -134,8 +134,8 @@ title: Popover - 弹出层
     import Button from '../../src/components/button/Button.vue';
     export default {
       components: {
-      'mi-popover':Popover,
-      'mi-button':Button,
+      's-popover':Popover,
+      's-button':Button,
       }
     };
   </script>
@@ -152,8 +152,8 @@ title: Popover - 弹出层
   import Button from '../../src/components/button/Button.vue';
   export default {
     components: {
-    'mi-popover':Popover,
-    'mi-button':Button,
+    's-popover':Popover,
+    's-button':Button,
     }
   };
 </script>

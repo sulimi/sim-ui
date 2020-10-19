@@ -7,39 +7,39 @@ title: Tabs - 标签
 <template>
 <Container title="类型">
     <template #list>
-        <mi-tabs :selected.sync="selectedTab">
-            <mi-tabs-head>
-                <mi-tabs-item name="tab1"></mi-tabs-item>
-                <mi-tabs-item name="tab2" disabled></mi-tabs-item>
-                <mi-tabs-item name="tab3"></mi-tabs-item>
-                <mi-tabs-item name="tab4"></mi-tabs-item>
-            </mi-tabs-head>
-            <mi-tabs-body>
-                <mi-tabs-pane name="tab1">内容1</mi-tabs-pane>
-                <mi-tabs-pane name="tab2">内容2</mi-tabs-pane>
-                <mi-tabs-pane name="tab3">内容3</mi-tabs-pane>
-                <mi-tabs-pane name="tab4">内容4</mi-tabs-pane>
-            </mi-tabs-body>
-        </mi-tabs>
+        <s-tabs :selected.sync="selectedTab">
+            <s-tabs-head>
+                <s-tabs-item name="tab1"></s-tabs-item>
+                <s-tabs-item name="tab2" disabled></s-tabs-item>
+                <s-tabs-item name="tab3"></s-tabs-item>
+                <s-tabs-item name="tab4"></s-tabs-item>
+            </s-tabs-head>
+            <s-tabs-body>
+                <s-tabs-pane name="tab1">内容1</s-tabs-pane>
+                <s-tabs-pane name="tab2">内容2</s-tabs-pane>
+                <s-tabs-pane name="tab3">内容3</s-tabs-pane>
+                <s-tabs-pane name="tab4">内容4</s-tabs-pane>
+            </s-tabs-body>
+        </s-tabs>
     </template>
 <template #code>
 
   ```vue
  <template #list>
-    <mi-tabs :selected.sync="selectedTab">
-        <mi-tabs-head>
-            <mi-tabs-item name="tab1"></mi-tabs-item>
-            <mi-tabs-item name="tab2" disabled></mi-tabs-item>
-            <mi-tabs-item name="tab3"></mi-tabs-item>
-            <mi-tabs-item name="tab4"></mi-tabs-item>
-        </mi-tabs-head>
-        <mi-tabs-body>
-            <mi-tabs-pane name="tab1">内容1</mi-tabs-pane>
-            <mi-tabs-pane name="tab2">内容2</mi-tabs-pane>
-            <mi-tabs-pane name="tab3">内容3</mi-tabs-pane>
-            <mi-tabs-pane name="tab4">内容4</mi-tabs-pane>
-        </mi-tabs-body>
-    </mi-tabs>
+    <s-tabs :selected.sync="selectedTab">
+        <s-tabs-head>
+            <s-tabs-item name="tab1"></s-tabs-item>
+            <s-tabs-item name="tab2" disabled></s-tabs-item>
+            <s-tabs-item name="tab3"></s-tabs-item>
+            <s-tabs-item name="tab4"></s-tabs-item>
+        </s-tabs-head>
+        <s-tabs-body>
+            <s-tabs-pane name="tab1">内容1</s-tabs-pane>
+            <s-tabs-pane name="tab2">内容2</s-tabs-pane>
+            <s-tabs-pane name="tab3">内容3</s-tabs-pane>
+            <s-tabs-pane name="tab4">内容4</s-tabs-pane>
+        </s-tabs-body>
+    </s-tabs>
  </template>
  
  
@@ -52,11 +52,11 @@ title: Tabs - 标签
   
     export default {
       components: {
-      'mi-tabs':Tabs,
-       'mi-tabs-head':TabsHead,
-       'mi-tabs-body':TabsBody,
-       'mi-tabs-item':TabsItem,
-       'mi-tabs-pane':TabsPane,
+      's-tabs':Tabs,
+       's-tabs-head':TabsHead,
+       's-tabs-body':TabsBody,
+       's-tabs-item':TabsItem,
+       's-tabs-pane':TabsPane,
       },
       data() {
         return {
@@ -80,11 +80,11 @@ import TabsPane from '../../src/components/tab/TabsPane.vue';
 
   export default {
     components: {
-    'mi-tabs':Tabs,
-     'mi-tabs-head':TabsHead,
-     'mi-tabs-body':TabsBody,
-     'mi-tabs-item':TabsItem,
-     'mi-tabs-pane':TabsPane,
+    's-tabs':Tabs,
+     's-tabs-head':TabsHead,
+     's-tabs-body':TabsBody,
+     's-tabs-item':TabsItem,
+     's-tabs-pane':TabsPane,
     },
     data() {
       return {

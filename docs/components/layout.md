@@ -8,22 +8,22 @@ title: Layout - 布局
 <template>
 <Container title="上中下布局">
 <template #list>
-    <mi-layout>
-        <mi-header class="mi-header">header</mi-header>
-        <mi-content class="mi-content">content</mi-content>
-        <mi-footer class="mi-footer">footer</mi-footer>
-    </mi-layout>
+    <s-layout>
+        <s-header class="s-header">header</s-header>
+        <s-content class="s-content">content</s-content>
+        <s-footer class="s-footer">footer</s-footer>
+    </s-layout>
 </template>
 <template #code>
 
   ```vue
 <template>
 
-    <mi-layout>
-        <mi-header class="mi-header">header</mi-header>
-        <mi-content class="mi-content">content</mi-content>
-        <mi-footer class="mi-footer">footer</mi-footer>
-    </mi-layout>
+    <s-layout>
+        <s-header class="s-header">header</s-header>
+        <s-content class="s-content">content</s-content>
+        <s-footer class="s-footer">footer</s-footer>
+    </s-layout>
 
 </template> 
 
@@ -35,11 +35,11 @@ title: Layout - 布局
   import Footer from '../../src/components/layout/Footer.vue';
   export default {
     components: {
-    'mi-layout':Layout,
-    'mi-header':Header,
-    'mi-content':Content,
-    'mi-sider':Sider,
-    'mi-footer':Footer,
+    's-layout':Layout,
+    's-header':Header,
+    's-content':Content,
+    's-sider':Sider,
+    's-footer':Footer,
     }
   };
 </script>
@@ -50,19 +50,19 @@ title: Layout - 布局
     text-align: center;
 }
 $h:40px;
-.mi-header{
+.s-header{
     @extend %item;
     background: #3eaf7c;
     height: $h;
     line-height: $h;
 }
-.mi-content{
+.s-content{
     @extend %item;
     background: #81d2ad;
     height: 100px;
     line-height: 100px;
 }
-.mi-footer{
+.s-footer{
     @extend %item;
     background: #3eaf7c;
     height: $h;
@@ -78,28 +78,28 @@ $h:40px;
 <template>
 <Container title="内容加侧边栏">
 <template #list>
-    <mi-layout>
-        <mi-header class="mi-header">header</mi-header>
-    <mi-layout>
-        <mi-sider class="mi-sider">sider</mi-sider>
-        <mi-content class="mi-content">content</mi-content>
-    </mi-layout>
-        <mi-footer class="mi-footer">footer</mi-footer>
-    </mi-layout>
+    <s-layout>
+        <s-header class="s-header">header</s-header>
+    <s-layout>
+        <s-sider class="s-sider">sider</s-sider>
+        <s-content class="s-content">content</s-content>
+    </s-layout>
+        <s-footer class="s-footer">footer</s-footer>
+    </s-layout>
 </template>
 <template #code>
 
   ```vue
 <template>
 
-    <mi-layout>
-      <mi-header class="mi-header">header</mi-header>
-    <mi-layout>
-      <mi-sider class="mi-sider">sider</mi-sider>
-      <mi-content class="mi-content">content</mi-content>
-    </mi-layout>
-      <mi-footer class="mi-footer">footer</mi-footer>
-    </mi-layout>
+    <s-layout>
+      <s-header class="s-header">header</s-header>
+    <s-layout>
+      <s-sider class="s-sider">sider</s-sider>
+      <s-content class="s-content">content</s-content>
+    </s-layout>
+      <s-footer class="s-footer">footer</s-footer>
+    </s-layout>
 
 </template> 
 
@@ -111,11 +111,11 @@ $h:40px;
   import Footer from '../../src/components/layout/Footer.vue';
   export default {
     components: {
-    'mi-layout':Layout,
-    'mi-header':Header,
-    'mi-content':Content,
-    'mi-sider':Sider,
-    'mi-footer':Footer,
+    's-layout':Layout,
+    's-header':Header,
+    's-content':Content,
+    's-sider':Sider,
+    's-footer':Footer,
     }
   };
 </script>
@@ -127,25 +127,25 @@ $h:40px;
 }
 $h:40px;
 $hh:100px;
-.mi-header{
+.s-header{
     @extend %item;
     background: #3eaf7c;
     height: $h;
     line-height: $h;
 }
-.mi-content{
+.s-content{
     @extend %item;
     background: #81d2ad;
     height: $hh;
     line-height: $hh;
 }
-.mi-footer{
+.s-footer{
     @extend %item;
     background: #3eaf7c;
     height: $h;
     line-height: $h;
 }
-.mi-sider{
+.s-sider{
    @extend %item;
     background: #3eaf7c;
     line-height: $hh;
@@ -161,28 +161,28 @@ $hh:100px;
 <template>
 <Container title="独立侧边栏">
 <template #list>
-    <mi-layout>
-        <mi-sider class="mi-sider">sider</mi-sider>
-    <mi-layout>
-        <mi-header class="mi-header">header</mi-header>
-        <mi-content class="mi-content">content</mi-content>
-        <mi-footer class="mi-footer">footer</mi-footer>
-    </mi-layout>
-    </mi-layout>
+    <s-layout>
+        <s-sider class="s-sider">sider</s-sider>
+    <s-layout>
+        <s-header class="s-header">header</s-header>
+        <s-content class="s-content">content</s-content>
+        <s-footer class="s-footer">footer</s-footer>
+    </s-layout>
+    </s-layout>
 </template>
 <template #code>
 
   ```vue
 <template>
 
-    <mi-layout>
-      <mi-sider class="mi-sider">sider</mi-sider>
-    <mi-layout>
-      <mi-header class="mi-header">header</mi-header>
-      <mi-content class="mi-content">content</mi-content>
-      <mi-footer class="mi-footer">footer</mi-footer>
-    </mi-layout>
-    </mi-layout>
+    <s-layout>
+      <s-sider class="s-sider">sider</s-sider>
+    <s-layout>
+      <s-header class="s-header">header</s-header>
+      <s-content class="s-content">content</s-content>
+      <s-footer class="s-footer">footer</s-footer>
+    </s-layout>
+    </s-layout>
 
 </template> 
 
@@ -194,11 +194,11 @@ $hh:100px;
   import Footer from '../../src/components/layout/Footer.vue';
   export default {
     components: {
-    'mi-layout':Layout,
-    'mi-header':Header,
-    'mi-content':Content,
-    'mi-sider':Sider,
-    'mi-footer':Footer,
+    's-layout':Layout,
+    's-header':Header,
+    's-content':Content,
+    's-sider':Sider,
+    's-footer':Footer,
     }
   };
 </script>
@@ -210,25 +210,25 @@ $hh:100px;
 }
 $h:40px;
 $hh:100px;
-.mi-header{
+.s-header{
     @extend %item;
     background: #3eaf7c;
     height: $h;
     line-height: $h;
 }
-.mi-content{
+.s-content{
     @extend %item;
     background: #81d2ad;
     height: $hh;
     line-height: $hh;
 }
-.mi-footer{
+.s-footer{
     @extend %item;
     background: #3eaf7c;
     height: $h;
     line-height: $h;
 }
-.mi-sider{
+.s-sider{
    @extend %item;
     background: #4abf8a;
     line-height: 100px;
@@ -252,11 +252,11 @@ $hh:100px;
   import Footer from '../../src/components/layout/Footer.vue';
   export default {
     components: {
-    'mi-layout':Layout,
-    'mi-header':Header,
-    'mi-content':Content,
-    'mi-sider':Sider,
-    'mi-footer':Footer,
+    's-layout':Layout,
+    's-header':Header,
+    's-content':Content,
+    's-sider':Sider,
+    's-footer':Footer,
     }
   };
 </script>
@@ -267,25 +267,25 @@ $hh:100px;
     text-align: center;
 }
 
-.mi-header{
+.s-header{
     @extend %item;
     background: #3eaf7c;
     height: 40px;
     line-height: 40px;
 }
-.mi-content{
+.s-content{
     @extend %item;
     background: #81d2ad;
     height: 100px;
     line-height: 100px;
 }
-.mi-footer{
+.s-footer{
     @extend %item;
     background: #3eaf7c;
     height: 40px;
     line-height: 40px;
 }
-.mi-sider{
+.s-sider{
    @extend %item;
     background: #4abf8a;
     line-height: 100px;

@@ -1,7 +1,7 @@
 # 一个 Vue UI 组件
 
 
- [![Build Status](https://travis-ci.org/sulimi/sumi-ui-vue2.svg?branch=main)](https://travis-ci.org/sulimi/sumi-ui-vue2)
+
 ## 介绍
 
 这是我在学习 Vue 过程中做的一个 UI 框架，希望对你有用。
@@ -16,33 +16,18 @@
     *,*::before,*::after{box-sizing: border-box}
     ```
     IE 8 及以上浏览器都支持此浏览器
+   
     
-    
-    你还需要设置默认颜色等变量（后续会改为 SCSS 变量）
-    ```
-       html {
-          --button-height: 32px;
-          --font-size: 14px;
-          --button-bg: white;
-          --button-active-bg: #eee;
-          --border-radius: 4px;
-          --color: #333;
-          --border-color: #999;
-          --border-color-hover: #666
-        }
-    ```
-    IE 15 及以上浏览器都支持此浏览器
-    
-2. 安装 sumi
+2. 安装 sim-ui
 
 ```
-npm i --save sumi
+npm i --save sim-ui
 ```
-3. 引入 sumi
+3. 引入 sim-ui
 
 ```
-import {Button,ButtonGroup} from 'sumi-ui-vue2'
-import 'sumi-ui-vue2/dist/index.css'
+import {Button,ButtonGroup} from 'sim-ui'
+import 'sim-ui/dist/index.css'
 
 export default {
   name: 'App',

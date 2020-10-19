@@ -7,17 +7,17 @@ title: Input - 输入框
 <template>
 <Container title="基础">
     <template #list>
-        <mi-input placeholder="请输入内容"></mi-input>
-        <mi-input placeholder="只读" readonly></mi-input>
-        <mi-input placeholder="禁用" disabled></mi-input>
+        <s-input placeholder="请输入内容"></s-input>
+        <s-input placeholder="只读" readonly></s-input>
+        <s-input placeholder="禁用" disabled></s-input>
     </template>
 <template #code>
 
   ```vue
 <template>
-      <mi-input placeholder="请输入内容"></mi-input>
-      <mi-input readonly placeholder="只读"></mi-input>
-      <mi-input disabled placeholder="禁用"></mi-input>
+      <s-input placeholder="请输入内容"></s-input>
+      <s-input readonly placeholder="只读"></s-input>
+      <s-input disabled placeholder="禁用"></s-input>
 </template>
 
 
@@ -26,7 +26,7 @@ title: Input - 输入框
   import Input from '../../src/components/input/Input.vue';
   export default {
     components: {
-    'mi-input':Input,
+    's-input':Input,
     },
    };
 </script>
@@ -39,14 +39,14 @@ title: Input - 输入框
 <template>
 <Container title="双向绑定">
     <template #list>
-        <mi-input  placeholder="请输入内容" v-model="value"></mi-input>
+        <s-input  placeholder="请输入内容" v-model="value"></s-input>
         <span style="padding-left: 1em">展示：</span><span>{{value}}</span>
     </template>
 <template #code>
 
   ```vue
 <template>
-  <mi-input  v-model="value" placeholder="请输入内容"></mi-input>
+  <s-input  v-model="value" placeholder="请输入内容"></s-input>
 </template>
 
 
@@ -54,7 +54,7 @@ title: Input - 输入框
   import Input from '../../src/components/input/Input.vue';
   export default {
     components: {
-    'mi-input':Input,
+    's-input':Input,
     },
       data() {
         return {
@@ -72,13 +72,13 @@ title: Input - 输入框
 <template>
 <Container title="错误提示">
     <template #list>
-        <mi-input  placeholder="请输入内容" value="错误的内容" error="输入错误"></mi-input>
+        <s-input  placeholder="请输入内容" value="错误的内容" error="输入错误"></s-input>
     </template>
 <template #code>
 
   ```vue
 <template>
-   <mi-input error="输入错误" placeholder="请输入内容" value="错误的内容"></mi-input>
+   <s-input error="输入错误" placeholder="请输入内容" value="错误的内容"></s-input>
 </template>
 
 
@@ -86,7 +86,7 @@ title: Input - 输入框
   import Input from '../../src/components/input/Input.vue';
   export default {
     components: {
-    'mi-input':Input,
+    's-input':Input,
     },
    };
 </script>
@@ -99,13 +99,13 @@ title: Input - 输入框
 <template>
 <Container title="一键清空">
     <template #list>
-        <mi-input  :clear="true" placeholder="请输入内容" value="不想要了"></mi-input>
+        <s-input  :clear="true" placeholder="请输入内容" value="不想要了"></s-input>
     </template>
 <template #code>
 
   ```vue
 <template>
-  <mi-input  :clear="true" placeholder="请输入内容" value="不想要了"></mi-input>
+  <s-input  :clear="true" placeholder="请输入内容" value="不想要了"></s-input>
 </template>
 
 
@@ -144,7 +144,7 @@ title: Input - 输入框
   import Input from '../../src/components/input/Input.vue';
   export default {
     components: {
-    'mi-input':Input,
+    's-input':Input,
     },
         data() {
           return {

@@ -8,21 +8,21 @@ title: Collapse - 折叠面板
 <template>
 <Container title="基础">
 <template #list>
-    <mi-collapse :selected.sync="selectedArray">
-        <mi-collapse-item title="标题1" name="1">内容1</mi-collapse-item>
-        <mi-collapse-item title="标题2" name="2">内容2</mi-collapse-item>
-        <mi-collapse-item title="标题3" name="3">内容3</mi-collapse-item>
-    </mi-collapse>
+    <s-collapse :selected.sync="selectedArray">
+        <s-collapse-item title="标题1" name="1">内容1</s-collapse-item>
+        <s-collapse-item title="标题2" name="2">内容2</s-collapse-item>
+        <s-collapse-item title="标题3" name="3">内容3</s-collapse-item>
+    </s-collapse>
 </template>
 <template #code>
 
 ```vue
  <template>
-    <mi-collapse :selected.sync="selectedArray">
-        <mi-collapse-item title="标题1" name="1">内容1</mi-collapse-item>
-        <mi-collapse-item title="标题2" name="2">内容2</mi-collapse-item>
-        <mi-collapse-item title="标题3" name="3">内容3</mi-collapse-item>
-    </mi-collapse>
+    <s-collapse :selected.sync="selectedArray">
+        <s-collapse-item title="标题1" name="1">内容1</s-collapse-item>
+        <s-collapse-item title="标题2" name="2">内容2</s-collapse-item>
+        <s-collapse-item title="标题3" name="3">内容3</s-collapse-item>
+    </s-collapse>
  </template>
     <script>
     import Collapse from '../../src/components/collapse/Collapse.vue';
@@ -30,8 +30,8 @@ title: Collapse - 折叠面板
 
       export default {
         components: {
-        'mi-collapse':Collapse,
-        'mi-collapse-item':CollapseItem,
+        's-collapse':Collapse,
+        's-collapse-item':CollapseItem,
         },
         data() {
           return {
@@ -48,21 +48,21 @@ title: Collapse - 折叠面板
 <template>
 <Container title="支持单项">
 <template #list>
-    <mi-collapse :selected.sync="selectedArray" :single="true">
-        <mi-collapse-item title="标题1" name="1">内容1</mi-collapse-item>
-        <mi-collapse-item title="标题2" name="2">内容2</mi-collapse-item>
-        <mi-collapse-item title="标题3" name="3">内容3</mi-collapse-item>
-    </mi-collapse>
+    <s-collapse :selected.sync="selectedArray" :single="true">
+        <s-collapse-item title="标题1" name="1">内容1</s-collapse-item>
+        <s-collapse-item title="标题2" name="2">内容2</s-collapse-item>
+        <s-collapse-item title="标题3" name="3">内容3</s-collapse-item>
+    </s-collapse>
 </template>
 <template #code>
 
 ```vue
  <template>
-    <mi-collapse :selected.sync="selectedArray" :single="true">
-        <mi-collapse-item title="标题1" name="1">内容1</mi-collapse-item>
-        <mi-collapse-item title="标题2" name="2">内容2</mi-collapse-item>
-        <mi-collapse-item title="标题3" name="3">内容3</mi-collapse-item>
-    </mi-collapse>
+    <s-collapse :selected.sync="selectedArray" :single="true">
+        <s-collapse-item title="标题1" name="1">内容1</s-collapse-item>
+        <s-collapse-item title="标题2" name="2">内容2</s-collapse-item>
+        <s-collapse-item title="标题3" name="3">内容3</s-collapse-item>
+    </s-collapse>
  </template>
     <script>
     import Collapse from '../../src/components/collapse/Collapse.vue';
@@ -70,8 +70,8 @@ title: Collapse - 折叠面板
 
       export default {
         components: {
-        'mi-collapse':Collapse,
-        'mi-collapse-item':CollapseItem,
+        's-collapse':Collapse,
+        's-collapse-item':CollapseItem,
         },
         data() {
           return {
@@ -94,8 +94,8 @@ import CollapseItem from '../../src/components/collapse/CollapseItem.vue';
 
   export default {
     components: {
-    'mi-collapse':Collapse,
-    'mi-collapse-item':CollapseItem,
+    's-collapse':Collapse,
+    's-collapse-item':CollapseItem,
     },
     data() {
       return {

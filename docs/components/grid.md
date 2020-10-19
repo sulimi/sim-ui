@@ -10,45 +10,45 @@ title: Grid - 栅格
 <template>
 <Container title="基础">
     <template #list>
-        <mi-row>
-            <mi-col class="item" span="24">col-24</mi-col>
-        </mi-row>
-        <mi-row>
-            <mi-col class="item" span="4">col-4</mi-col>
-            <mi-col class="item" span="8">col-8</mi-col>
-            <mi-col class="item" span="12">col-12</mi-col>
-        </mi-row>
-        <mi-row>
-            <mi-col class="item" span="6">col-6</mi-col>
-            <mi-col class="item" span="6">col-6</mi-col>
-            <mi-col class="item" span="6">col-6</mi-col>
-            <mi-col class="item" span="6">col-6</mi-col>
-        </mi-row>
+        <s-row>
+            <s-col class="item" span="24">col-24</s-col>
+        </s-row>
+        <s-row>
+            <s-col class="item" span="4">col-4</s-col>
+            <s-col class="item" span="8">col-8</s-col>
+            <s-col class="item" span="12">col-12</s-col>
+        </s-row>
+        <s-row>
+            <s-col class="item" span="6">col-6</s-col>
+            <s-col class="item" span="6">col-6</s-col>
+            <s-col class="item" span="6">col-6</s-col>
+            <s-col class="item" span="6">col-6</s-col>
+        </s-row>
     </template>
 <template #code>
 
   ```vue
 <template>
 
-    <!--mi-row 行-->
-    <!--mi-col 列-->
+    <!--s-row 行-->
+    <!--s-col 列-->
     <!--span 控制占比-->
-    <mi-row>
-      <mi-col class="item" span="24">col-24</mi-col>
-    </mi-row>
+    <s-row>
+      <s-col class="item" span="24">col-24</s-col>
+    </s-row>
 
-    <mi-row>
-        <mi-col class="item" span="4">col-4</mi-col>
-        <mi-col class="item" span="8">col-8</mi-col>
-        <mi-col class="item" span="12">col-12</mi-col>
-    </mi-row>
+    <s-row>
+        <s-col class="item" span="4">col-4</s-col>
+        <s-col class="item" span="8">col-8</s-col>
+        <s-col class="item" span="12">col-12</s-col>
+    </s-row>
     
-    <mi-row>
-        <mi-col class="item" span="6">col-6</mi-col>
-        <mi-col class="item" span="6">col-6</mi-col>
-        <mi-col class="item" span="6">col-6</mi-col>
-        <mi-col class="item" span="6">col-6</mi-col>
-    </mi-row>
+    <s-row>
+        <s-col class="item" span="6">col-6</s-col>
+        <s-col class="item" span="6">col-6</s-col>
+        <s-col class="item" span="6">col-6</s-col>
+        <s-col class="item" span="6">col-6</s-col>
+    </s-row>
 
 </template>
 
@@ -57,8 +57,8 @@ title: Grid - 栅格
   import Col from '../../src/components/grid/Col.vue';
   export default {
     components: {
-    'mi-row':Row,
-    'mi-col':Col,
+    's-row':Row,
+    's-col':Col,
     },
   };
 </script>
@@ -94,39 +94,39 @@ background: #81d2ad;
 <template>
 <Container title="占比偏移">
     <template #list>
-        <mi-row>
-            <mi-col class="item" span="2" offset="2">col-2</mi-col>
-            <mi-col class="item" span="6" offset="2">col-6</mi-col>
-            <mi-col class="item" span="10" offset="2">col-10</mi-col>
-        </mi-row>
-        <mi-row>
-            <mi-col class="item" span="6">col-6</mi-col>
-            <mi-col class="item" span="4" offset="2">col-4</mi-col>
-            <mi-col class="item" span="6">col-6</mi-col>
-            <mi-col class="item" span="6">col-6</mi-col>
-        </mi-row>
+        <s-row>
+            <s-col class="item" span="2" offset="2">col-2</s-col>
+            <s-col class="item" span="6" offset="2">col-6</s-col>
+            <s-col class="item" span="10" offset="2">col-10</s-col>
+        </s-row>
+        <s-row>
+            <s-col class="item" span="6">col-6</s-col>
+            <s-col class="item" span="4" offset="2">col-4</s-col>
+            <s-col class="item" span="6">col-6</s-col>
+            <s-col class="item" span="6">col-6</s-col>
+        </s-row>
     </template>
 <template #code>
 
   ```vue
 <template>
 
-    <!--mi-row 行-->
-    <!--mi-col 列-->
+    <!--s-row 行-->
+    <!--s-col 列-->
     <!--span 控制占比-->
     <!--offset 控制偏移比例-->
-    <mi-row>
-        <mi-col class="item" span="2" offset="2">col-2</mi-col>
-        <mi-col class="item" span="6" offset="2">col-6</mi-col>
-        <mi-col class="item" span="10" offset="2">col-10</mi-col>
-    </mi-row>
+    <s-row>
+        <s-col class="item" span="2" offset="2">col-2</s-col>
+        <s-col class="item" span="6" offset="2">col-6</s-col>
+        <s-col class="item" span="10" offset="2">col-10</s-col>
+    </s-row>
     
-    <mi-row>
-        <mi-col class="item" span="6">col-6</mi-col>
-        <mi-col class="item" span="4" offset="2">col-4</mi-col>
-        <mi-col class="item" span="6">col-6</mi-col>
-        <mi-col class="item" span="6">col-6</mi-col>
-    </mi-row>
+    <s-row>
+        <s-col class="item" span="6">col-6</s-col>
+        <s-col class="item" span="4" offset="2">col-4</s-col>
+        <s-col class="item" span="6">col-6</s-col>
+        <s-col class="item" span="6">col-6</s-col>
+    </s-row>
 
 
 </template>
@@ -137,8 +137,8 @@ background: #81d2ad;
   import Col from '../../src/components/grid/Col.vue';
   export default {
     components: {
-    'mi-row':Row,
-    'mi-col':Col,
+    's-row':Row,
+    's-col':Col,
     }
   };
 </script>
@@ -174,39 +174,39 @@ background: #81d2ad;
 <template>
 <Container title="随意间隔">
     <template #list>
-        <mi-row gutter="30">
-            <mi-col span="4" class="mi-col"><div>col-4</div></mi-col>
-            <mi-col span="8" class="mi-col"><div>col-8</div></mi-col>
-            <mi-col span="12" class="mi-col"><div>col-12</div></mi-col>
-        </mi-row>
-        <mi-row gutter="10">
-            <mi-col span="6" class="mi-col"><div>col-6</div></mi-col>
-            <mi-col span="6" class="mi-col"><div>col-6</div></mi-col>
-            <mi-col span="6" class="mi-col"><div>col-6</div></mi-col>
-            <mi-col span="6" class="mi-col"><div>col-6</div></mi-col>
-        </mi-row>
+        <s-row gutter="30">
+            <s-col span="4" class="s-col"><div>col-4</div></s-col>
+            <s-col span="8" class="s-col"><div>col-8</div></s-col>
+            <s-col span="12" class="s-col"><div>col-12</div></s-col>
+        </s-row>
+        <s-row gutter="10">
+            <s-col span="6" class="s-col"><div>col-6</div></s-col>
+            <s-col span="6" class="s-col"><div>col-6</div></s-col>
+            <s-col span="6" class="s-col"><div>col-6</div></s-col>
+            <s-col span="6" class="s-col"><div>col-6</div></s-col>
+        </s-row>
     </template>
 <template #code>
 
   ```vue
 <template>
 
-    <!--mi-row 行-->
-    <!--mi-col 列-->
+    <!--s-row 行-->
+    <!--s-col 列-->
     <!--span 控制占比-->
     <!--gutter 控制padding间隔-->
     <template #list>
-        <mi-row gutter="30">
-            <mi-col span="4" class="item"><div>col-4</div></mi-col>
-            <mi-col span="8" class="item"><div>col-8</div></mi-col>
-            <mi-col span="12" class="item"><div>col-12</div></mi-col>
-        </mi-row>
-        <mi-row gutter="10">
-            <mi-col span="6" class="item"><div>col-6</div></mi-col>
-            <mi-col span="6" class="item"><div>col-6</div></mi-col>
-            <mi-col span="6" class="item"><div>col-6</div></mi-col>
-            <mi-col span="6" class="item"><div>col-6</div></mi-col>
-        </mi-row>
+        <s-row gutter="30">
+            <s-col span="4" class="item"><div>col-4</div></s-col>
+            <s-col span="8" class="item"><div>col-8</div></s-col>
+            <s-col span="12" class="item"><div>col-12</div></s-col>
+        </s-row>
+        <s-row gutter="10">
+            <s-col span="6" class="item"><div>col-6</div></s-col>
+            <s-col span="6" class="item"><div>col-6</div></s-col>
+            <s-col span="6" class="item"><div>col-6</div></s-col>
+            <s-col span="6" class="item"><div>col-6</div></s-col>
+        </s-row>
     </template>
 
 </template>
@@ -216,8 +216,8 @@ background: #81d2ad;
   import Col from '../../src/components/grid/Col.vue';
   export default {
     components: {
-    'mi-row':Row,
-    'mi-col':Col,
+    's-row':Row,
+    's-col':Col,
     }
   };
 </script>
@@ -257,49 +257,49 @@ background: #81d2ad;
 <template>
 <Container title="flex布局">
     <template #list>
-        <mi-row align="left">
-            <mi-col class="item" span="4">left-4</mi-col>
-            <mi-col class="item" span="8">left-8</mi-col>
-            <mi-col class="item" span="8">left-8</mi-col>
-        </mi-row>
-        <mi-row align="center">
-            <mi-col class="item" span="4">center-4</mi-col>
-            <mi-col class="item" span="8">center-8</mi-col>
-        </mi-row>
-        <mi-row gutter="10"  align="right">
-            <mi-col class="item" span="4">right-4</mi-col>
-            <mi-col class="item" span="4">right-4</mi-col>
-            <mi-col class="item" span="4">right-4</mi-col>
-            <mi-col class="item" span="4">right-4</mi-col>
-        </mi-row>
+        <s-row align="left">
+            <s-col class="item" span="4">left-4</s-col>
+            <s-col class="item" span="8">left-8</s-col>
+            <s-col class="item" span="8">left-8</s-col>
+        </s-row>
+        <s-row align="center">
+            <s-col class="item" span="4">center-4</s-col>
+            <s-col class="item" span="8">center-8</s-col>
+        </s-row>
+        <s-row gutter="10"  align="right">
+            <s-col class="item" span="4">right-4</s-col>
+            <s-col class="item" span="4">right-4</s-col>
+            <s-col class="item" span="4">right-4</s-col>
+            <s-col class="item" span="4">right-4</s-col>
+        </s-row>
     </template>
 <template #code>
 
   ```vue
 <template>
 
-    <!--mi-row 行-->
-    <!--mi-col 列-->
+    <!--s-row 行-->
+    <!--s-col 列-->
     <!--span 控制占比-->
     <!--gutter 控制padding间隔-->
     <!--align 控制排列位置-->
-    <mi-row align="left">
-        <mi-col class="item" span="4">left-4</mi-col>
-        <mi-col class="item" span="8">left-8</mi-col>
-        <mi-col class="item" span="8">left-8</mi-col>
-    </mi-row>
+    <s-row align="left">
+        <s-col class="item" span="4">left-4</s-col>
+        <s-col class="item" span="8">left-8</s-col>
+        <s-col class="item" span="8">left-8</s-col>
+    </s-row>
 
-    <mi-row align="center">
-        <mi-col class="item" span="4">center-4</mi-col>
-        <mi-col class="item" span="8">center-8</mi-col>
-    </mi-row>
+    <s-row align="center">
+        <s-col class="item" span="4">center-4</s-col>
+        <s-col class="item" span="8">center-8</s-col>
+    </s-row>
 
-    <mi-row gutter="10"  align="right">
-        <mi-col class="item" span="4">right-4</mi-col>
-        <mi-col class="item" span="4">right-4</mi-col>
-        <mi-col class="item" span="4">right-4</mi-col>
-        <mi-col class="item" span="4">right-4</mi-col>
-    </mi-row>
+    <s-row gutter="10"  align="right">
+        <s-col class="item" span="4">right-4</s-col>
+        <s-col class="item" span="4">right-4</s-col>
+        <s-col class="item" span="4">right-4</s-col>
+        <s-col class="item" span="4">right-4</s-col>
+    </s-row>
 
 </template>
 
@@ -308,8 +308,8 @@ background: #81d2ad;
   import Col from '../../src/components/grid/Col.vue';
   export default {
     components: {
-    'mi-row':Row,
-    'mi-col':Col,
+    's-row':Row,
+    's-col':Col,
     }
   };
 </script>
@@ -345,57 +345,57 @@ background: #81d2ad;
 <template>
 <Container title="响应式（默认为手机样式）">
     <template #list>
-        <mi-row>
-            <mi-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:1}" :pc="{span:13}" :widePc="{span:1}"
-            ></mi-col>
-            <mi-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:6}" :pc="{span:1}" :widePc="{span:8}"
-            ></mi-col>
-            <mi-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:17}" :pc="{span:10}" :widePc="{span:15}"
-            ></mi-col>
-        </mi-row>
-        <mi-row>
-            <mi-col class="item" span="6" :pc="{span:2}"></mi-col>
-            <mi-col class="item" span="4" offset="2" :pc="{span:2}"></mi-col>
-            <mi-col class="item" span="6" :pc="{span:8}"></mi-col>
-            <mi-col class="item" span="6" :pc="{span:10}"></mi-col>
-        </mi-row>
+        <s-row>
+            <s-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:1}" :pc="{span:13}" :widePc="{span:1}"
+            ></s-col>
+            <s-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:6}" :pc="{span:1}" :widePc="{span:8}"
+            ></s-col>
+            <s-col class="item" span="24" :iPad="{span:12}" :narrowPc="{span:17}" :pc="{span:10}" :widePc="{span:15}"
+            ></s-col>
+        </s-row>
+        <s-row>
+            <s-col class="item" span="6" :pc="{span:2}"></s-col>
+            <s-col class="item" span="4" offset="2" :pc="{span:2}"></s-col>
+            <s-col class="item" span="6" :pc="{span:8}"></s-col>
+            <s-col class="item" span="6" :pc="{span:10}"></s-col>
+        </s-row>
     </template>
 <template #code>
 
   ```vue
 <template>
 
-    <!--mi-row 行-->
-    <!--mi-col 列-->
+    <!--s-row 行-->
+    <!--s-col 列-->
     <!--span 控制占比-->
     <!--offset 控制偏移比例-->
-    <mi-row>
-        <mi-col class="item" span="24" 
+    <s-row>
+        <s-col class="item" span="24" 
                               :iPad="{span:12}" 
                               :narrowPc="{span:1}" 
                               :pc="{span:13}" 
                               :widePc="{span:1}"
-        ></mi-col>
-        <mi-col class="item" span="24" 
+        ></s-col>
+        <s-col class="item" span="24" 
                               :iPad="{span:12}" 
                               :narrowPc="{span:6}" 
                               :pc="{span:1}" 
                               :widePc="{span:8}"
-        ></mi-col>
-        <mi-col class="item" span="24" 
+        ></s-col>
+        <s-col class="item" span="24" 
                               :iPad="{span:12}" 
                               :narrowPc="{span:17}" 
                               :pc="{span:10}" 
                               :widePc="{span:15}"
-        ></mi-col>
-    </mi-row>
+        ></s-col>
+    </s-row>
     
-    <mi-row>
-        <mi-col class="item" span="6" :pc="{span:2}">col-6</mi-col>
-        <mi-col class="item" span="4" offset="2" :pc="{span:2}">col-4</mi-col>
-        <mi-col class="item" span="6" :pc="{span:8}">col-6</mi-col>
-        <mi-col class="item" span="6" :pc="{span:10}">col-6</mi-col>
-    </mi-row>
+    <s-row>
+        <s-col class="item" span="6" :pc="{span:2}">col-6</s-col>
+        <s-col class="item" span="4" offset="2" :pc="{span:2}">col-4</s-col>
+        <s-col class="item" span="6" :pc="{span:8}">col-6</s-col>
+        <s-col class="item" span="6" :pc="{span:10}">col-6</s-col>
+    </s-row>
 
 
 </template>
@@ -406,8 +406,8 @@ background: #81d2ad;
   import Col from '../../src/components/grid/Col.vue';
   export default {
     components: {
-    'mi-row':Row,
-    'mi-col':Col,
+    's-row':Row,
+    's-col':Col,
     }
   };
 </script>
@@ -448,8 +448,8 @@ background: #81d2ad;
   import Col from '../../src/components/grid/Col.vue';
   export default {
     components: {
-    'mi-row':Row,
-    'mi-col':Col,
+    's-row':Row,
+    's-col':Col,
     },
         data() {
           return {
@@ -481,13 +481,13 @@ background: #81d2ad;
 @extend %colitem;
 background: #3eaf7c;
 }
-.mi-col:nth-child(odd)
+.s-col:nth-child(odd)
     div{
         @extend %colitem;
         background: #81d2ad;
      }
 
-.mi-col:nth-child(even)
+.s-col:nth-child(even)
     div{
         @extend %colitem;
          background: #3eaf7c;
