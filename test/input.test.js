@@ -17,17 +17,6 @@ describe('Input', () => {
       vm.$destroy();
     });
 
-
-    it('接收 value', () => {
-      vm = new Constructor({
-        propsData: {
-          value: '1234'
-        }
-      }).$mount();
-      const inputElement = vm.$el.querySelector('input');
-      expect(inputElement.value).to.equal('1234');  //期待input标签的value等于
-    });
-
     it('接收 disabled', () => {
       vm = new Constructor({
         propsData: {
