@@ -1,16 +1,21 @@
 <template>
   <div class="collapse-item">
     <div class="title" @click="toggle">
-      {{title}}
+      <span class="text">{{title}}</span>
+      <Icon icon="close" :class="{'open':open}"></Icon>
     </div>
-    <div class="content" v-if="open">
-      <slot></slot>
+    <div class="content"  :class="{'open':open}">
+      <template v-if="open">
+        <slot></slot>
+      </template>
     </div>
   </div>
 </template>
 <script>
 
+  import Icon from '../Icon';
   export default {
+    components: {Icon},
     props: {
       title: {
         type: String,
@@ -52,9 +57,19 @@
       border-bottom: 1px solid #ddd;
       min-height: 32px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: 0 8px;
       margin-top: -1px;
+      .g-icon{
+        fill: #767676;
+        width: 0.8em;
+        height: 0.8em;
+        transition: all .3s;
+        &.open{
+          transform: rotate(90deg);
+        }
+      }
     }
 
     &:first-child {
@@ -74,9 +89,14 @@
         border-radius: 4px;
       }
     }
-
     .content {
-      padding: 16px;
+      color: #767676;
+      padding: 0 16px;
+      transition: all 0.3s;
+      overflow: hidden;
+      &.open{
+        padding: 16px;
+      }
     }
   }
 </style>

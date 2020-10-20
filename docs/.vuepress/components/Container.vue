@@ -69,8 +69,12 @@
         fill: #fff;
         width: 20px;
         height: 20px;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .g-icon{
+          width: 0.8em;
+          height: 0.8em;
           transition: all .6s;
           &.open{
             transform: rotate(90deg);
