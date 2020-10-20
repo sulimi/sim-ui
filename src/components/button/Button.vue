@@ -1,9 +1,9 @@
 <template>
-  <button v-bind="$attrs" class="g-button" :class="{[`icon-${iconPosition}`]:true,'disabledHave':disabledHave}"
+  <button v-bind="$attrs" class="g-button" :class="{[`icon-${iconPosition}`]:true,'s-disabledHave':disabledHave}"
           @click="$emit('click')">
-    <g-icon class="icon loading" icon="jiazaizhong" v-if="loading"></g-icon>
-    <g-icon class="icon" :icon="icon" v-if="icon&&!loading"></g-icon>
-    <span class="slot">
+    <g-icon class="s-icon s-loading" icon="jiazaizhong" v-if="loading"></g-icon>
+    <g-icon class="s-icon" :icon="icon" v-if="icon&&!loading"></g-icon>
+    <span class="s-slot">
       <slot></slot>
     </span>
   </button>
@@ -64,40 +64,40 @@
     vertical-align: middle;
     cursor: pointer;
 
-    &.disabledHave {
+    &.s-disabledHave {
       border-color: #bbb;
       color: #bbb;
       cursor: not-allowed;
 
-      .icon {
+      .s-icon {
         fill: #bbb
       }
     }
 
-    .icon {
+    .s-icon {
       order: 1;
       margin-right: .3em;
     }
 
-    .slot {
+    .s-slot {
       line-height: 1em;
       order: 2;
     }
 
 
     &.icon-right {
-      .icon {
+      .s-icon {
         order: 2;
         margin-left: .3em;
         margin-right: 0
       }
 
-      .slot {
+      .s-slot {
         order: 1;
       }
     }
 
-    .loading {
+    .s-loading {
       animation: g-spin 1s infinite linear;
     }
 
