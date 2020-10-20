@@ -1,6 +1,15 @@
 module.exports = {
-  plugins: [
-    '@goy/svg-icons'
+  head: [
+    [
+      "meta", // 移动端禁止用户缩放
+      {
+        name: "viewport",
+        content:
+          "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+      }
+    ],
+    ["link", { rel: "stylesheet", href: "/css/style.css" }], //
+    ["script", { charset: "utf-8", src: "/js/disable-user-zoom.js" }] // 移动端,禁止用户缩放,引入你写的js
   ],
   base:'/sim-ui/',
   title: 'Sim UI',
