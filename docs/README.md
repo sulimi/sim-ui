@@ -4,7 +4,7 @@ heroImage: /long.jpg
 heroText: Sim UI 官网
 tagline: 一个让工作变高效的UI组件库
 actionText: 使用组件 →
-actionLink: /install/
+actionLink: /starting/
 features:
 - title: 简洁轻便
   details: 除Vue生态相关外，基本没有第三方依赖，保证代码体积。
