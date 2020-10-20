@@ -46,6 +46,7 @@ import 'sim-ui-use/dist/index.css'
   ```vue
 <template>
   <Input v-model="value" placeholder="请输入内容"></Input>
+  <span>展示：{{value}}</span>
 </template>
 
 

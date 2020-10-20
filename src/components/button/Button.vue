@@ -1,11 +1,11 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]:true,'disabledHave':disabledHave}"
+  <button v-bind="$attrs" class="g-button" :class="{[`icon-${iconPosition}`]:true,'disabledHave':disabledHave}"
           @click="$emit('click')">
     <g-icon class="icon loading" icon="jiazaizhong" v-if="loading"></g-icon>
     <g-icon class="icon" :icon="icon" v-if="icon&&!loading"></g-icon>
-    <div class="slot">
+    <span class="slot">
       <slot></slot>
-    </div>
+    </span>
   </button>
 
 
@@ -77,7 +77,7 @@
 
     .icon {
       order: 1;
-      margin-right: .3em
+      margin-right: .3em;
     }
 
     .slot {

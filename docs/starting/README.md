@@ -30,7 +30,6 @@ import 'sim-ui-use/dist/index.css'
 #### 注册组件
 ```js
 export default {
-  name: 'App',
       components: {
         Button,
         ButtonGroup,
