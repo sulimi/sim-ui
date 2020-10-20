@@ -1,4 +1,7 @@
 module.exports = {
+  plugins: [
+    '@goy/svg-icons'
+  ],
   base:'/sim-ui/',
   title: 'Sim UI',
   description: '一个好用的UI组件库',

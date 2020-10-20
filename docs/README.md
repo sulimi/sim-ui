@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: /simui.png
-heroText: Sim UI
-tagline: 一个使工作变得更高效的UI组件库
+heroImage: /long.jpg
+heroText: Sim UI 官网
+tagline: 一个让工作变高效的UI组件库
 actionText: 使用组件 →
 actionLink: /install/
 features:
