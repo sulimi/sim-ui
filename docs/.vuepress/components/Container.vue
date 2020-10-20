@@ -49,7 +49,6 @@
   .content {
     margin: 16px 0;
     border: 2px solid #3eaf7c;
-    /*height: 100px;*/
     position: relative;
 
     h6 {
@@ -62,6 +61,7 @@
       color: #fff;
       justify-content: center;
       align-items: center;
+      margin: 0;
     }
 
     .list {

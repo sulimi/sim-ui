@@ -16,21 +16,18 @@ title: Button - 按钮
 
   ```vue
 <template>
-    <s-button>普通按钮</s-button>
-    <s-button disabled>禁用按钮</s-button>
-    <s-button :loading="true">加载按钮</s-button>
-    <s-button :loading="loading" @click="loading=!loading">点击加载</s-button>
+    <Button>普通按钮</Button>
+    <Button disabled>禁用按钮</Button>
+    <Button :loading="true">加载按钮</Button>
+    <Button :loading="loading" @click="loading=!loading">点击加载</Button>
 </template>
 
 
 <script>
-  import Button from '../../src/components/button/Button.vue';
-  import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
+import {Button} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
     export default {
-      components: {
-        's-button':Button,
-        's-button-group':ButtonGroup,
-      },
+      components: {Button},
       data() {
         return {
           loading: false,
@@ -44,35 +41,40 @@ title: Button - 按钮
 </template>
 
 
+
+
+
+
 <template>
 <Container title="有图标">
     <template #list>
-        <s-button icon="jiazaizhong">左图标按钮</s-button>
-        <s-button icon="jiazaizhong" iconPosition="right">右图标按钮</s-button>
+        <s-button icon="error">左图标</s-button>
+        <s-button icon="error" iconPosition="right">右图标</s-button>
     </template>
 <template #code>
 
   ```vue
 <template>
-    <s-button icon="jiazaizhong">左图标按钮</s-button>
-    <s-button icon="jiazaizhong" iconPosition="right">右图标按钮</s-button>
+    <Button icon="error">左图标</Button>
+    <Button icon="error" iconPosition="right">右图标</Button>
 </template>
 
 
 <script>
-  import Button from '../../src/components/button/Button.vue';
-  import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
+import {Button} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
     export default {
-      components: {
-        's-button':Button,
-        's-button-group':ButtonGroup,
-      },
+      components: {Button},
     };
 </script>
   ```
 </template>
 </Container>
 </template>
+
+
+
+
 
 
 <template>
@@ -88,29 +90,27 @@ title: Button - 按钮
 
   ```vue
 <template>
-    <s-button-group>
-      <s-button>上一页</s-button>
-      <s-button>主页</s-button>
-      <s-button>下一页</s-button>
-    </s-button-group>
+    <ButtonGroup>
+      <Button>上一页</Button>
+      <Button>主页</Button>
+      <Button>下一页</Button>
+    </ButtonGroup>
 </template>
 
 
 <script>
-  import Button from '../../src/components/button/Button.vue';
-  import ButtonGroup from '../../src/components/button/ButtonGroup.vue';
+import {Button,ButtonGroup} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
     export default {
       components: {
-         's-button':Button,
-         's-button-group':ButtonGroup,
-      },
+         Button,
+         ButtonGroup},
     };
 </script>
   ```
 </template>
 </Container>
 </template>
-
 </ClientOnly>
 
 

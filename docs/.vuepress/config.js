@@ -19,6 +19,7 @@ module.exports = {
        children: [
          '/get-started/',
          '/install/',
+         '/starting/',
        ]
      },
      {

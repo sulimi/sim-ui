@@ -28,23 +28,20 @@ title: Layout - 布局
 </template> 
 
 <script>
-  import Layout from '../../src/components/layout/Layout.vue';
-  import Header from '../../src/components/layout/Header.vue';
-  import Content from '../../src/components/layout/Content.vue';
-  import Sider from '../../src/components/layout/Sider.vue';
-  import Footer from '../../src/components/layout/Footer.vue';
+import {Layout,Header,Content,Footer} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
   export default {
     components: {
     's-layout':Layout,
     's-header':Header,
     's-content':Content,
-    's-sider':Sider,
     's-footer':Footer,
     }
   };
 </script>
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
 %item{
     color: #fff;
     text-align: center;
@@ -68,7 +65,6 @@ $h:40px;
     height: $h;
     line-height: $h;
 }
-
 </style>
   ```
 </template>
@@ -104,11 +100,8 @@ $h:40px;
 </template> 
 
 <script>
-  import Layout from '../../src/components/layout/Layout.vue';
-  import Header from '../../src/components/layout/Header.vue';
-  import Content from '../../src/components/layout/Content.vue';
-  import Sider from '../../src/components/layout/Sider.vue';
-  import Footer from '../../src/components/layout/Footer.vue';
+import {Layout,Header,Content,Sider,Footer} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
   export default {
     components: {
     's-layout':Layout,
@@ -119,8 +112,9 @@ $h:40px;
     }
   };
 </script>
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
 %item{
     color: #fff;
     text-align: center;
@@ -151,7 +145,6 @@ $hh:100px;
     line-height: $hh;
     width: $hh;
 }
-
 </style>
   ```
 </template>
@@ -187,11 +180,8 @@ $hh:100px;
 </template> 
 
 <script>
-  import Layout from '../../src/components/layout/Layout.vue';
-  import Header from '../../src/components/layout/Header.vue';
-  import Content from '../../src/components/layout/Content.vue';
-  import Sider from '../../src/components/layout/Sider.vue';
-  import Footer from '../../src/components/layout/Footer.vue';
+import {Layout,Header,Content,Sider,Footer} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
   export default {
     components: {
     's-layout':Layout,
@@ -202,8 +192,9 @@ $hh:100px;
     }
   };
 </script>
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
 %item{
     color: #fff;
     text-align: center;
@@ -234,7 +225,6 @@ $hh:100px;
     line-height: 100px;
     width: $hh;
 }
-
 </style>
   ```
 </template>

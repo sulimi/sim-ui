@@ -15,19 +15,18 @@ title: Input - 输入框
 
   ```vue
 <template>
-      <s-input placeholder="请输入内容"></s-input>
-      <s-input readonly placeholder="只读"></s-input>
-      <s-input disabled placeholder="禁用"></s-input>
+      <Input placeholder="请输入内容"></Input>
+      <Input readonly placeholder="只读"></Input>
+      <Input disabled placeholder="禁用"></Input>
 </template>
 
 
 
 <script>
-  import Input from '../../src/components/input/Input.vue';
+import {Input} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
   export default {
-    components: {
-    's-input':Input,
-    },
+    components: {Input},
    };
 </script>
   ```
@@ -46,16 +45,15 @@ title: Input - 输入框
 
   ```vue
 <template>
-  <s-input  v-model="value" placeholder="请输入内容"></s-input>
+  <Input v-model="value" placeholder="请输入内容"></Input>
 </template>
 
 
 <script>
-  import Input from '../../src/components/input/Input.vue';
+import {Input} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
   export default {
-    components: {
-    's-input':Input,
-    },
+    components: {Input},
       data() {
         return {
           value: '双向绑定',
@@ -78,16 +76,15 @@ title: Input - 输入框
 
   ```vue
 <template>
-   <s-input error="输入错误" placeholder="请输入内容" value="错误的内容"></s-input>
+   <Input error="输入错误" placeholder="请输入内容" value="错误的内容"></Input>
 </template>
 
 
 <script>
-  import Input from '../../src/components/input/Input.vue';
+import {Input} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
   export default {
-    components: {
-    's-input':Input,
-    },
+    components: {Input},
    };
 </script>
   ```
@@ -105,22 +102,21 @@ title: Input - 输入框
 
   ```vue
 <template>
-  <s-input  :clear="true" placeholder="请输入内容" value="不想要了"></s-input>
+  <Input  :clear="true" placeholder="请输入内容" value="不想要了"></Input>
 </template>
 
 
 <script>
+import {Input} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
     export default {
-      components: {},
+      components: {Input},
     };
 </script>
   ```
 </template>
 </Container>
 </template>
-
-
-
 
 </ClientOnly>
 

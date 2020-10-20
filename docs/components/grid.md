@@ -30,40 +30,37 @@ title: Grid - 栅格
   ```vue
 <template>
 
-    <!--s-row 行-->
-    <!--s-col 列-->
     <!--span 控制占比-->
-    <s-row>
-      <s-col class="item" span="24">col-24</s-col>
-    </s-row>
+    <Row>
+      <Col class="item" span="24">col-24</Col>
+    </Row>
 
-    <s-row>
-        <s-col class="item" span="4">col-4</s-col>
-        <s-col class="item" span="8">col-8</s-col>
-        <s-col class="item" span="12">col-12</s-col>
-    </s-row>
+    <Row>
+        <Col class="item" span="4">col-4</Col>
+        <Col class="item" span="8">col-8</Col>
+        <Col class="item" span="12">col-12</Col>
+    </Row>
     
-    <s-row>
-        <s-col class="item" span="6">col-6</s-col>
-        <s-col class="item" span="6">col-6</s-col>
-        <s-col class="item" span="6">col-6</s-col>
-        <s-col class="item" span="6">col-6</s-col>
-    </s-row>
+    <Row>
+        <Col class="item" span="6">col-6</Col>
+        <Col class="item" span="6">col-6</Col>
+        <Col class="item" span="6">col-6</Col>
+        <Col class="item" span="6">col-6</Col>
+    </Row>
 
 </template>
 
+
 <script>
-  import Row from '../../src/components/grid/Row.vue';
-  import Col from '../../src/components/grid/Col.vue';
+import {Col,Row} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
   export default {
-    components: {
-    's-row':Row,
-    's-col':Col,
-    },
+    components: {Row,Col},
   };
 </script>
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
 }
@@ -111,39 +108,35 @@ background: #81d2ad;
   ```vue
 <template>
 
-    <!--s-row 行-->
-    <!--s-col 列-->
     <!--span 控制占比-->
     <!--offset 控制偏移比例-->
-    <s-row>
-        <s-col class="item" span="2" offset="2">col-2</s-col>
-        <s-col class="item" span="6" offset="2">col-6</s-col>
-        <s-col class="item" span="10" offset="2">col-10</s-col>
-    </s-row>
+    <Row>
+        <Col class="item" span="2" offset="2">col-2</Col>
+        <Col class="item" span="6" offset="2">col-6</Col>
+        <Col class="item" span="10" offset="2">col-10</Col>
+    </Row>
     
-    <s-row>
-        <s-col class="item" span="6">col-6</s-col>
-        <s-col class="item" span="4" offset="2">col-4</s-col>
-        <s-col class="item" span="6">col-6</s-col>
-        <s-col class="item" span="6">col-6</s-col>
-    </s-row>
+    <Row>
+        <Col class="item" span="6">col-6</Col>
+        <Col class="item" span="4" offset="2">col-4</Col>
+        <Col class="item" span="6">col-6</Col>
+        <Col class="item" span="6">col-6</Col>
+    </Row>
 
 
 </template>
 
 
 <script>
-  import Row from '../../src/components/grid/Row.vue';
-  import Col from '../../src/components/grid/Col.vue';
+  import {Col,Row} from 'sim-ui-use';
+  import 'sim-ui-use/dist/index.css'
   export default {
-    components: {
-    's-row':Row,
-    's-col':Col,
-    }
+    components: {Row,Col}
   };
 </script>
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
 }
@@ -191,38 +184,35 @@ background: #81d2ad;
   ```vue
 <template>
 
-    <!--s-row 行-->
-    <!--s-col 列-->
     <!--span 控制占比-->
     <!--gutter 控制padding间隔-->
     <template #list>
-        <s-row gutter="30">
-            <s-col span="4" class="item"><div>col-4</div></s-col>
-            <s-col span="8" class="item"><div>col-8</div></s-col>
-            <s-col span="12" class="item"><div>col-12</div></s-col>
-        </s-row>
-        <s-row gutter="10">
-            <s-col span="6" class="item"><div>col-6</div></s-col>
-            <s-col span="6" class="item"><div>col-6</div></s-col>
-            <s-col span="6" class="item"><div>col-6</div></s-col>
-            <s-col span="6" class="item"><div>col-6</div></s-col>
-        </s-row>
+        <Row gutter="30">
+            <Col span="4" class="item"><div>col-4</div></Col>
+            <Col span="8" class="item"><div>col-8</div></Col>
+            <Col span="12" class="item"><div>col-12</div></Col>
+        </Row>
+        <Row gutter="10">
+            <Col span="6" class="item"><div>col-6</div></Col>
+            <Col span="6" class="item"><div>col-6</div></Col>
+            <Col span="6" class="item"><div>col-6</div></Col>
+            <Col span="6" class="item"><div>col-6</div></Col>
+        </Row>
     </template>
 
 </template>
 
+
 <script>
-  import Row from '../../src/components/grid/Row.vue';
-  import Col from '../../src/components/grid/Col.vue';
+  import {Col,Row} from 'sim-ui-use';
+  import 'sim-ui-use/dist/index.css'
   export default {
-    components: {
-    's-row':Row,
-    's-col':Col,
-    }
+    components: {Row,Col}
   };
 </script>
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
 }
@@ -278,43 +268,39 @@ background: #81d2ad;
   ```vue
 <template>
 
-    <!--s-row 行-->
-    <!--s-col 列-->
     <!--span 控制占比-->
     <!--gutter 控制padding间隔-->
     <!--align 控制排列位置-->
-    <s-row align="left">
-        <s-col class="item" span="4">left-4</s-col>
-        <s-col class="item" span="8">left-8</s-col>
-        <s-col class="item" span="8">left-8</s-col>
-    </s-row>
+    <Row align="left">
+        <Col class="item" span="4">left-4</Col>
+        <Col class="item" span="8">left-8</Col>
+        <Col class="item" span="8">left-8</Col>
+    </Row>
 
-    <s-row align="center">
-        <s-col class="item" span="4">center-4</s-col>
-        <s-col class="item" span="8">center-8</s-col>
-    </s-row>
+    <Row align="center">
+        <Col class="item" span="4">center-4</Col>
+        <Col class="item" span="8">center-8</Col>
+    </Row>
 
-    <s-row gutter="10"  align="right">
-        <s-col class="item" span="4">right-4</s-col>
-        <s-col class="item" span="4">right-4</s-col>
-        <s-col class="item" span="4">right-4</s-col>
-        <s-col class="item" span="4">right-4</s-col>
-    </s-row>
+    <Row gutter="10"  align="right">
+        <Col class="item" span="4">right-4</Col>
+        <Col class="item" span="4">right-4</Col>
+        <Col class="item" span="4">right-4</Col>
+        <Col class="item" span="4">right-4</Col>
+    </Row>
 
 </template>
 
 <script>
-  import Row from '../../src/components/grid/Row.vue';
-  import Col from '../../src/components/grid/Col.vue';
+  import {Col,Row} from 'sim-ui-use';
+  import 'sim-ui-use/dist/index.css'
   export default {
-    components: {
-    's-row':Row,
-    's-col':Col,
-    }
+    components: {Row,Col}
   };
 </script>
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
 }
@@ -365,54 +351,50 @@ background: #81d2ad;
   ```vue
 <template>
 
-    <!--s-row 行-->
-    <!--s-col 列-->
     <!--span 控制占比-->
     <!--offset 控制偏移比例-->
-    <s-row>
-        <s-col class="item" span="24" 
+    <Row>
+        <Col class="item" span="24" 
                               :iPad="{span:12}" 
                               :narrowPc="{span:1}" 
                               :pc="{span:13}" 
                               :widePc="{span:1}"
-        ></s-col>
-        <s-col class="item" span="24" 
+        ></Col>
+        <Col class="item" span="24" 
                               :iPad="{span:12}" 
                               :narrowPc="{span:6}" 
                               :pc="{span:1}" 
                               :widePc="{span:8}"
-        ></s-col>
-        <s-col class="item" span="24" 
+        ></Col>
+        <Col class="item" span="24" 
                               :iPad="{span:12}" 
                               :narrowPc="{span:17}" 
                               :pc="{span:10}" 
                               :widePc="{span:15}"
-        ></s-col>
-    </s-row>
+        ></Col>
+    </Row>
     
-    <s-row>
-        <s-col class="item" span="6" :pc="{span:2}">col-6</s-col>
-        <s-col class="item" span="4" offset="2" :pc="{span:2}">col-4</s-col>
-        <s-col class="item" span="6" :pc="{span:8}">col-6</s-col>
-        <s-col class="item" span="6" :pc="{span:10}">col-6</s-col>
-    </s-row>
+    <Row>
+        <Col class="item" span="6" :pc="{span:2}">col-6</Col>
+        <Col class="item" span="4" offset="2" :pc="{span:2}">col-4</Col>
+        <Col class="item" span="6" :pc="{span:8}">col-6</Col>
+        <Col class="item" span="6" :pc="{span:10}">col-6</Col>
+    </Row>
 
 
 </template>
 
 
 <script>
-  import Row from '../../src/components/grid/Row.vue';
-  import Col from '../../src/components/grid/Col.vue';
+  import {Col,Row} from 'sim-ui-use';
+  import 'sim-ui-use/dist/index.css'
   export default {
-    components: {
-    's-row':Row,
-    's-col':Col,
-    }
+    components: {Row,Col}
   };
 </script>
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
 * {
   box-sizing: border-box;
 }

@@ -3,6 +3,12 @@ title: Toast - 提示框
 ---
 # 提示框
 
+>特殊组件：需要引入插件才能使用 `$toast` 函数
+```js
+import Vue from 'vue';
+import {plugin} from 'sim-ui-use';
+Vue.use(plugin);
+```
 
 <ClientOnly>
 <template>
@@ -14,20 +20,18 @@ title: Toast - 提示框
 
   ```vue
 <template>
-    <s-button @click="showToast">点我出现</s-button>
+    <Button @click="showToast">点我出现</Button>
 </template>
 
 
 <script>
-  import Vue from 'vue';
-  import Button from '../../src/components/button/Button.vue';
-  import plugin from '../../src/plugin.js';
-  import Toast from '../../src/components/toast/Toast.vue';
-  Vue.use(plugin);
+import Vue from 'vue';
+import {Button,plugin} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
+Vue.use(plugin);
   export default {
     components: {
-    's-button':Button,
-    Toast
+    Button,
     },
     methods: {
       showToast(){
@@ -53,20 +57,18 @@ title: Toast - 提示框
 
   ```vue
 <template>
-    <s-button @click="showToast">点我出现</s-button>
+    <Button @click="showToast">点我出现</Button>
 </template>
 
 
 <script>
-  import Vue from 'vue';
-  import Button from '../../src/components/button/Button.vue';
-  import plugin from '../../src/plugin.js';
-  import Toast from '../../src/components/toast/Toast.vue';
+import Vue from 'vue';
+import {Button,plugin} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
   Vue.use(plugin);
   export default {
     components: {
-    's-button':Button,
-    Toast
+    Button,
     },
     methods: {
       showToast(){
@@ -98,20 +100,18 @@ title: Toast - 提示框
 
   ```vue
 <template>
-    <s-button @click="showToast">点我出现</s-button>
+    <Button @click="showToast">点我出现</Button>
 </template>
 
 
 <script>
-  import Vue from 'vue';
-  import Button from '../../src/components/button/Button.vue';
-  import plugin from '../../src/plugin.js';
-  import Toast from '../../src/components/toast/Toast.vue';
+import Vue from 'vue';
+import {Button,plugin} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
   Vue.use(plugin);
   export default {
     components: {
-    's-button':Button,
-    Toast
+    Button,
     },
     methods: {
       showToast(){
@@ -150,22 +150,20 @@ title: Toast - 提示框
 
   ```vue
 <template>
-    <s-button @click="showTop">上方出现</s-button>
-    <s-button @click="showMiddle">中间出现</s-button>
-    <s-button @click="showBottom">底部出现</s-button>
+    <Button @click="showTop">上方出现</Button>
+    <Button @click="showMiddle">中间出现</Button>
+    <Button @click="showBottom">底部出现</Button>
 </template>
 
 
 <script>
-  import Vue from 'vue';
-  import Button from '../../src/components/button/Button.vue';
-  import plugin from '../../src/plugin.js';
-  import Toast from '../../src/components/toast/Toast.vue';
-  Vue.use(plugin);
+import Vue from 'vue';
+import {Button,plugin} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
+Vue.use(plugin);
   export default {
     components: {
-    's-button':Button,
-    Toast
+    Button,
     },
     methods: {
       showTop(){
@@ -204,20 +202,18 @@ title: Toast - 提示框
 
   ```vue
 <template>
-    <s-button @click="showToast">点我出现</s-button>
+    <Button @click="showToast">点我出现</Button>
 </template>
 
 
 <script>
-  import Vue from 'vue';
-  import Button from '../../src/components/button/Button.vue';
-  import plugin from '../../src/plugin.js';
-  import Toast from '../../src/components/toast/Toast.vue';
-  Vue.use(plugin);
+import Vue from 'vue';
+import {Button,plugin} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
+Vue.use(plugin);
   export default {
     components: {
-    's-button':Button,
-    Toast
+    Button,
     },
     methods: {
       showToast(){

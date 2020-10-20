@@ -18,20 +18,20 @@ title: Popover - 弹出层
 
   ```vue
 <template>
-    <s-popover>
+    <Popover>
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <s-button>点我出现</s-button>
-    </s-popover>
+       <Button>点我出现</Button>
+    </Popover>
 </template>
 
 
   <script>
-    import Popover from '../../src/components/popover/Popover.vue';
-    import Button from '../../src/components/button/Button.vue';
+import {Popover,Button} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
     export default {
       components: {
-      's-popover':Popover,
-      's-button':Button,
+      Popover,
+      Button,
       }
     };
   </script>
@@ -64,32 +64,32 @@ title: Popover - 弹出层
 
   ```vue
 <template #list>
-    <s-popover>
+    <Popover>
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <s-button>上方出现</s-button>
-    </s-popover>
-    <s-popover position="bottom">
+       <Button>上方出现</Button>
+    </Popover>
+    <Popover position="bottom">
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <s-button>下方出现</s-button>
-    </s-popover>
-    <s-popover position="left">
+       <Button>下方出现</Button>
+    </Popover>
+    <Popover position="left">
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <s-button>左边出现</s-button>
-    </s-popover>
-    <s-popover position="right">
+       <Button>左边出现</Button>
+    </Popover>
+    <Popover position="right">
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <s-button>右边出现</s-button>
-    </s-popover>
+       <Button>右边出现</Button>
+    </Popover>
 </template>
 
 
   <script>
-    import Popover from '../../src/components/popover/Popover.vue';
-    import Button from '../../src/components/button/Button.vue';
+import {Popover,Button} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
     export default {
       components: {
-      's-popover':Popover,
-      's-button':Button,
+      Popover,
+      Button,
       }
     };
   </script>
@@ -118,24 +118,24 @@ title: Popover - 弹出层
 
   ```vue
 <template>
-    <s-popover>
+    <Popover>
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <s-button>点击出现</s-button>
-    </s-popover>
-    <s-popover trigger="hover">
+       <Button>点击出现</Button>
+    </Popover>
+    <Popover trigger="hover">
        <template slot="content"><div>hi 这是弹出层</div></template>
-       <s-button>hover出现</s-button>
-    </s-popover>
+       <Button>hover出现</Button>
+    </Popover>
 </template>
 
 
   <script>
-    import Popover from '../../src/components/popover/Popover.vue';
-    import Button from '../../src/components/button/Button.vue';
+import {Popover,Button} from 'sim-ui-use';
+import 'sim-ui-use/dist/index.css'
     export default {
       components: {
-      's-popover':Popover,
-      's-button':Button,
+      Popover,
+      Button,
       }
     };
   </script>

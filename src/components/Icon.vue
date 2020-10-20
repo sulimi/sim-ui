@@ -1,6 +1,6 @@
 <template>
   <svg class="g-icon">
-    <use :xlink:href=`#icon-${icon}`></use>
+    <use :xlink:href="'#icon-'+icon"></use>
   </svg>
 </template>
 
@@ -23,3 +23,4 @@
     height: 1em;
   }
 </style>
+
