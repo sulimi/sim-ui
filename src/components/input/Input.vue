@@ -74,6 +74,7 @@
         border-radius: 4px;
         padding: 0 8px;
         font-size: inherit;
+        -webkit-appearance: none;
 
         &:hover {
           border-color: #666;
