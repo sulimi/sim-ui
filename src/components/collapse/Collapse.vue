@@ -52,5 +52,6 @@
     border: 1px solid #ddd;
     border-bottom: none;
     border-radius: 4px;
+    width: 100%;
   }
 </style>

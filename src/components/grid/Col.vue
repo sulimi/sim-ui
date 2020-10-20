@@ -3,7 +3,7 @@
        :style="colStyle"
   >
     <div class="content">
-      <slot></slot>
+        <slot></slot>
     </div>
 
   </div>
@@ -73,6 +73,7 @@
 </script>
 <style lang="scss" scoped>
   .col {
+    align-items:stretch;
     //默认手机
     $class-prefix: col-;
     @for $n from 1 through 24 {
@@ -154,6 +155,9 @@
 
     .content {
       height: 100%;
+      div{
+        height: 100%;
+      }
     }
   }
 

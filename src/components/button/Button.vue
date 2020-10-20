@@ -53,7 +53,9 @@
   .g-button {
     font-size: 14px;
     height: 32px;
+    line-height: 32px;
     padding: 1em;
+    margin: 6px;
     border-radius: 4px;
     border: 1px solid #999;
     background: white;

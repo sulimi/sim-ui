@@ -192,7 +192,7 @@ Vue.use(plugin);
 </template>
 
 <template>
-<Container title="手动关闭">
+<Container title="可以传HTML">
     <template #list>
        <s-button @click="$toast({content: `<h1>标题</h1>`,
                                   enableHtml:true,

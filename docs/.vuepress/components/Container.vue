@@ -2,7 +2,12 @@
   <div class="wrapper">
     <div class="header">
       <h3>{{title}}</h3>
-      <Button @click="open=!open">查看代码</Button>
+      <div class="btn-wrapper">
+        <div class="icon-i">
+          <Icon icon="close" :class="{'open':open}"></Icon>
+        </div>
+        <Button @click="open=!open" class="btn">查看代码</Button>
+      </div>
     </div>
     <hr/>
     <div class="content">
@@ -18,9 +23,10 @@
 </template>
 <script>
   import Button from '../../../src/components/button/Button.vue';
+  import Icon from '../../../src/components/Icon.vue';
   export default {
     name: 'Container',
-    components: {Button},
+    components: {Icon, Button},
     data() {
       return {
         open: false
@@ -39,10 +45,38 @@
     padding: 16px 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 
     h3 {
       border-bottom: none;
+    }
+    .btn-wrapper{
+      background: #3eaf7c;
+      border-radius: 4px;
+      border: 1px solid #bbbbbb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .btn{
+        background: #3eaf7c;
+        color: #fff;
+        border: none;
+        margin: 0;
+        padding-left: 0;
+      }
+      .icon-i{
+        fill: #fff;
+        width: 20px;
+        height: 20px;
+
+        .g-icon{
+          transition: all .6s;
+          &.open{
+            transform: rotate(90deg);
+          }
+        }
+      }
     }
   }
 
@@ -50,6 +84,7 @@
     margin: 16px 0;
     border: 2px solid #3eaf7c;
     position: relative;
+
 
     h6 {
       position: absolute;
@@ -66,6 +101,9 @@
 
     .list {
       padding: 50px 30px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
     }
   }
   .code{

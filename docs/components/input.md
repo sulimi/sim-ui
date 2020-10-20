@@ -39,7 +39,7 @@ import 'sim-ui-use/dist/index.css'
 <Container title="双向绑定">
     <template #list>
         <s-input  placeholder="请输入内容" v-model="value"></s-input>
-        <span style="padding-left: 1em">展示：</span><span>{{value}}</span>
+        <span style="padding-left: 1em">展示：{{value}}</span>
     </template>
 <template #code>
 

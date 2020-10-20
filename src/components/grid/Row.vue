@@ -38,6 +38,7 @@
 </script>
 <style lang="scss" scoped>
   .row {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     &.align-left{

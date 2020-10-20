@@ -46,7 +46,7 @@
 </script>
 <style lang="scss" scoped>
   .collapse-item {
-
+    width: 100%;
     .title {
       border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;

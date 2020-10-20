@@ -24,6 +24,7 @@
 
     .g-button {
       border-radius: 0;
+      margin: 6px 0;
       &:not(:first-child){
         margin-left: -1px;
       }

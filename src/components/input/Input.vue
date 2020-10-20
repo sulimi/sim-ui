@@ -58,6 +58,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    padding: 6px;
 
     :not(:last-child) {
       margin-right: .8em;
