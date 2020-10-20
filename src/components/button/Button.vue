@@ -53,7 +53,6 @@
   .g-button {
     font-size: 14px;
     height: 32px;
-    line-height: 32px;
     padding: 1em;
     margin: 6px;
     border-radius: 4px;
@@ -81,6 +80,7 @@
     }
 
     .slot {
+      line-height: 1em;
       order: 2;
     }
 
