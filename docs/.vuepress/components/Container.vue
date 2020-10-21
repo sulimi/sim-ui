@@ -53,7 +53,6 @@
     .btn-wrapper{
       background: #3eaf7c;
       border-radius: 4px;
-      border: 1px solid #bbbbbb;
       display: flex;
       align-items: center;
       justify-content: center;

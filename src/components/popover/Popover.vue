@@ -3,9 +3,9 @@
     <div ref="contentWrapper" v-show="visible" class="content-wrapper" :class="{['position-'+position]:true}">
       <slot name="content"></slot>
     </div>
-    <span ref="triggerWrapper" class="trigger">
+    <div ref="triggerWrapper" class="trigger">
           <slot></slot>
-    </span>
+    </div>
   </div>
 </template>
 <script>
@@ -78,6 +78,7 @@
       close() {
         this.visible = false;
         document.removeEventListener('click', this.eventHandler);
+        this.$refs.contentWrapper.remove()
       },
       onClick(even) {
         if (this.$refs.triggerWrapper.contains(even.target)) {
@@ -127,7 +128,8 @@
     border: 1px solid #bbbbbb;
     background: #fff;
     border-radius: 4px;
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+    /*filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));!*用这个手机点击多个弹出按钮切换有阴影保留*!*/
+    /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);!*但是用这个阴影又影响不到伪元素*!*/
     padding: 0.5em 1em;
     max-width: 20em;
     word-break: break-all;
@@ -144,7 +146,6 @@
     &.position-top {
       transform: translateY(-100%);
       margin-top: -10px;
-      border-bottom: none;
 
       &::before {
         border-bottom: none;
