@@ -7,7 +7,6 @@ title: Button - 按钮
 <template>
 <Container title="基础">
     <template #list>
-        <button>普通按钮</button>
         <s-button>普通按钮</s-button>
         <s-button disabled>禁用按钮</s-button>
         <s-button :loading="true">加载中</s-button>
